@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Average Blur Finds Dominant Color in Images - image-editing</title>
+    <meta name="description" content="The average blur filter determines the dominant color of a photograph by computing the mathematical mean of every pixel&#39;s color value across the entire canvas. By expanding the blur radius to cover the full width and height of an image, individual details">
+    <link rel="canonical" href="https://salivity.github.io/image-editing/article/how-average-blur-finds-dominant-color-in-images">
+    <link rel="search" type="application/opensearchdescription+xml" title="image-editing" href="/image-editing/opensearch.xml">
+    <link rel="icon" href="/image-editing/favicon.ico">
+    <link rel="stylesheet" href="/image-editing/css/style.css">
+    <link media="print" rel="stylesheet" href="/image-editing/css/print.css">
+    <script src="/image-editing/js/fuse.min.js"></script>
+    <script src="/image-editing/js/script.js"></script>
+    <script id="MathJax-script" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/4.1.3/tex-chtml.min.js" defer></script>
+    <script src="/monetize/monetize.js"></script>
+    <script src="/social/social.js"></script>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="How Average Blur Finds Dominant Color in Images - image-editing" />
+    <meta property="og:url" content="https://salivity.github.io/image-editing/article/how-average-blur-finds-dominant-color-in-images" />
+    <meta property="og:image" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:secure_url" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:width" content="1120" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:description" content="The average blur filter determines the dominant color of a photograph by computing the mathematical mean of every pixel&#39;s color value across the entire canvas. By expanding the blur radius to cover the full width and height of an image, individual details" />
+    <link rel="manifest" href="/image-editing/pwa/manifest.json" />
+</head>
+<body>
+    <header>
+        <a href="/image-editing/" aria-label="Go To Home Page" title="Go To Home Page" id="logo">
+            <span>salivity.github.io/</span><span>image-editing</span>
+        </a>
+        <nav>
+            <ul class="header-links">
+                <li><a href="/image-editing/search" title="Search" aria-label="Go To Search Page"><svg class="svg-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"></path></svg></a></li>
+                <li><a id="theme-toggle" title="Theme" href="javascript:void(0);" aria-label="Toggle Website Theme"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+    <div class="article-layout">
+        <aside id="profile-sidebar" class="profile-column" aria-label="Author Profile"></aside>
+        <div class="article-main-column">
+            <article><h1 id="how-average-blur-finds-dominant-color-in-images">How Average
+Blur Finds Dominant Color in Images</h1>
+<p>The average blur filter determines the dominant color of a photograph
+by computing the mathematical mean of every pixel's color value across
+the entire canvas. By expanding the blur radius to cover the full width
+and height of an image, individual details, textures, and localized
+contrasts are eliminated, collapsing the entire composition into a
+single, uniform color that represents the overall chromatic average of
+the scene.</p>
+<h3 id="the-underlying-mathematics">The Underlying Mathematics</h3>
+<p>Digital images are grids composed of individual pixels, each defined
+by numerical values within a specific color model, most commonly RGB
+(Red, Green, Blue). In an 8-bit image, each channel has an intensity
+value ranging from 0 to 255.</p>
+<p>To find the average color, the software executes a straightforward
+arithmetic calculation for each channel independently:</p>
+<ol type="1">
+<li><strong>Summation:</strong> The algorithm iterates through every
+pixel in the image and sums all the Red values, all the Green values,
+and all the Blue values separately.</li>
+<li><strong>Division:</strong> Each total sum is divided by the total
+count of pixels (<span class="math inline">\(N\)</span>) present in the
+image (Width <span class="math inline">\(\times\)</span> Height).</li>
+<li><strong>Recombination:</strong> The resulting quotients form a new
+triplet (<span class="math inline">\(R_{avg}, G_{avg},
+B_{avg}\)</span>), which defines the resulting flat color.</li>
+</ol>
+<p><span class="math display">\[\text{Channel}_{\text{avg}} =
+\frac{1}{N} \sum_{i=1}^{N} \text{Channel}_i\]</span></p>
+<h3 id="kernel-sizing-and-the-averaging-process">Kernel Sizing and the
+Averaging Process</h3>
+<p>In standard blur operations, such as a Box Blur or Gaussian Blur, the
+software uses a small matrix called a "kernel" to average pixels only
+within a localized neighborhood (e.g., a 5x5 or 20x20 pixel radius).</p>
+<p>When image editing software uses an average blur filter to extract a
+dominant color, it sets the kernel size to match the total dimensions of
+the canvas. Because every pixel influences the calculation equally,
+spatial boundaries disappear, leaving a solid fill.</p>
+<h3 id="mean-color-vs-perceptual-dominance">Mean Color vs. Perceptual
+Dominance</h3>
+<p>It is worth noting the distinction between an arithmetic average and
+perceptual dominance. The average blur filter computes the <em>mean</em>
+color, not the <em>mode</em> (the most frequently occurring color).</p>
+<p>Because the filter adds all values together:</p>
+<ul>
+<li>Complementary colors cancel each other out. For instance, an image
+split evenly between saturated blue and saturated yellow will resolve
+into an averaged, desaturated gray or muted green.</li>
+<li>High-luminance areas (such as a bright sky or white background)
+exert a strong pull on the final numeric average, often making the
+resulting color brighter than what a viewer might perceive as the
+artistic "dominant" subject.</li>
+</ul>
+<p>Despite this limitation, the average blur filter remains one of the
+fastest, most computationally efficient methods in image editing to
+extract a unified color profile for background matching, UI theming, and
+color cast correction.</p></article>
+        <div id="comments-container"></div>
+        <script>
+            const utterancesScript = document.createElement('script');
+            utterancesScript.setAttribute('src', 'https://utteranc.es/client.js');
+            utterancesScript.setAttribute('repo', 'salivity/image-editing'); 
+            utterancesScript.setAttribute('issue-term', 'pathname'); 
+            const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            utterancesScript.setAttribute('theme', currentTheme === 'dark' ? 'github-dark' : 'github-light'); 
+            utterancesScript.setAttribute('crossorigin', 'anonymous');
+            utterancesScript.async = true;
+            document.getElementById('comments-container').appendChild(utterancesScript);
+        </script>
+    
+        </div>
+    </div>
+    
+    </main>
+    <footer>
+        <nav>
+            <ul class="social-links">
+            </ul>
+        </nav>
+        <nav>
+            <ul class="footer-links">
+                <li><a href="https://smvc.dev/contact">Contact</a></li>
+                <li><a href="/image-editing/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/image-editing/terms-and-conditions">Terms and Conditions</a></li>
+            </ul>
+        </nav>
+        <div class="copyright">
+            Copyright &copy; <span id="current-year"></span>
+        </div>
+    </footer>
+</body>
+</html>

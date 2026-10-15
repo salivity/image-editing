@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Dodging and Burning Changes Lighting Direction - image-editing</title>
+    <meta name="description" content="Dodging and burning can completely reshape the perceived direction of light in an image by manually manipulating tonal values to simulate new highlights and shadows. By selectively brightening surfaces facing a theoretical light source (dodging) and darke">
+    <link rel="canonical" href="https://salivity.github.io/image-editing/article/how-dodging-and-burning-changes-lighting-direction">
+    <link rel="search" type="application/opensearchdescription+xml" title="image-editing" href="/image-editing/opensearch.xml">
+    <link rel="icon" href="/image-editing/favicon.ico">
+    <link rel="stylesheet" href="/image-editing/css/style.css">
+    <link media="print" rel="stylesheet" href="/image-editing/css/print.css">
+    <script src="/image-editing/js/fuse.min.js"></script>
+    <script src="/image-editing/js/script.js"></script>
+    <script id="MathJax-script" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/4.1.3/tex-chtml.min.js" defer></script>
+    <script src="/monetize/monetize.js"></script>
+    <script src="/social/social.js"></script>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="How Dodging and Burning Changes Lighting Direction - image-editing" />
+    <meta property="og:url" content="https://salivity.github.io/image-editing/article/how-dodging-and-burning-changes-lighting-direction" />
+    <meta property="og:image" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:secure_url" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:width" content="1120" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:description" content="Dodging and burning can completely reshape the perceived direction of light in an image by manually manipulating tonal values to simulate new highlights and shadows. By selectively brightening surfaces facing a theoretical light source (dodging) and darke" />
+    <link rel="manifest" href="/image-editing/pwa/manifest.json" />
+</head>
+<body>
+    <header>
+        <a href="/image-editing/" aria-label="Go To Home Page" title="Go To Home Page" id="logo">
+            <span>salivity.github.io/</span><span>image-editing</span>
+        </a>
+        <nav>
+            <ul class="header-links">
+                <li><a href="/image-editing/search" title="Search" aria-label="Go To Search Page"><svg class="svg-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"></path></svg></a></li>
+                <li><a id="theme-toggle" title="Theme" href="javascript:void(0);" aria-label="Toggle Website Theme"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+    <div class="article-layout">
+        <aside id="profile-sidebar" class="profile-column" aria-label="Author Profile"></aside>
+        <div class="article-main-column">
+            <article><h1 id="how-dodging-and-burning-changes-lighting-direction">How Dodging
+and Burning Changes Lighting Direction</h1>
+<p>Dodging and burning can completely reshape the perceived direction of
+light in an image by manually manipulating tonal values to simulate new
+highlights and shadows. By selectively brightening surfaces facing a
+theoretical light source (dodging) and darkening the planes turned away
+from it (burning), an editor rewrites the optical cues that human
+perception relies on to interpret depth and illumination. This article
+explains the mechanics of using localized exposure adjustments to
+believably relocate a scene's primary light source.</p>
+<h3 id="the-visual-mechanics-of-light-perception">The Visual Mechanics
+of Light Perception</h3>
+<p>The human visual system decodes three-dimensional form on a flat
+surface by analyzing tonal gradients. When light strikes an object, it
+creates a predictable pattern: a specular highlight at the point of
+reflection, a midtone core on the illuminated plane, a terminator line
+where light transitions to shadow, and a cast shadow behind the
+object.</p>
+<p>Because the brain instinctively uses these tonal relationships to
+identify where light originates, changing those tones alters the
+perceived angle, height, and intensity of the light source, even if the
+original capture had flat or opposing lighting.</p>
+<h3 id="establishing-the-new-light-vector">Establishing the New Light
+Vector</h3>
+<p>To alter light direction, an editor must first define an imaginary
+vector for the new key light. Every subsequent dodge and burn stroke
+must strictly respect this axis.</p>
+<ol type="1">
+<li><strong>Mapping Highlights (Dodging):</strong> Brighten the planes,
+edges, and ridges of the subject directly facing the new light
+coordinate. For example, if shifting light from the front to the
+upper-left, dodge the left temple, left cheekbone, top of the shoulder,
+and left side of the nose.</li>
+<li><strong>Carving Shadows (Burning):</strong> Darken the opposing
+surfaces that should now fall into darkness. In the upper-left scenario,
+the right jawline, right cheek, and the underside of features must be
+burned to simulate form shadows.</li>
+<li><strong>Generating Cast Shadows:</strong> Burn the areas where one
+physical feature blocks the new path of light onto another surface, such
+as the nose casting a shadow diagonally across the opposite cheek.</li>
+</ol>
+<h3 id="eliminating-contradictory-light-information">Eliminating
+Contradictory Light Information</h3>
+<p>A common failure when altering light direction is leaving behind
+original lighting cues. If the original photo was lit from the right and
+you attempt to light it from the left, simply brightening the left side
+creates an unnatural, two-source, or muddy look.</p>
+<p>To ensure realism:</p>
+<ul>
+<li><strong>Neutralize Original Highlights:</strong> Use targeted
+burning to pull down existing specular highlights that betray the
+original light source.</li>
+<li><strong>Lift Original Shadows:</strong> Dodge areas that were
+previously in deep shadow if they now face the new light source,
+ensuring the surface matches the tone of illuminated midtones.</li>
+<li><strong>Match Ambient Fill:</strong> Ensure that burned shadow areas
+maintain appropriate ambient light levels rather than becoming clipped,
+solid black voids, which look painted-on rather than lit.</li>
+</ul>
+<h3 id="feathering-and-edge-quality">Feathering and Edge Quality</h3>
+<p>Light direction is only believable if the hardness of the newly
+painted shadows matches the intended quality of the light source. Hard,
+direct light requires narrow transition zones, meaning dodging and
+burning must be applied with precise, defined brush edges. Soft,
+diffused light requires wide, feathered transitions across curved
+surfaces. Using luminosity masks or blend modes (such as Soft Light or
+Overlay on neutral gray layers) prevents brush strokes from destroying
+underlying texture and maintains natural skin or material properties as
+the light angle shifts.</p></article>
+        <div id="comments-container"></div>
+        <script>
+            const utterancesScript = document.createElement('script');
+            utterancesScript.setAttribute('src', 'https://utteranc.es/client.js');
+            utterancesScript.setAttribute('repo', 'salivity/image-editing'); 
+            utterancesScript.setAttribute('issue-term', 'pathname'); 
+            const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            utterancesScript.setAttribute('theme', currentTheme === 'dark' ? 'github-dark' : 'github-light'); 
+            utterancesScript.setAttribute('crossorigin', 'anonymous');
+            utterancesScript.async = true;
+            document.getElementById('comments-container').appendChild(utterancesScript);
+        </script>
+    
+        </div>
+    </div>
+    
+    </main>
+    <footer>
+        <nav>
+            <ul class="social-links">
+            </ul>
+        </nav>
+        <nav>
+            <ul class="footer-links">
+                <li><a href="https://smvc.dev/contact">Contact</a></li>
+                <li><a href="/image-editing/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/image-editing/terms-and-conditions">Terms and Conditions</a></li>
+            </ul>
+        </nav>
+        <div class="copyright">
+            Copyright &copy; <span id="current-year"></span>
+        </div>
+    </footer>
+</body>
+</html>

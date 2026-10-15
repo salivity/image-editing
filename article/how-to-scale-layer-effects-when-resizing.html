@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Scale Layer Effects When Resizing - image-editing</title>
+    <meta name="description" content="When resizing an image or document in raster graphics software like Adobe Photoshop, layer effects such as drop shadows, strokes, and bevels do not always scale proportionally by default. This often results in disproportionately thick outlines or exaggera">
+    <link rel="canonical" href="https://salivity.github.io/image-editing/article/how-to-scale-layer-effects-when-resizing">
+    <link rel="search" type="application/opensearchdescription+xml" title="image-editing" href="/image-editing/opensearch.xml">
+    <link rel="icon" href="/image-editing/favicon.ico">
+    <link rel="stylesheet" href="/image-editing/css/style.css">
+    <link media="print" rel="stylesheet" href="/image-editing/css/print.css">
+    <script src="/image-editing/js/fuse.min.js"></script>
+    <script src="/image-editing/js/script.js"></script>
+    <script id="MathJax-script" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/4.1.3/tex-chtml.min.js" defer></script>
+    <script src="/monetize/monetize.js"></script>
+    <script src="/social/social.js"></script>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="How to Scale Layer Effects When Resizing - image-editing" />
+    <meta property="og:url" content="https://salivity.github.io/image-editing/article/how-to-scale-layer-effects-when-resizing" />
+    <meta property="og:image" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:secure_url" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:width" content="1120" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:description" content="When resizing an image or document in raster graphics software like Adobe Photoshop, layer effects such as drop shadows, strokes, and bevels do not always scale proportionally by default. This often results in disproportionately thick outlines or exaggera" />
+    <link rel="manifest" href="/image-editing/pwa/manifest.json" />
+</head>
+<body>
+    <header>
+        <a href="/image-editing/" aria-label="Go To Home Page" title="Go To Home Page" id="logo">
+            <span>salivity.github.io/</span><span>image-editing</span>
+        </a>
+        <nav>
+            <ul class="header-links">
+                <li><a href="/image-editing/search" title="Search" aria-label="Go To Search Page"><svg class="svg-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"></path></svg></a></li>
+                <li><a id="theme-toggle" title="Theme" href="javascript:void(0);" aria-label="Toggle Website Theme"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+    <div class="article-layout">
+        <aside id="profile-sidebar" class="profile-column" aria-label="Author Profile"></aside>
+        <div class="article-main-column">
+            <article><h1 id="how-to-scale-layer-effects-when-resizing">How to Scale Layer
+Effects When Resizing</h1>
+<p>When resizing an image or document in raster graphics software like
+Adobe Photoshop, layer effects such as drop shadows, strokes, and bevels
+do not always scale proportionally by default. This often results in
+disproportionately thick outlines or exaggerated glows on smaller
+canvases. The best and most reliable way to maintain visual integrity
+depends on your workflow, primarily involving the "Scale Styles"
+document setting, utilizing Smart Objects, or manually scaling effects
+after the resize.</p>
+<h3 id="1-enable-scale-styles-in-the-image-size-dialog">1. Enable "Scale
+Styles" in the Image Size Dialog</h3>
+<p>The most direct method to ensure layer effects resize proportionally
+with your canvas is to activate the native scaling option inside the
+Image Size window.</p>
+<ol type="1">
+<li>Navigate to <strong>Image &gt; Image Size</strong> (or press
+<code>Ctrl + Alt + I</code> on Windows / <code>Cmd + Option + I</code>
+on Mac).</li>
+<li>Click the <strong>gear icon</strong> (Settings) located in the
+upper-right corner of the Image Size dialog box.</li>
+<li>Ensure that <strong>Scale Styles</strong> is checked.</li>
+<li>Input your new document dimensions or resolution and click
+<strong>OK</strong>.</li>
+</ol>
+<p>Once checked, the software recalculates the pixel values of every
+effect (e.g., reducing a 10px stroke to 5px if the document is reduced
+by 50%), preserving the relative balance of your design.</p>
+<h3
+id="2-convert-layers-to-smart-objects-best-for-non-destructive-workflows">2.
+Convert Layers to Smart Objects (Best for Non-Destructive
+Workflows)</h3>
+<p>Converting layers with applied styles into Smart Objects is
+considered the best overall practice because it permanently protects
+your layer effects from rasterization or distortion during arbitrary
+transformations.</p>
+<ol type="1">
+<li>Select the layer or group containing the effects.</li>
+<li>Right-click the layer in the Layers panel and choose <strong>Convert
+to Smart Object</strong>.</li>
+<li>Resize the document or scale the layer individually using the Free
+Transform tool (<code>Ctrl + T</code> / <code>Cmd + T</code>).</li>
+</ol>
+<p>Because the layer style is nested inside the Smart Object container,
+the rendering engine scales the rendered output proportionally without
+altering the core parameters inside the original layer. You can always
+double-click the Smart Object thumbnail to edit the underlying styles at
+their original scale.</p>
+<h3 id="3-manually-scale-layer-effects-post-resize">3. Manually Scale
+Layer Effects Post-Resize</h3>
+<p>If a document has already been resized without the "Scale Styles"
+option enabled, you can retroactively adjust the effects using a
+dedicated percentage command.</p>
+<ol type="1">
+<li>Select the affected layer in the Layers panel.</li>
+<li>Go to <strong>Layer &gt; Layer Style &gt; Scale Effects...</strong>
+in the top menu.</li>
+<li>Enter the percentage corresponding to your document's resizing
+factor (for example, enter <strong>50%</strong> if the document was
+reduced by half).</li>
+<li>Check <strong>Preview</strong> to verify the adjustment, then click
+<strong>OK</strong>.</li>
+</ol>
+<p>For multi-layered files, you can link the layers or place them into a
+group and apply the effect scaling collectively to maintain global
+consistency across all visual assets.</p></article>
+        <div id="comments-container"></div>
+        <script>
+            const utterancesScript = document.createElement('script');
+            utterancesScript.setAttribute('src', 'https://utteranc.es/client.js');
+            utterancesScript.setAttribute('repo', 'salivity/image-editing'); 
+            utterancesScript.setAttribute('issue-term', 'pathname'); 
+            const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            utterancesScript.setAttribute('theme', currentTheme === 'dark' ? 'github-dark' : 'github-light'); 
+            utterancesScript.setAttribute('crossorigin', 'anonymous');
+            utterancesScript.async = true;
+            document.getElementById('comments-container').appendChild(utterancesScript);
+        </script>
+    
+        </div>
+    </div>
+    
+    </main>
+    <footer>
+        <nav>
+            <ul class="social-links">
+            </ul>
+        </nav>
+        <nav>
+            <ul class="footer-links">
+                <li><a href="https://smvc.dev/contact">Contact</a></li>
+                <li><a href="/image-editing/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/image-editing/terms-and-conditions">Terms and Conditions</a></li>
+            </ul>
+        </nav>
+        <div class="copyright">
+            Copyright &copy; <span id="current-year"></span>
+        </div>
+    </footer>
+</body>
+</html>

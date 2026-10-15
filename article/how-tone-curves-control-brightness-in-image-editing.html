@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Tone Curves Control Brightness in Image Editing - image-editing</title>
+    <meta name="description" content="Tone curves provide precise control over brightness by allowing editors to target specific luminance ranges rather than applying broad, uniform adjustments across an entire image. Unlike basic exposure or brightness sliders that push the entire tonal spec">
+    <link rel="canonical" href="https://salivity.github.io/image-editing/article/how-tone-curves-control-brightness-in-image-editing">
+    <link rel="search" type="application/opensearchdescription+xml" title="image-editing" href="/image-editing/opensearch.xml">
+    <link rel="icon" href="/image-editing/favicon.ico">
+    <link rel="stylesheet" href="/image-editing/css/style.css">
+    <link media="print" rel="stylesheet" href="/image-editing/css/print.css">
+    <script src="/image-editing/js/fuse.min.js"></script>
+    <script src="/image-editing/js/script.js"></script>
+    <script id="MathJax-script" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/4.1.3/tex-chtml.min.js" defer></script>
+    <script src="/monetize/monetize.js"></script>
+    <script src="/social/social.js"></script>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="How Tone Curves Control Brightness in Image Editing - image-editing" />
+    <meta property="og:url" content="https://salivity.github.io/image-editing/article/how-tone-curves-control-brightness-in-image-editing" />
+    <meta property="og:image" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:secure_url" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:width" content="1120" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:description" content="Tone curves provide precise control over brightness by allowing editors to target specific luminance ranges rather than applying broad, uniform adjustments across an entire image. Unlike basic exposure or brightness sliders that push the entire tonal spec" />
+    <link rel="manifest" href="/image-editing/pwa/manifest.json" />
+</head>
+<body>
+    <header>
+        <a href="/image-editing/" aria-label="Go To Home Page" title="Go To Home Page" id="logo">
+            <span>salivity.github.io/</span><span>image-editing</span>
+        </a>
+        <nav>
+            <ul class="header-links">
+                <li><a href="/image-editing/search" title="Search" aria-label="Go To Search Page"><svg class="svg-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"></path></svg></a></li>
+                <li><a id="theme-toggle" title="Theme" href="javascript:void(0);" aria-label="Toggle Website Theme"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+    <div class="article-layout">
+        <aside id="profile-sidebar" class="profile-column" aria-label="Author Profile"></aside>
+        <div class="article-main-column">
+            <article><h1 id="how-tone-curves-control-brightness-in-image-editing">How Tone
+Curves Control Brightness in Image Editing</h1>
+<p>Tone curves provide precise control over brightness by allowing
+editors to target specific luminance ranges rather than applying broad,
+uniform adjustments across an entire image. Unlike basic exposure or
+brightness sliders that push the entire tonal spectrum in one direction,
+a tone curve maps input tones to output tones on an interactive graph.
+This article breaks down how tone curves work, why they offer superior
+control over shadows, midtones, and highlights, and how to use anchor
+points to isolate adjustments without degrading image quality.</p>
+<h3 id="global-brightness-sliders-vs-the-tone-curve">Global Brightness
+Sliders vs. The Tone Curve</h3>
+<p>Standard brightness and exposure sliders adjust the luminance of an
+entire image globally. While modern algorithms attempt to protect
+extreme values, increasing exposure globally often washes out highlights
+or causes shadows to become unnaturally flat.</p>
+<p>The tone curve eliminates this limitation by plotting every tone on a
+two-dimensional grid:</p>
+<ul>
+<li><strong>Horizontal Axis (Input):</strong> Represents the original
+brightness values of the image, running from pure black (0) on the
+bottom left to pure white (255) on the bottom right.</li>
+<li><strong>Vertical Axis (Output):</strong> Represents the resulting
+brightness values after adjustment, running from pure black at the
+bottom to pure white at the top.</li>
+<li><strong>The Default Diagonal Line:</strong> Represents a 1:1 ratio
+where input equals output, meaning no changes have been applied.</li>
+</ul>
+<p>By shifting parts of the line upward, you increase brightness; by
+shifting them downward, you decrease brightness.</p>
+<h3 id="pinpointing-specific-tonal-regions">Pinpointing Specific Tonal
+Regions</h3>
+<p>The fundamental advantage of the tone curve is the ability to isolate
+specific sections of the tonal spectrum:</p>
+<ul>
+<li><strong>Shadows and Blacks:</strong> The lower-left quadrant of the
+curve controls deep shadows. You can lift this section to recover detail
+in dark areas without altering the rest of the image.</li>
+<li><strong>Midtones:</strong> The center of the curve governs skin
+tones, primary subject details, and the overall perceived exposure.
+Raising or lowering the center point changes the primary brightness
+without clipping highlights or crushing blacks.</li>
+<li><strong>Highlights and Whites:</strong> The upper-right quadrant
+controls bright skies, direct light sources, and reflections. You can
+pull this section down to recover highlight detail without dimming the
+subject in the midtones.</li>
+</ul>
+<h3 id="the-power-of-anchor-points">The Power of Anchor Points</h3>
+<p>Tone curves allow you to place multiple anchor points along the line.
+When you place a point, it locks that specific brightness value in
+place.</p>
+<p>For example, if an image has a dark subject against a correctly
+exposed bright background:</p>
+<ol type="1">
+<li>Place an anchor point in the highlight region to lock the background
+exposure.</li>
+<li>Place an anchor point in the deep shadow region to keep pure blacks
+rich.</li>
+<li>Click and drag the center of the curve (midtones) upward.</li>
+</ol>
+<p>The result is a brightened subject while the background highlights
+and deep shadows remain completely unchanged. This level of selective
+control cannot be achieved with basic linear sliders.</p>
+<h3 id="simultaneous-contrast-and-brightness-sculpting">Simultaneous
+Contrast and Brightness Sculpting</h3>
+<p>Brightness and contrast are intrinsically linked. Because a tone
+curve controls brightness across different zones simultaneously, it can
+alter contrast shapes in real time.</p>
+<p>Creating a subtle "S-curve"—raising the highlights while lowering the
+shadows—simultaneously increases contrast while retaining exact control
+over where the transition between bright and dark occurs. Conversely, a
+reverse S-curve reduces harsh contrast by brightening deep shadows and
+dimming aggressive highlights.</p>
+<h3 id="preserving-detail-and-dynamic-range">Preserving Detail and
+Dynamic Range</h3>
+<p>Over-adjusting standard brightness controls frequently leads to
+clipping, where pixel values hit absolute white (255) or absolute black
+(0), permanently erasing texture and detail. With a tone curve, you can
+flatten or round off the extreme ends of the line, creating smooth
+rolloffs. This gentle transition preserves texture in bright clouds,
+reflective surfaces, and deep folds of dark fabric, maximizing the
+visible dynamic range of the image.</p></article>
+        <div id="comments-container"></div>
+        <script>
+            const utterancesScript = document.createElement('script');
+            utterancesScript.setAttribute('src', 'https://utteranc.es/client.js');
+            utterancesScript.setAttribute('repo', 'salivity/image-editing'); 
+            utterancesScript.setAttribute('issue-term', 'pathname'); 
+            const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            utterancesScript.setAttribute('theme', currentTheme === 'dark' ? 'github-dark' : 'github-light'); 
+            utterancesScript.setAttribute('crossorigin', 'anonymous');
+            utterancesScript.async = true;
+            document.getElementById('comments-container').appendChild(utterancesScript);
+        </script>
+    
+        </div>
+    </div>
+    
+    </main>
+    <footer>
+        <nav>
+            <ul class="social-links">
+            </ul>
+        </nav>
+        <nav>
+            <ul class="footer-links">
+                <li><a href="https://smvc.dev/contact">Contact</a></li>
+                <li><a href="/image-editing/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/image-editing/terms-and-conditions">Terms and Conditions</a></li>
+            </ul>
+        </nav>
+        <div class="copyright">
+            Copyright &copy; <span id="current-year"></span>
+        </div>
+    </footer>
+</body>
+</html>

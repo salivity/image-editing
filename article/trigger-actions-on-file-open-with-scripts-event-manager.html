@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trigger Actions on File Open with Scripts Event Manager - image-editing</title>
+    <meta name="description" content="Automating repetitive tasks in image editing software like Adobe Photoshop saves significant production time. The Scripts Event Manager allows you to bind specific scripts or recorded Actions to core application events, such as opening a document. This gu">
+    <link rel="canonical" href="https://salivity.github.io/image-editing/article/trigger-actions-on-file-open-with-scripts-event-manager">
+    <link rel="search" type="application/opensearchdescription+xml" title="image-editing" href="/image-editing/opensearch.xml">
+    <link rel="icon" href="/image-editing/favicon.ico">
+    <link rel="stylesheet" href="/image-editing/css/style.css">
+    <link media="print" rel="stylesheet" href="/image-editing/css/print.css">
+    <script src="/image-editing/js/fuse.min.js"></script>
+    <script src="/image-editing/js/script.js"></script>
+    <script id="MathJax-script" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/4.1.3/tex-chtml.min.js" defer></script>
+    <script src="/monetize/monetize.js"></script>
+    <script src="/social/social.js"></script>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Trigger Actions on File Open with Scripts Event Manager - image-editing" />
+    <meta property="og:url" content="https://salivity.github.io/image-editing/article/trigger-actions-on-file-open-with-scripts-event-manager" />
+    <meta property="og:image" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:secure_url" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:width" content="1120" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:description" content="Automating repetitive tasks in image editing software like Adobe Photoshop saves significant production time. The Scripts Event Manager allows you to bind specific scripts or recorded Actions to core application events, such as opening a document. This gu" />
+    <link rel="manifest" href="/image-editing/pwa/manifest.json" />
+</head>
+<body>
+    <header>
+        <a href="/image-editing/" aria-label="Go To Home Page" title="Go To Home Page" id="logo">
+            <span>salivity.github.io/</span><span>image-editing</span>
+        </a>
+        <nav>
+            <ul class="header-links">
+                <li><a href="/image-editing/search" title="Search" aria-label="Go To Search Page"><svg class="svg-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"></path></svg></a></li>
+                <li><a id="theme-toggle" title="Theme" href="javascript:void(0);" aria-label="Toggle Website Theme"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+    <div class="article-layout">
+        <aside id="profile-sidebar" class="profile-column" aria-label="Author Profile"></aside>
+        <div class="article-main-column">
+            <article><h1 id="trigger-actions-on-file-open-with-scripts-event-manager">Trigger
+Actions on File Open with Scripts Event Manager</h1>
+<p>Automating repetitive tasks in image editing software like Adobe
+Photoshop saves significant production time. The Scripts Event Manager
+allows you to bind specific scripts or recorded Actions to core
+application events, such as opening a document. This guide explains how
+to configure the Scripts Event Manager to automatically trigger an
+Action the moment an image file is opened.</p>
+<h3 id="1-prepare-your-action">1. Prepare Your Action</h3>
+<p>Before configuring the event trigger, ensure the Action you want to
+execute already exists and works without errors.</p>
+<ol type="1">
+<li>Open the <strong>Actions</strong> panel (<strong>Window &gt;
+Actions</strong>).</li>
+<li>Record or locate the Action you want to automate (for example,
+applying a specific color profile, creating standard layers, or
+resizing).</li>
+<li>Test the Action manually on an open document to confirm it executes
+without prompting for unnecessary user input.</li>
+</ol>
+<h3 id="2-open-the-script-events-manager">2. Open the Script Events
+Manager</h3>
+<ol type="1">
+<li>Navigate to the top menu and select <strong>File &gt; Scripts &gt;
+Script Events Manager...</strong></li>
+<li>In the dialog box that appears, check the box labeled <strong>Enable
+Events to Run Scripts/Actions</strong>. This activates background event
+monitoring within the application.</li>
+</ol>
+<h3 id="3-set-the-event-trigger">3. Set the Event Trigger</h3>
+<ol type="1">
+<li>Locate the <strong>Photoshop Event</strong> dropdown menu.</li>
+<li>Select <strong>Open Document</strong> from the list. This tells the
+application to listen specifically for the file-open command.</li>
+</ol>
+<h3 id="4-assign-the-action">4. Assign the Action</h3>
+<ol type="1">
+<li>Below the event selection, find the options for what to execute.
+Select the <strong>Action</strong> radio button (instead of
+Script).</li>
+<li>Use the first dropdown menu to select the <strong>Action
+Set</strong> that contains your target Action.</li>
+<li>Use the second dropdown menu to select the specific
+<strong>Action</strong> you want to run automatically.</li>
+</ol>
+<h3 id="5-register-the-event">5. Register the Event</h3>
+<ol type="1">
+<li>Click the <strong>Add</strong> button located on the right side of
+the dialog box.</li>
+<li>Verify that your new event-action pair appears in the active list at
+the top of the window (it will display as
+<code>Open Document -&gt; [Your Action]</code>).</li>
+<li>Click <strong>Done</strong> to save the changes and close the dialog
+box.</li>
+</ol>
+<h3 id="6-test-and-manage-the-automation">6. Test and Manage the
+Automation</h3>
+<p>To test the setup, open any image file via <strong>File &gt;
+Open</strong> or by dragging it into the workspace. The assigned Action
+will execute immediately once the document loads.</p>
+<p>To disable or remove this automation later:</p>
+<ol type="1">
+<li>Return to <strong>File &gt; Scripts &gt; Script Events
+Manager...</strong></li>
+<li>Select the event from the list at the top.</li>
+<li>Click <strong>Remove</strong> to delete the pairing, or uncheck
+<strong>Enable Events to Run Scripts/Actions</strong> to disable all
+automated triggers globally.</li>
+<li>Click <strong>Done</strong>.</li>
+</ol></article>
+        <div id="comments-container"></div>
+        <script>
+            const utterancesScript = document.createElement('script');
+            utterancesScript.setAttribute('src', 'https://utteranc.es/client.js');
+            utterancesScript.setAttribute('repo', 'salivity/image-editing'); 
+            utterancesScript.setAttribute('issue-term', 'pathname'); 
+            const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            utterancesScript.setAttribute('theme', currentTheme === 'dark' ? 'github-dark' : 'github-light'); 
+            utterancesScript.setAttribute('crossorigin', 'anonymous');
+            utterancesScript.async = true;
+            document.getElementById('comments-container').appendChild(utterancesScript);
+        </script>
+    
+        </div>
+    </div>
+    
+    </main>
+    <footer>
+        <nav>
+            <ul class="social-links">
+            </ul>
+        </nav>
+        <nav>
+            <ul class="footer-links">
+                <li><a href="https://smvc.dev/contact">Contact</a></li>
+                <li><a href="/image-editing/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/image-editing/terms-and-conditions">Terms and Conditions</a></li>
+            </ul>
+        </nav>
+        <div class="copyright">
+            Copyright &copy; <span id="current-year"></span>
+        </div>
+    </footer>
+</body>
+</html>

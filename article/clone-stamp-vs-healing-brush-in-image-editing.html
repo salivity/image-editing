@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clone Stamp vs Healing Brush in Image Editing - image-editing</title>
+    <meta name="description" content="While both the Clone Stamp tool and the Healing Brush are essential image retouching tools designed to replace unwanted elements using source pixels from another area, they operate on fundamentally different algorithms. The Clone Stamp tool performs a dir">
+    <link rel="canonical" href="https://salivity.github.io/image-editing/article/clone-stamp-vs-healing-brush-in-image-editing">
+    <link rel="search" type="application/opensearchdescription+xml" title="image-editing" href="/image-editing/opensearch.xml">
+    <link rel="icon" href="/image-editing/favicon.ico">
+    <link rel="stylesheet" href="/image-editing/css/style.css">
+    <link media="print" rel="stylesheet" href="/image-editing/css/print.css">
+    <script src="/image-editing/js/fuse.min.js"></script>
+    <script src="/image-editing/js/script.js"></script>
+    <script id="MathJax-script" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/4.1.3/tex-chtml.min.js" defer></script>
+    <script src="/monetize/monetize.js"></script>
+    <script src="/social/social.js"></script>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Clone Stamp vs Healing Brush in Image Editing - image-editing" />
+    <meta property="og:url" content="https://salivity.github.io/image-editing/article/clone-stamp-vs-healing-brush-in-image-editing" />
+    <meta property="og:image" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:secure_url" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:width" content="1120" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:description" content="While both the Clone Stamp tool and the Healing Brush are essential image retouching tools designed to replace unwanted elements using source pixels from another area, they operate on fundamentally different algorithms. The Clone Stamp tool performs a dir" />
+    <link rel="manifest" href="/image-editing/pwa/manifest.json" />
+</head>
+<body>
+    <header>
+        <a href="/image-editing/" aria-label="Go To Home Page" title="Go To Home Page" id="logo">
+            <span>salivity.github.io/</span><span>image-editing</span>
+        </a>
+        <nav>
+            <ul class="header-links">
+                <li><a href="/image-editing/search" title="Search" aria-label="Go To Search Page"><svg class="svg-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"></path></svg></a></li>
+                <li><a id="theme-toggle" title="Theme" href="javascript:void(0);" aria-label="Toggle Website Theme"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+    <div class="article-layout">
+        <aside id="profile-sidebar" class="profile-column" aria-label="Author Profile"></aside>
+        <div class="article-main-column">
+            <article><h1 id="clone-stamp-vs-healing-brush-in-image-editing">Clone Stamp vs
+Healing Brush in Image Editing</h1>
+<p>While both the Clone Stamp tool and the Healing Brush are essential
+image retouching tools designed to replace unwanted elements using
+source pixels from another area, they operate on fundamentally different
+algorithms. The Clone Stamp tool performs a direct, literal duplicate of
+the sampled pixels, copying color, luminosity, and texture identically
+without modification. In contrast, the Healing Brush samples the texture
+from the source point but dynamically calculates and blends that texture
+with the color, shading, and luminosity of the surrounding destination
+area.</p>
+<h3 id="how-the-clone-stamp-tool-works">How the Clone Stamp Tool
+Works</h3>
+<p>The Clone Stamp tool acts as a precision copy-and-paste mechanism.
+When you sample an area (typically by holding <code>Alt</code> or
+<code>Option</code> and clicking), the tool records every attribute of
+those exact pixels. As you paint over the target area, the Clone Stamp
+overwrites the underlying data completely with the exact sampled
+pixels.</p>
+<p>Because it does not attempt to interpret or harmonize with the
+surrounding environment, it provides complete control. This makes it
+ideal for:</p>
+<ul>
+<li>Reconstructing sharp edges, straight lines, and geometric
+patterns.</li>
+<li>Duplicating specific objects or patterns without tone shifting.</li>
+<li>Working close to high-contrast borders where automated blending
+algorithms would produce smudging.</li>
+</ul>
+<h3 id="how-the-healing-brush-tool-works">How the Healing Brush Tool
+Works</h3>
+<p>The Healing Brush functions as an intelligent blending tool. When you
+select a source point, the tool extracts the surface texture—such as
+fine lines, pores, or grain—while discarding the source's color and
+brightness values. When applied to the target area, it injects that
+sampled texture into the destination, seamlessly adopting the target
+area's underlying hue, saturation, and exposure.</p>
+<p>Because of this mathematical blending process, the Healing Brush is
+ideal for:</p>
+<ul>
+<li>Skin retouching (removing blemishes, wrinkles, and spots while
+keeping skin tone natural).</li>
+<li>Cleaning up dust, scratches, and minor flaws on continuous-tone
+backgrounds like skies or smooth walls.</li>
+<li>Quickly repairing irregular, organic surfaces where exact pixel
+matching is unnecessary.</li>
+</ul>
+<h3 id="key-differences-in-performance-and-behavior">Key Differences in
+Performance and Behavior</h3>
+<ol type="1">
+<li><strong>Pixel Blending vs. Direct Duplication:</strong> The Clone
+Stamp replaces destination pixels entirely. The Healing Brush merges
+source texture with destination lighting and color.</li>
+<li><strong>Edge Handling:</strong> The Healing Brush often creates dark
+or discolored "halos" or smudges when used near high-contrast edges
+because it tries to sample and blend the drastically different adjacent
+colors. The Clone Stamp retains clean, sharp boundaries along edges
+without bleeding.</li>
+<li><strong>User Control:</strong> The Clone Stamp is entirely
+predictable because what you sample is precisely what is rendered. The
+Healing Brush requires trust in the software's blending algorithm, which
+may occasionally generate unexpected color shifts if the sample and
+target lighting vary significantly.</li>
+</ol>
+<p>Using these tools in tandem yields the best editing results: use the
+Clone Stamp to define borders, edges, and high-contrast lines, then
+switch to the Healing Brush to blend textures seamlessly across uniform
+surfaces.</p></article>
+        <div id="comments-container"></div>
+        <script>
+            const utterancesScript = document.createElement('script');
+            utterancesScript.setAttribute('src', 'https://utteranc.es/client.js');
+            utterancesScript.setAttribute('repo', 'salivity/image-editing'); 
+            utterancesScript.setAttribute('issue-term', 'pathname'); 
+            const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            utterancesScript.setAttribute('theme', currentTheme === 'dark' ? 'github-dark' : 'github-light'); 
+            utterancesScript.setAttribute('crossorigin', 'anonymous');
+            utterancesScript.async = true;
+            document.getElementById('comments-container').appendChild(utterancesScript);
+        </script>
+    
+        </div>
+    </div>
+    
+    </main>
+    <footer>
+        <nav>
+            <ul class="social-links">
+            </ul>
+        </nav>
+        <nav>
+            <ul class="footer-links">
+                <li><a href="https://smvc.dev/contact">Contact</a></li>
+                <li><a href="/image-editing/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/image-editing/terms-and-conditions">Terms and Conditions</a></li>
+            </ul>
+        </nav>
+        <div class="copyright">
+            Copyright &copy; <span id="current-year"></span>
+        </div>
+    </footer>
+</body>
+</html>

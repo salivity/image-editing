@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Median Filter Preserves Edges in Image Editing - image-editing</title>
+    <meta name="description" content="The median filter is a nonlinear digital filtering technique widely used in image editing to reduce noise and simplify visual detail without blurring crucial boundaries. Unlike linear smoothing filters—such as Gaussian or box blur—which calculate the aver">
+    <link rel="canonical" href="https://salivity.github.io/image-editing/article/how-median-filter-preserves-edges-in-image-editing">
+    <link rel="search" type="application/opensearchdescription+xml" title="image-editing" href="/image-editing/opensearch.xml">
+    <link rel="icon" href="/image-editing/favicon.ico">
+    <link rel="stylesheet" href="/image-editing/css/style.css">
+    <link media="print" rel="stylesheet" href="/image-editing/css/print.css">
+    <script src="/image-editing/js/fuse.min.js"></script>
+    <script src="/image-editing/js/script.js"></script>
+    <script id="MathJax-script" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/4.1.3/tex-chtml.min.js" defer></script>
+    <script src="/monetize/monetize.js"></script>
+    <script src="/social/social.js"></script>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="How Median Filter Preserves Edges in Image Editing - image-editing" />
+    <meta property="og:url" content="https://salivity.github.io/image-editing/article/how-median-filter-preserves-edges-in-image-editing" />
+    <meta property="og:image" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:secure_url" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:width" content="1120" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:description" content="The median filter is a nonlinear digital filtering technique widely used in image editing to reduce noise and simplify visual detail without blurring crucial boundaries. Unlike linear smoothing filters—such as Gaussian or box blur—which calculate the aver" />
+    <link rel="manifest" href="/image-editing/pwa/manifest.json" />
+</head>
+<body>
+    <header>
+        <a href="/image-editing/" aria-label="Go To Home Page" title="Go To Home Page" id="logo">
+            <span>salivity.github.io/</span><span>image-editing</span>
+        </a>
+        <nav>
+            <ul class="header-links">
+                <li><a href="/image-editing/search" title="Search" aria-label="Go To Search Page"><svg class="svg-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"></path></svg></a></li>
+                <li><a id="theme-toggle" title="Theme" href="javascript:void(0);" aria-label="Toggle Website Theme"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+    <div class="article-layout">
+        <aside id="profile-sidebar" class="profile-column" aria-label="Author Profile"></aside>
+        <div class="article-main-column">
+            <article><h1 id="how-median-filter-preserves-edges-in-image-editing">How Median
+Filter Preserves Edges in Image Editing</h1>
+<p>The median filter is a nonlinear digital filtering technique widely
+used in image editing to reduce noise and simplify visual detail without
+blurring crucial boundaries. Unlike linear smoothing filters—such as
+Gaussian or box blur—which calculate the average of neighboring pixels,
+the median filter replaces each pixel with the statistical median of its
+local neighborhood. This article explains how the median filter
+functions, why it effectively cleans up visual clutter, and the
+mathematical mechanics that allow it to preserve sharp, hard edges.</p>
+<h3 id="how-the-median-filter-works">How the Median Filter Works</h3>
+<p>The median filter operates through a sliding window, known as a
+kernel, which moves across an image pixel by pixel:</p>
+<ol type="1">
+<li>A neighborhood of pixels is defined around a target pixel (for
+example, a 3x3 or 5x5 grid).</li>
+<li>The numerical intensity values of all pixels inside this window are
+sorted in numerical order.</li>
+<li>The middle value (the median) from this sorted list is chosen.</li>
+<li>The target pixel's value is replaced with this median value.</li>
+</ol>
+<h3 id="how-it-simplifies-images">How It Simplifies Images</h3>
+<p>Image simplification involves removing unnecessary, high-frequency
+details such as visual noise, fine grain, and minor texture variations,
+resulting in flatter, more uniform surfaces.</p>
+<p>Because the median filter sorts pixel values, statistical
+outliers—such as extreme bright or dark spots caused by
+"salt-and-pepper" noise—are pushed to the extreme ends of the sorted
+sequence. As a result, anomalous pixels are virtually never selected as
+the median. Small-scale variations and isolated irregularities are
+overwritten by the prevailing neighborhood values, creating clean,
+simplified patches of color or tone.</p>
+<h3 id="why-hard-edges-are-retained">Why Hard Edges Are Retained</h3>
+<p>The primary drawback of standard averaging filters is edge
+degradation. When a linear filter spans an edge separating a dark area
+from a light area, it computes an average, creating intermediate shades
+of gray. This mathematical blending is what creates a blurry
+boundary.</p>
+<p>The median filter avoids this blur through several distinct
+characteristics:</p>
+<ul>
+<li><strong>No Creation of New Values:</strong> The median filter never
+calculates an average or creates synthetic color values. It only selects
+an existing pixel value from the neighborhood. Consequently, it cannot
+introduce intermediate gradient shades along an edge.</li>
+<li><strong>Majority Dominance Across Boundaries:</strong> An edge
+represents a step change in intensity. When the filter window crosses an
+edge, the pixels inside the window belong partly to the dark side and
+partly to the bright side. As long as more than half of the pixels in
+the window belong to one side of the edge, the median value will be
+drawn strictly from that side.</li>
+<li><strong>Step-Function Preservation:</strong> Because the median
+switches abruptly from the dark value to the bright value as the window
+moves across the boundary, the transition remains steep. The sharp drop
+or rise in pixel intensity is maintained rather than softened into a
+ramp.</li>
+</ul>
+<h3 id="applications-in-image-editing">Applications in Image
+Editing</h3>
+<p>By combining edge retention with surface smoothing, the median filter
+is a foundational tool for specific editing and processing tasks:</p>
+<ul>
+<li><strong>Impulse Noise Removal:</strong> Eliminating dust, scratches,
+and transmission artifacts without losing image crispness.</li>
+<li><strong>Pre-Processing for Segmentation:</strong> Flattening
+textures within objects so edge-detection algorithms can identify
+primary object outlines without being distracted by internal
+patterns.</li>
+<li><strong>Artistic Stylization:</strong> Creating painterly,
+cartoon-like, or posterized effects by stripping away photographic
+micro-textures while keeping recognizable structural contours
+intact.</li>
+</ul></article>
+        <div id="comments-container"></div>
+        <script>
+            const utterancesScript = document.createElement('script');
+            utterancesScript.setAttribute('src', 'https://utteranc.es/client.js');
+            utterancesScript.setAttribute('repo', 'salivity/image-editing'); 
+            utterancesScript.setAttribute('issue-term', 'pathname'); 
+            const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            utterancesScript.setAttribute('theme', currentTheme === 'dark' ? 'github-dark' : 'github-light'); 
+            utterancesScript.setAttribute('crossorigin', 'anonymous');
+            utterancesScript.async = true;
+            document.getElementById('comments-container').appendChild(utterancesScript);
+        </script>
+    
+        </div>
+    </div>
+    
+    </main>
+    <footer>
+        <nav>
+            <ul class="social-links">
+            </ul>
+        </nav>
+        <nav>
+            <ul class="footer-links">
+                <li><a href="https://smvc.dev/contact">Contact</a></li>
+                <li><a href="/image-editing/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/image-editing/terms-and-conditions">Terms and Conditions</a></li>
+            </ul>
+        </nav>
+        <div class="copyright">
+            Copyright &copy; <span id="current-year"></span>
+        </div>
+    </footer>
+</body>
+</html>

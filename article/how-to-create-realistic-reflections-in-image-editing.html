@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Create Realistic Reflections in Image Editing - image-editing</title>
+    <meta name="description" content="Creating a convincing reflection requires more than simply duplicating an object and flipping it upside down. This guide outlines the best workflow for creating photorealistic reflections on surfaces like water, glass, and polished floors, detailing essen">
+    <link rel="canonical" href="https://salivity.github.io/image-editing/article/how-to-create-realistic-reflections-in-image-editing">
+    <link rel="search" type="application/opensearchdescription+xml" title="image-editing" href="/image-editing/opensearch.xml">
+    <link rel="icon" href="/image-editing/favicon.ico">
+    <link rel="stylesheet" href="/image-editing/css/style.css">
+    <link media="print" rel="stylesheet" href="/image-editing/css/print.css">
+    <script src="/image-editing/js/fuse.min.js"></script>
+    <script src="/image-editing/js/script.js"></script>
+    <script id="MathJax-script" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/4.1.3/tex-chtml.min.js" defer></script>
+    <script src="/monetize/monetize.js"></script>
+    <script src="/social/social.js"></script>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="How to Create Realistic Reflections in Image Editing - image-editing" />
+    <meta property="og:url" content="https://salivity.github.io/image-editing/article/how-to-create-realistic-reflections-in-image-editing" />
+    <meta property="og:image" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:secure_url" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:width" content="1120" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:description" content="Creating a convincing reflection requires more than simply duplicating an object and flipping it upside down. This guide outlines the best workflow for creating photorealistic reflections on surfaces like water, glass, and polished floors, detailing essen" />
+    <link rel="manifest" href="/image-editing/pwa/manifest.json" />
+</head>
+<body>
+    <header>
+        <a href="/image-editing/" aria-label="Go To Home Page" title="Go To Home Page" id="logo">
+            <span>salivity.github.io/</span><span>image-editing</span>
+        </a>
+        <nav>
+            <ul class="header-links">
+                <li><a href="/image-editing/search" title="Search" aria-label="Go To Search Page"><svg class="svg-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"></path></svg></a></li>
+                <li><a id="theme-toggle" title="Theme" href="javascript:void(0);" aria-label="Toggle Website Theme"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+    <div class="article-layout">
+        <aside id="profile-sidebar" class="profile-column" aria-label="Author Profile"></aside>
+        <div class="article-main-column">
+            <article><h1 id="how-to-create-realistic-reflections-in-image-editing">How to
+Create Realistic Reflections in Image Editing</h1>
+<p>Creating a convincing reflection requires more than simply
+duplicating an object and flipping it upside down. This guide outlines
+the best workflow for creating photorealistic reflections on surfaces
+like water, glass, and polished floors, detailing essential techniques
+such as perspective correction, surface displacement, gradient falloff,
+and color blending to achieve seamless results.</p>
+<h3 id="1-duplicate-and-align-the-subject">1. Duplicate and Align the
+Subject</h3>
+<p>Isolate your subject from its background using a clean cutout mask.
+Duplicate this layer and flip it vertically to establish the base
+reflection. Position the duplicate so that the contact points—such as
+the soles of shoes, tires, or the base of a building—align naturally
+with the original subject. If the ground surface is angled, position the
+reflection to match the contact axis rather than a strict 90-degree
+vertical drop.</p>
+<h3 id="2-match-the-perspective">2. Match the Perspective</h3>
+<p>Real reflections are dictated by the camera's angle and the ground
+plane's vanishing points. Use transform tools (such as Skew, Distort, or
+Perspective) to adapt the flipped layer to the plane of the reflective
+surface. For complex three-dimensional objects, you may need to slice
+the reflection into multiple sections—such as legs, torso, or wheels—and
+distort each part independently so the geometry correctly follows the
+floor or water line.</p>
+<h3 id="3-apply-distance-based-blur">3. Apply Distance-Based Blur</h3>
+<p>Reflections become softer and less defined as the distance between
+the subject and the reflective surface increases. Apply a blur filter
+(such as a Lens Blur or Tilt-Shift Blur) to the reflection layer,
+configuring it so the area closest to the contact point remains sharp
+while the parts extending farther away become progressively
+diffused.</p>
+<h3 id="4-create-natural-falloff-with-gradient-masks">4. Create Natural
+Falloff with Gradient Masks</h3>
+<p>Light loses intensity across non-mirror surfaces due to absorption
+and scattering. Add a layer mask to your reflection and use a linear
+gradient running from white (fully opaque at the contact point) to black
+(fully transparent at the far edge). This simulates natural light
+falloff and the Fresnel effect, making the reflection appear physically
+integrated rather than superimposed.</p>
+<h3 id="5-incorporate-surface-texture-using-displacement">5. Incorporate
+Surface Texture Using Displacement</h3>
+<p>Water, wet pavement, and wood floors have physical textures that warp
+reflected light. To replicate this:</p>
+<ul>
+<li>Create a high-contrast black-and-white copy of the background
+surface texture.</li>
+<li>Save it as a separate file to use as a displacement map.</li>
+<li>Apply a displacement filter to the reflection layer, referencing the
+saved texture map. This bends the reflection around ripples, bumps, and
+grain patterns instead of leaving it unnaturally flat.</li>
+</ul>
+<h3 id="6-adjust-blending-modes-and-surface-color">6. Adjust Blending
+Modes and Surface Color</h3>
+<p>A reflection should interact with the tone and color of the
+underlying surface. Change the reflection layer's blending mode to
+<strong>Screen</strong> (for dark surfaces), <strong>Multiply</strong>
+(for light surfaces), or <strong>Soft Light</strong> /
+<strong>Overlay</strong> (for semi-reflective textures). Finally, reduce
+the layer's overall opacity (typically between 30% and 70%) and apply a
+subtle color overlay or tint matching the surface beneath it.</p></article>
+        <div id="comments-container"></div>
+        <script>
+            const utterancesScript = document.createElement('script');
+            utterancesScript.setAttribute('src', 'https://utteranc.es/client.js');
+            utterancesScript.setAttribute('repo', 'salivity/image-editing'); 
+            utterancesScript.setAttribute('issue-term', 'pathname'); 
+            const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            utterancesScript.setAttribute('theme', currentTheme === 'dark' ? 'github-dark' : 'github-light'); 
+            utterancesScript.setAttribute('crossorigin', 'anonymous');
+            utterancesScript.async = true;
+            document.getElementById('comments-container').appendChild(utterancesScript);
+        </script>
+    
+        </div>
+    </div>
+    
+    </main>
+    <footer>
+        <nav>
+            <ul class="social-links">
+            </ul>
+        </nav>
+        <nav>
+            <ul class="footer-links">
+                <li><a href="https://smvc.dev/contact">Contact</a></li>
+                <li><a href="/image-editing/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/image-editing/terms-and-conditions">Terms and Conditions</a></li>
+            </ul>
+        </nav>
+        <div class="copyright">
+            Copyright &copy; <span id="current-year"></span>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photoshop Contact Sheet II: Create Thumbnail Galleries - image-editing</title>
+    <meta name="description" content="Contact Sheet II is an automated tool in image editing software, most notably Adobe Photoshop, designed to quickly compile and arrange batches of images into a single, organized grid layout. This article explains what the Contact Sheet II automation is, t">
+    <link rel="canonical" href="https://salivity.github.io/image-editing/article/photoshop-contact-sheet-ii-create-thumbnail-galleries">
+    <link rel="search" type="application/opensearchdescription+xml" title="image-editing" href="/image-editing/opensearch.xml">
+    <link rel="icon" href="/image-editing/favicon.ico">
+    <link rel="stylesheet" href="/image-editing/css/style.css">
+    <link media="print" rel="stylesheet" href="/image-editing/css/print.css">
+    <script src="/image-editing/js/fuse.min.js"></script>
+    <script src="/image-editing/js/script.js"></script>
+    <script id="MathJax-script" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/4.1.3/tex-chtml.min.js" defer></script>
+    <script src="/monetize/monetize.js"></script>
+    <script src="/social/social.js"></script>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Photoshop Contact Sheet II: Create Thumbnail Galleries - image-editing" />
+    <meta property="og:url" content="https://salivity.github.io/image-editing/article/photoshop-contact-sheet-ii-create-thumbnail-galleries" />
+    <meta property="og:image" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:secure_url" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:width" content="1120" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:description" content="Contact Sheet II is an automated tool in image editing software, most notably Adobe Photoshop, designed to quickly compile and arrange batches of images into a single, organized grid layout. This article explains what the Contact Sheet II automation is, t" />
+    <link rel="manifest" href="/image-editing/pwa/manifest.json" />
+</head>
+<body>
+    <header>
+        <a href="/image-editing/" aria-label="Go To Home Page" title="Go To Home Page" id="logo">
+            <span>salivity.github.io/</span><span>image-editing</span>
+        </a>
+        <nav>
+            <ul class="header-links">
+                <li><a href="/image-editing/search" title="Search" aria-label="Go To Search Page"><svg class="svg-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"></path></svg></a></li>
+                <li><a id="theme-toggle" title="Theme" href="javascript:void(0);" aria-label="Toggle Website Theme"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+    <div class="article-layout">
+        <aside id="profile-sidebar" class="profile-column" aria-label="Author Profile"></aside>
+        <div class="article-main-column">
+            <article><h1 id="photoshop-contact-sheet-ii-create-thumbnail-galleries">Photoshop
+Contact Sheet II: Create Thumbnail Galleries</h1>
+<p>Contact Sheet II is an automated tool in image editing software, most
+notably Adobe Photoshop, designed to quickly compile and arrange batches
+of images into a single, organized grid layout. This article explains
+what the Contact Sheet II automation is, the mechanics of how it
+processes files to build thumbnail galleries, and how professionals use
+it to streamline client proofing and asset management.</p>
+<h3 id="what-is-contact-sheet-ii">What Is Contact Sheet II?</h3>
+<p>Contact Sheet II is a legacy automation script that replicates the
+traditional darkroom technique of creating a "contact print"—laying
+photographic negatives directly onto light-sensitive paper to preview an
+entire roll of film at once. In digital image editing, it serves as a
+batch-processing utility that automatically opens multiple image files,
+resizes them proportionally into uniform thumbnails, and arranges them
+in defined rows and columns across one or more master document
+pages.</p>
+<h3 id="how-contact-sheet-ii-builds-thumbnail-galleries">How Contact
+Sheet II Builds Thumbnail Galleries</h3>
+<p>The automation executes a sequence of automated actions based on user
+parameters, eliminating the need to manually crop, resize, and position
+individual photos. The process functions through several key stages:</p>
+<h4 id="1-source-file-ingestion">1. Source File Ingestion</h4>
+<p>Users specify a source destination, typically an entire folder,
+individual files, or currently selected assets in a media browser like
+Adobe Bridge. The script reads the directory and queues the files for
+processing, with the option to include or exclude subfolders.</p>
+<h4 id="2-canvas-and-document-configuration">2. Canvas and Document
+Configuration</h4>
+<p>Before generating the grid, the tool establishes the master page
+properties:</p>
+<ul>
+<li><strong>Page Dimensions and Resolution:</strong> Users define the
+width, height, and DPI/PPI based on whether the final sheet will be
+printed (e.g., 300 DPI on standard paper sizes) or shared digitally
+(e.g., 72 to 150 DPI for PDF export).</li>
+<li><strong>Color Mode:</strong> The output can be designated as RGB,
+CMYK, or Grayscale, with options to manage color profiles across mixed
+assets.</li>
+</ul>
+<h4 id="3-grid-geometry-and-placement">3. Grid Geometry and
+Placement</h4>
+<p>The automation calculates the layout using user-defined grid
+settings:</p>
+<ul>
+<li><strong>Rows and Columns:</strong> Specifying the number of vertical
+and horizontal cells determines how many thumbnails fit on a single
+page.</li>
+<li><strong>Auto-Spacing vs. Fixed Spacing:</strong> The script
+automatically calculates margins and cell gutters to ensure equal
+spacing, or allows custom pixel values.</li>
+<li><strong>Orientation Matching:</strong> An optional "Rotate for Best
+Fit" setting rotates vertical or horizontal images to maximize thumbnail
+size within the designated cell.</li>
+</ul>
+<h4 id="4-automated-scaling-and-captioning">4. Automated Scaling and
+Captioning</h4>
+<p>Once execution begins, the script processes each file
+sequentially:</p>
+<ul>
+<li><strong>Downsampling:</strong> Each image is opened and downscaled
+to fit the boundary of its assigned grid cell while preserving its
+original aspect ratio.</li>
+<li><strong>Layer Composition:</strong> Images are pasted onto the
+master canvas, either flattened onto the background or maintained as
+separate layers for post-generation adjustments.</li>
+<li><strong>Metadata and Labeling:</strong> Contact Sheet II can
+automatically generate text layers beneath each thumbnail, pulling the
+original filename or metadata captions and styling them with chosen
+fonts and sizes.</li>
+</ul>
+<h4 id="5-multi-page-generation">5. Multi-Page Generation</h4>
+<p>If the number of selected images exceeds the capacity of a single
+grid, the tool automatically generates sequential sheets (e.g.,
+ContactSheet-1, ContactSheet-2) until every file in the batch has been
+rendered.</p>
+<h3 id="common-applications">Common Applications</h3>
+<ul>
+<li><strong>Client Proofing:</strong> Photographers use it to generate
+lightweight contact sheets for clients to review, select, and approve
+shots using printed or digital filenames.</li>
+<li><strong>Asset Cataloging:</strong> Graphic designers and digital
+asset managers use contact sheets to create printable archives of stock
+libraries, icon sets, or project textures.</li>
+<li><strong>Pre-Press Quality Control:</strong> Print operators run
+contact sheets to quickly verify color consistency, framing, and aspect
+ratios across a collection of print-ready assets before final
+production.</li>
+</ul></article>
+        <div id="comments-container"></div>
+        <script>
+            const utterancesScript = document.createElement('script');
+            utterancesScript.setAttribute('src', 'https://utteranc.es/client.js');
+            utterancesScript.setAttribute('repo', 'salivity/image-editing'); 
+            utterancesScript.setAttribute('issue-term', 'pathname'); 
+            const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            utterancesScript.setAttribute('theme', currentTheme === 'dark' ? 'github-dark' : 'github-light'); 
+            utterancesScript.setAttribute('crossorigin', 'anonymous');
+            utterancesScript.async = true;
+            document.getElementById('comments-container').appendChild(utterancesScript);
+        </script>
+    
+        </div>
+    </div>
+    
+    </main>
+    <footer>
+        <nav>
+            <ul class="social-links">
+            </ul>
+        </nav>
+        <nav>
+            <ul class="footer-links">
+                <li><a href="https://smvc.dev/contact">Contact</a></li>
+                <li><a href="/image-editing/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/image-editing/terms-and-conditions">Terms and Conditions</a></li>
+            </ul>
+        </nav>
+        <div class="copyright">
+            Copyright &copy; <span id="current-year"></span>
+        </div>
+    </footer>
+</body>
+</html>

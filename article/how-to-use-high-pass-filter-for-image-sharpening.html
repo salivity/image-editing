@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Use High Pass Filter for Image Sharpening - image-editing</title>
+    <meta name="description" content="The High Pass filter is an industry-standard technique in photo editing that isolates edge contrast to produce crisp, controlled sharpening without introducing severe noise or digital halos. Unlike basic global sharpening sliders, the High Pass method is">
+    <link rel="canonical" href="https://salivity.github.io/image-editing/article/how-to-use-high-pass-filter-for-image-sharpening">
+    <link rel="search" type="application/opensearchdescription+xml" title="image-editing" href="/image-editing/opensearch.xml">
+    <link rel="icon" href="/image-editing/favicon.ico">
+    <link rel="stylesheet" href="/image-editing/css/style.css">
+    <link media="print" rel="stylesheet" href="/image-editing/css/print.css">
+    <script src="/image-editing/js/fuse.min.js"></script>
+    <script src="/image-editing/js/script.js"></script>
+    <script id="MathJax-script" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/4.1.3/tex-chtml.min.js" defer></script>
+    <script src="/monetize/monetize.js"></script>
+    <script src="/social/social.js"></script>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="How to Use High Pass Filter for Image Sharpening - image-editing" />
+    <meta property="og:url" content="https://salivity.github.io/image-editing/article/how-to-use-high-pass-filter-for-image-sharpening" />
+    <meta property="og:image" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:secure_url" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:width" content="1120" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:description" content="The High Pass filter is an industry-standard technique in photo editing that isolates edge contrast to produce crisp, controlled sharpening without introducing severe noise or digital halos. Unlike basic global sharpening sliders, the High Pass method is" />
+    <link rel="manifest" href="/image-editing/pwa/manifest.json" />
+</head>
+<body>
+    <header>
+        <a href="/image-editing/" aria-label="Go To Home Page" title="Go To Home Page" id="logo">
+            <span>salivity.github.io/</span><span>image-editing</span>
+        </a>
+        <nav>
+            <ul class="header-links">
+                <li><a href="/image-editing/search" title="Search" aria-label="Go To Search Page"><svg class="svg-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"></path></svg></a></li>
+                <li><a id="theme-toggle" title="Theme" href="javascript:void(0);" aria-label="Toggle Website Theme"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+    <div class="article-layout">
+        <aside id="profile-sidebar" class="profile-column" aria-label="Author Profile"></aside>
+        <div class="article-main-column">
+            <article><h1 id="how-to-use-high-pass-filter-for-image-sharpening">How to Use
+High Pass Filter for Image Sharpening</h1>
+<p>The High Pass filter is an industry-standard technique in photo
+editing that isolates edge contrast to produce crisp, controlled
+sharpening without introducing severe noise or digital halos. Unlike
+basic global sharpening sliders, the High Pass method is
+non-destructive, customizable, and gives editors precise control over
+which textures are enhanced and by how much. This guide explains how the
+High Pass filter functions, provides a step-by-step workflow for
+implementing it, and highlights advanced refinement techniques to
+achieve professional results.</p>
+<h2 id="why-the-high-pass-filter-outperforms-standard-sharpening">Why
+the High Pass Filter Outperforms Standard Sharpening</h2>
+<p>Standard sharpening tools often boost contrast globally, increasing
+noise in smooth areas like skies or skin tones. The High Pass filter
+works by suppressing low-frequency information (broad color gradients
+and flat tones) while retaining high-frequency data (fine textures,
+lines, and edges).</p>
+<p>By isolating these edges on a neutral gray layer and blending them
+back into the original image, you enhance perceived sharpness strictly
+along boundaries where contrast naturally occurs, preserving smooth
+areas and preventing over-sharpening artifacts.</p>
+<h2 id="step-by-step-high-pass-sharpening-workflow">Step-by-Step High
+Pass Sharpening Workflow</h2>
+<h3 id="1-duplicate-the-image-layer">1. Duplicate the Image Layer</h3>
+<p>Open your image in your chosen photo editor (such as Adobe Photoshop,
+Affinity Photo, or GIMP). Duplicate your background layer or create a
+stamped visible layer using <code>Ctrl + Alt + Shift + E</code>
+(Windows) or <code>Cmd + Option + Shift + E</code> (macOS). Rename this
+new layer "High Pass Sharpness."</p>
+<h3 id="2-convert-to-a-smart-object">2. Convert to a Smart Object</h3>
+<p>Right-click the duplicated layer and select <strong>Convert to Smart
+Object</strong>. This step ensures the High Pass filter remains
+editable, allowing you to fine-tune the pixel radius later without
+restarting the process.</p>
+<h3 id="3-apply-the-high-pass-filter">3. Apply the High Pass Filter</h3>
+<p>Navigate to <strong>Filter &gt; Other &gt; High Pass</strong>. The
+image preview will turn solid gray, displaying faint outlines of the
+image's details.</p>
+<p>Adjust the <strong>Radius</strong> slider:</p>
+<ul>
+<li><strong>0.5 to 1.5 pixels:</strong> Best for subtle, fine-detail
+sharpening (portraits, hair, fabric).</li>
+<li><strong>1.5 to 3.0 pixels:</strong> Ideal for general photography,
+architecture, and landscape textures.</li>
+<li><strong>Above 3.0 pixels:</strong> Often introduces noticeable halos
+around edges and should generally be avoided unless preparing an image
+for large-format print.</li>
+</ul>
+<p>Set the radius so that only the critical edges are visible against
+the gray background, then click <strong>OK</strong>.</p>
+<h3 id="4-adjust-the-blend-mode">4. Adjust the Blend Mode</h3>
+<p>Change the blending mode of the High Pass layer to integrate the edge
+contrast back into the original image:</p>
+<ul>
+<li><strong>Soft Light:</strong> Delivers subtle, natural sharpening.
+Ideal for portraits.</li>
+<li><strong>Overlay:</strong> The standard choice, providing balanced,
+crisp contrast.</li>
+<li><strong>Hard Light:</strong> A more aggressive approach, useful for
+high-texture subjects like stonework or mechanical objects.</li>
+</ul>
+<h2 id="advanced-refinement-techniques">Advanced Refinement
+Techniques</h2>
+<h3 id="remove-color-fringing">Remove Color Fringing</h3>
+<p>Because the High Pass filter can sometimes shift saturation along
+edges, desaturate the High Pass layer by pressing
+<code>Ctrl + Shift + U</code> (Windows) or <code>Cmd + Shift + U</code>
+(macOS), or by clipping a Black &amp; White adjustment layer directly to
+it. This limits the sharpening effect strictly to luminosity values.</p>
+<h3 id="apply-selective-masking">Apply Selective Masking</h3>
+<p>Avoid applying sharpening globally across the entire image. Add a
+layer mask to the High Pass layer, invert it to black
+(<code>Ctrl/Cmd + I</code>) to hide the effect, and use a soft white
+brush at low flow to paint sharpness selectively onto focal points—such
+as the eyes and lips in portraits, or key foreground elements in
+landscapes.</p>
+<h3 id="fine-tune-with-opacity">Fine-Tune with Opacity</h3>
+<p>If the resulting effect is too intense, lower the opacity of the High
+Pass layer. Setting opacity between 50% and 75% often produces the
+cleanest balance between micro-contrast and a natural appearance.</p></article>
+        <div id="comments-container"></div>
+        <script>
+            const utterancesScript = document.createElement('script');
+            utterancesScript.setAttribute('src', 'https://utteranc.es/client.js');
+            utterancesScript.setAttribute('repo', 'salivity/image-editing'); 
+            utterancesScript.setAttribute('issue-term', 'pathname'); 
+            const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            utterancesScript.setAttribute('theme', currentTheme === 'dark' ? 'github-dark' : 'github-light'); 
+            utterancesScript.setAttribute('crossorigin', 'anonymous');
+            utterancesScript.async = true;
+            document.getElementById('comments-container').appendChild(utterancesScript);
+        </script>
+    
+        </div>
+    </div>
+    
+    </main>
+    <footer>
+        <nav>
+            <ul class="social-links">
+            </ul>
+        </nav>
+        <nav>
+            <ul class="footer-links">
+                <li><a href="https://smvc.dev/contact">Contact</a></li>
+                <li><a href="/image-editing/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/image-editing/terms-and-conditions">Terms and Conditions</a></li>
+            </ul>
+        </nav>
+        <div class="copyright">
+            Copyright &copy; <span id="current-year"></span>
+        </div>
+    </footer>
+</body>
+</html>

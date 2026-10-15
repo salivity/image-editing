@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove White Backgrounds Using Multiply Mode - image-editing</title>
+    <meta name="description" content="The Multiply blending mode is one of the fastest and most efficient methods for removing pure white backgrounds from graphics, sketches, and logos in software such as Adobe Photoshop, GIMP, and Affinity Photo. Instead of requiring complex selection tools,">
+    <link rel="canonical" href="https://salivity.github.io/image-editing/article/remove-white-backgrounds-using-multiply-mode">
+    <link rel="search" type="application/opensearchdescription+xml" title="image-editing" href="/image-editing/opensearch.xml">
+    <link rel="icon" href="/image-editing/favicon.ico">
+    <link rel="stylesheet" href="/image-editing/css/style.css">
+    <link media="print" rel="stylesheet" href="/image-editing/css/print.css">
+    <script src="/image-editing/js/fuse.min.js"></script>
+    <script src="/image-editing/js/script.js"></script>
+    <script id="MathJax-script" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/4.1.3/tex-chtml.min.js" defer></script>
+    <script src="/monetize/monetize.js"></script>
+    <script src="/social/social.js"></script>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Remove White Backgrounds Using Multiply Mode - image-editing" />
+    <meta property="og:url" content="https://salivity.github.io/image-editing/article/remove-white-backgrounds-using-multiply-mode" />
+    <meta property="og:image" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:secure_url" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:width" content="1120" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:description" content="The Multiply blending mode is one of the fastest and most efficient methods for removing pure white backgrounds from graphics, sketches, and logos in software such as Adobe Photoshop, GIMP, and Affinity Photo. Instead of requiring complex selection tools," />
+    <link rel="manifest" href="/image-editing/pwa/manifest.json" />
+</head>
+<body>
+    <header>
+        <a href="/image-editing/" aria-label="Go To Home Page" title="Go To Home Page" id="logo">
+            <span>salivity.github.io/</span><span>image-editing</span>
+        </a>
+        <nav>
+            <ul class="header-links">
+                <li><a href="/image-editing/search" title="Search" aria-label="Go To Search Page"><svg class="svg-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"></path></svg></a></li>
+                <li><a id="theme-toggle" title="Theme" href="javascript:void(0);" aria-label="Toggle Website Theme"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+    <div class="article-layout">
+        <aside id="profile-sidebar" class="profile-column" aria-label="Author Profile"></aside>
+        <div class="article-main-column">
+            <article><h1 id="remove-white-backgrounds-using-multiply-mode">Remove White
+Backgrounds Using Multiply Mode</h1>
+<p>The Multiply blending mode is one of the fastest and most efficient
+methods for removing pure white backgrounds from graphics, sketches, and
+logos in software such as Adobe Photoshop, GIMP, and Affinity Photo.
+Instead of requiring complex selection tools, clipping paths, or layer
+masks, this technique uses basic pixel math to render pure white
+completely invisible while preserving darker elements. This guide breaks
+down how the Multiply mode works, the exact steps to apply it, and how
+to refine your results for a clean, seamless finish.</p>
+<h3 id="how-the-multiply-blend-mode-works">How the Multiply Blend Mode
+Works</h3>
+<p>Blending modes calculate how the pixels of an active layer interact
+with the pixels of the layers beneath it. Mathematically, the Multiply
+mode takes the color values of the top layer (scaled from 0 for pure
+black to 1 for pure white) and multiplies them by the values of the
+underlying layer.</p>
+<p>Because multiplying any number by 1 leaves the original number
+unchanged, pure white pixels (value 1) become entirely neutral and
+effectively transparent. Conversely, multiplying by 0 results in 0,
+meaning pure black pixels remain solid black. Any intermediate gray or
+colored pixels darken the background beneath them proportionally.</p>
+<h3 id="step-by-step-instructions">Step-by-Step Instructions</h3>
+<ol type="1">
+<li><p><strong>Arrange Your Layers</strong><br />
+Open your image editing software and place the background image or
+texture on the bottom layer. Place the graphic containing the white
+background directly on the layer above it.</p></li>
+<li><p><strong>Change the Layer Blending Mode</strong><br />
+Locate the blending mode dropdown menu in your layers panel (typically
+set to "Normal" by default). Click the menu and select
+<strong>Multiply</strong>. The white background will instantly
+disappear, revealing the layer underneath.</p></li>
+<li><p><strong>Ensure Pure White Values</strong><br />
+If the background appears slightly gray, dirty, or hazy rather than
+transparent, the background pixels are not pure white (RGB 255, 255,
+255). To fix this:</p>
+<ul>
+<li>Add a <strong>Levels</strong> or <strong>Curves</strong> adjustment
+layer directly above your graphic layer.</li>
+<li>Clip the adjustment layer to the graphic layer (Right-click &gt;
+<em>Create Clipping Mask</em> or press <code>Ctrl+Alt+G</code> /
+<code>Cmd+Opt+G</code>).</li>
+<li>Drag the white point slider inward until the background reaches pure
+white and completely disappears.</li>
+</ul></li>
+<li><p><strong>Enhance the Dark Details</strong><br />
+If the subject appears too faint or translucent over the new background,
+duplicate the multiplied layer (<code>Ctrl+J</code> /
+<code>Cmd+J</code>) to double the density of the artwork, or adjust the
+black point slider on your Curves adjustment to deepen the line
+work.</p></li>
+</ol>
+<h3 id="best-use-cases">Best Use Cases</h3>
+<ul>
+<li><strong>Scanned Line Art and Sketches:</strong> Quickly overlaying
+hand-drawn ink sketches onto digital paper, textures, or colored
+canvases.</li>
+<li><strong>Dark Logos and Typography:</strong> Placing solid black or
+dark-colored text and logos onto colored or photographic
+backgrounds.</li>
+<li><strong>Isolated Stock Assets:</strong> Integrating isolated smoke,
+shadows, ink splatters, or technical diagrams shot against clean
+lightboxes.</li>
+</ul>
+<h3 id="limitations">Limitations</h3>
+<p>The Multiply method only works when the subject is darker than the
+background it is placed on. It is not suitable for images featuring
+light-colored subjects, white highlights, or colored elements that must
+remain opaque, as the background colors will bleed through lighter
+tones. For subjects with mixed tones or white highlights, a dedicated
+layer mask or the <em>Color Range</em> tool should be used instead.</p></article>
+        <div id="comments-container"></div>
+        <script>
+            const utterancesScript = document.createElement('script');
+            utterancesScript.setAttribute('src', 'https://utteranc.es/client.js');
+            utterancesScript.setAttribute('repo', 'salivity/image-editing'); 
+            utterancesScript.setAttribute('issue-term', 'pathname'); 
+            const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            utterancesScript.setAttribute('theme', currentTheme === 'dark' ? 'github-dark' : 'github-light'); 
+            utterancesScript.setAttribute('crossorigin', 'anonymous');
+            utterancesScript.async = true;
+            document.getElementById('comments-container').appendChild(utterancesScript);
+        </script>
+    
+        </div>
+    </div>
+    
+    </main>
+    <footer>
+        <nav>
+            <ul class="social-links">
+            </ul>
+        </nav>
+        <nav>
+            <ul class="footer-links">
+                <li><a href="https://smvc.dev/contact">Contact</a></li>
+                <li><a href="/image-editing/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/image-editing/terms-and-conditions">Terms and Conditions</a></li>
+            </ul>
+        </nav>
+        <div class="copyright">
+            Copyright &copy; <span id="current-year"></span>
+        </div>
+    </footer>
+</body>
+</html>

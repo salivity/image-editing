@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Recover Blown-Out Highlights in Photos - image-editing</title>
+    <meta name="description" content="Blown-out highlights occur when a camera sensor clips bright areas to pure white, resulting in a loss of texture, color, and detail. While fully clipped digital data cannot always be perfectly restored, several advanced editing workflows can salvage parti">
+    <link rel="canonical" href="https://salivity.github.io/image-editing/article/how-to-recover-blown-out-highlights-in-photos">
+    <link rel="search" type="application/opensearchdescription+xml" title="image-editing" href="/image-editing/opensearch.xml">
+    <link rel="icon" href="/image-editing/favicon.ico">
+    <link rel="stylesheet" href="/image-editing/css/style.css">
+    <link media="print" rel="stylesheet" href="/image-editing/css/print.css">
+    <script src="/image-editing/js/fuse.min.js"></script>
+    <script src="/image-editing/js/script.js"></script>
+    <script id="MathJax-script" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/4.1.3/tex-chtml.min.js" defer></script>
+    <script src="/monetize/monetize.js"></script>
+    <script src="/social/social.js"></script>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="How to Recover Blown-Out Highlights in Photos - image-editing" />
+    <meta property="og:url" content="https://salivity.github.io/image-editing/article/how-to-recover-blown-out-highlights-in-photos" />
+    <meta property="og:image" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:secure_url" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:width" content="1120" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:description" content="Blown-out highlights occur when a camera sensor clips bright areas to pure white, resulting in a loss of texture, color, and detail. While fully clipped digital data cannot always be perfectly restored, several advanced editing workflows can salvage parti" />
+    <link rel="manifest" href="/image-editing/pwa/manifest.json" />
+</head>
+<body>
+    <header>
+        <a href="/image-editing/" aria-label="Go To Home Page" title="Go To Home Page" id="logo">
+            <span>salivity.github.io/</span><span>image-editing</span>
+        </a>
+        <nav>
+            <ul class="header-links">
+                <li><a href="/image-editing/search" title="Search" aria-label="Go To Search Page"><svg class="svg-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"></path></svg></a></li>
+                <li><a id="theme-toggle" title="Theme" href="javascript:void(0);" aria-label="Toggle Website Theme"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+    <div class="article-layout">
+        <aside id="profile-sidebar" class="profile-column" aria-label="Author Profile"></aside>
+        <div class="article-main-column">
+            <article><h1 id="how-to-recover-blown-out-highlights-in-photos">How to Recover
+Blown-Out Highlights in Photos</h1>
+<p>Blown-out highlights occur when a camera sensor clips bright areas to
+pure white, resulting in a loss of texture, color, and detail. While
+fully clipped digital data cannot always be perfectly restored, several
+advanced editing workflows can salvage partially clipped data or
+realistically reconstruct missing details. This guide covers the most
+effective techniques for recovering blown-out highlights, ranging from
+basic RAW exposure adjustments and tone curves to advanced luminosity
+masking, channel blending, texture synthesis, and AI-driven generative
+fill.</p>
+<h3 id="1-raw-highlight-and-white-clipping-pullback">1. RAW Highlight
+and White Clipping Pullback</h3>
+<p>If you shot in RAW format, the file likely contains latent dynamic
+range that is hidden by the default rendering.</p>
+<ul>
+<li><strong>Highlight Slider:</strong> In raw processors like Adobe
+Camera Raw, Lightroom, or Capture One, lower the Highlights slider
+first. This acts globally on the upper tonal regions without drastically
+affecting midtones.</li>
+<li><strong>Whites Slider:</strong> Hold the <code>Alt</code> (Windows)
+or <code>Option</code> (Mac) key while dragging the Whites slider to the
+left until the clipping warnings disappear. This resets the absolute
+white point and prevents harsh transitions.</li>
+<li><strong>Exposure:</strong> Lower overall exposure slightly, then use
+shadow and midtone sliders to compensate for lost brightness in the rest
+of the frame.</li>
+</ul>
+<h3 id="2-targeted-luminosity-masking">2. Targeted Luminosity
+Masking</h3>
+<p>When global adjustments make the rest of the image look flat or
+muddy, use local adjustments tied to a luminosity mask.</p>
+<ul>
+<li>Create a mask targeted strictly at the 85% to 100% luminance
+range.</li>
+<li>Apply a localized drop in exposure, highlights, and contrast.</li>
+<li>Add a slight warm tint or match the surrounding color temperature
+within the mask to remove the unnatural grayish cast that often appears
+when desaturated, overexposed highlights are lowered.</li>
+</ul>
+<h3 id="3-curve-flattening-and-de-hazing">3. Curve Flattening and
+De-Hazing</h3>
+<p>Overexposed areas frequently suffer from low contrast and optical
+glare from the lens.</p>
+<ul>
+<li>Use a <strong>Tone Curve</strong> (Parametric or Point Curve) and
+pull the top-right point down slightly, or introduce a gentle downward
+curve in the highlight quadrant to compress the tonal range.</li>
+<li>Use a local brush or radial gradient over the blown area with a low
+value of <strong>Dehaze</strong> or <strong>Clarity</strong>. This
+restores micro-contrast along the edges of the clipped zone.</li>
+</ul>
+<h3 id="4-color-channel-reconstruction">4. Color Channel
+Reconstruction</h3>
+<p>Often, only one or two color channels (typically red or green) are
+fully clipped, while the remaining channel still contains structural
+data.</p>
+<ul>
+<li>In Photoshop, inspect the individual Red, Green, and Blue channels
+via the Channels panel. Identify the channel that retains the most
+texture.</li>
+<li>Duplicate that channel, adjust its contrast, and use it as a
+selection mask or paste it onto a new layer set to
+<strong>Luminosity</strong> blend mode.</li>
+<li>Sample the native color from adjacent, properly exposed areas using
+an eyedropper, set a blank layer to <strong>Color</strong> blend mode,
+and brush over the clipped zone to restore natural hue without
+disturbing the newly added tonal values.</li>
+</ul>
+<h3 id="5-texture-transfer-with-frequency-separation">5. Texture
+Transfer with Frequency Separation</h3>
+<p>If the highlight is clipped to pure 255,255,255 white, no slider can
+recover detail because no digital data exists. You must borrow texture
+from neighboring areas.</p>
+<ul>
+<li>Separate the image into high-frequency (texture) and low-frequency
+(color and tone) layers.</li>
+<li>On the low-frequency layer, sample the ambient tone from surrounding
+pixels and paint a smooth gradient over the blown area to establish base
+color.</li>
+<li>On the high-frequency layer, use the <strong>Clone Stamp</strong>
+tool (set to <em>Current Layer</em>) to clone real texture—such as skin
+pores, cloud edges, or fabric weave—from an adjacent, well-exposed zone
+directly into the clipped area.</li>
+</ul>
+<h3 id="6-ai-inpainting-and-generative-fill">6. AI Inpainting and
+Generative Fill</h3>
+<p>For completely lost areas where manual texture synthesis is too
+complex—such as large sections of sky or intricate architectural
+elements—generative AI provides the most seamless recovery.</p>
+<ul>
+<li>Make a loose selection around the clipped highlights with a
+feathered edge (2 to 5 pixels).</li>
+<li>Apply generative inpainting without entering any prompt, or use a
+descriptive prompt like "natural cloud texture" or "subtle sky
+gradient."</li>
+<li>Generative engines analyze the contextual boundaries and synthesize
+mathematically consistent details, replacing empty white pixels with
+believable lighting and detail.</li>
+</ul></article>
+        <div id="comments-container"></div>
+        <script>
+            const utterancesScript = document.createElement('script');
+            utterancesScript.setAttribute('src', 'https://utteranc.es/client.js');
+            utterancesScript.setAttribute('repo', 'salivity/image-editing'); 
+            utterancesScript.setAttribute('issue-term', 'pathname'); 
+            const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            utterancesScript.setAttribute('theme', currentTheme === 'dark' ? 'github-dark' : 'github-light'); 
+            utterancesScript.setAttribute('crossorigin', 'anonymous');
+            utterancesScript.async = true;
+            document.getElementById('comments-container').appendChild(utterancesScript);
+        </script>
+    
+        </div>
+    </div>
+    
+    </main>
+    <footer>
+        <nav>
+            <ul class="social-links">
+            </ul>
+        </nav>
+        <nav>
+            <ul class="footer-links">
+                <li><a href="https://smvc.dev/contact">Contact</a></li>
+                <li><a href="/image-editing/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/image-editing/terms-and-conditions">Terms and Conditions</a></li>
+            </ul>
+        </nav>
+        <div class="copyright">
+            Copyright &copy; <span id="current-year"></span>
+        </div>
+    </footer>
+</body>
+</html>

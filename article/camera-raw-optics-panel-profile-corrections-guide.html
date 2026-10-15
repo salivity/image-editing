@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera Raw Optics Panel Profile Corrections Guide - image-editing</title>
+    <meta name="description" content="The Optics panel in Camera Raw image editing is primarily used to automatically identify and correct inherent optical flaws caused by camera lenses. By applying built-in lens profile corrections, the software eliminates geometric distortion, compensates f">
+    <link rel="canonical" href="https://salivity.github.io/image-editing/article/camera-raw-optics-panel-profile-corrections-guide">
+    <link rel="search" type="application/opensearchdescription+xml" title="image-editing" href="/image-editing/opensearch.xml">
+    <link rel="icon" href="/image-editing/favicon.ico">
+    <link rel="stylesheet" href="/image-editing/css/style.css">
+    <link media="print" rel="stylesheet" href="/image-editing/css/print.css">
+    <script src="/image-editing/js/fuse.min.js"></script>
+    <script src="/image-editing/js/script.js"></script>
+    <script id="MathJax-script" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/4.1.3/tex-chtml.min.js" defer></script>
+    <script src="/monetize/monetize.js"></script>
+    <script src="/social/social.js"></script>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Camera Raw Optics Panel Profile Corrections Guide - image-editing" />
+    <meta property="og:url" content="https://salivity.github.io/image-editing/article/camera-raw-optics-panel-profile-corrections-guide" />
+    <meta property="og:image" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:secure_url" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:width" content="1120" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:description" content="The Optics panel in Camera Raw image editing is primarily used to automatically identify and correct inherent optical flaws caused by camera lenses. By applying built-in lens profile corrections, the software eliminates geometric distortion, compensates f" />
+    <link rel="manifest" href="/image-editing/pwa/manifest.json" />
+</head>
+<body>
+    <header>
+        <a href="/image-editing/" aria-label="Go To Home Page" title="Go To Home Page" id="logo">
+            <span>salivity.github.io/</span><span>image-editing</span>
+        </a>
+        <nav>
+            <ul class="header-links">
+                <li><a href="/image-editing/search" title="Search" aria-label="Go To Search Page"><svg class="svg-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"></path></svg></a></li>
+                <li><a id="theme-toggle" title="Theme" href="javascript:void(0);" aria-label="Toggle Website Theme"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+    <div class="article-layout">
+        <aside id="profile-sidebar" class="profile-column" aria-label="Author Profile"></aside>
+        <div class="article-main-column">
+            <article><h1 id="camera-raw-optics-panel-profile-corrections-guide">Camera Raw
+Optics Panel Profile Corrections Guide</h1>
+<p>The Optics panel in Camera Raw image editing is primarily used to
+automatically identify and correct inherent optical flaws caused by
+camera lenses. By applying built-in lens profile corrections, the
+software eliminates geometric distortion, compensates for peripheral
+illumination falloff (vignetting), and fixes chromatic aberration,
+providing a clean, flat baseline for further adjustments.</p>
+<h3 id="understanding-profile-corrections">Understanding Profile
+Corrections</h3>
+<p>Every camera lens has distinct physical characteristics and optical
+limitations. When you capture an image in raw format, the file stores
+metadata regarding the camera body, specific lens model, and focal
+length used. The Optics panel uses this metadata to apply a
+pre-calculated mathematical profile that counteracts the known flaws of
+that specific lens.</p>
+<h3 id="key-corrections-handled-by-the-optics-panel">Key Corrections
+Handled by the Optics Panel</h3>
+<ol type="1">
+<li><p><strong>Distortion Correction</strong> Lenses—especially
+wide-angle, ultra-wide, and telephoto zooms—often introduce geometric
+distortion. Wide lenses typically produce barrel distortion, causing
+straight lines to bow outward, while telephoto lenses often introduce
+pincushion distortion, pulling lines inward. Enabling profile
+corrections straightens these lines instantly to represent the scene
+accurately.</p></li>
+<li><p><strong>Vignetting Correction</strong> Most lenses experience
+light falloff toward the corners of the frame, resulting in darker
+edges, particularly when shooting at wide-open apertures. The profile
+correction analyzes the aperture and focal length used, automatically
+brightening the corners to create an even exposure across the entire
+frame.</p></li>
+<li><p><strong>Lateral Chromatic Aberration</strong> Light passing
+through glass can split into different wavelengths, causing color
+fringing (usually purple or green) along high-contrast edges. The Optics
+panel uses the lens profile to align these color channels correctly,
+eliminating the fringing before it affects pixel sharpness.</p></li>
+</ol>
+<h3 id="how-to-use-profile-corrections">How to Use Profile
+Corrections</h3>
+<ol type="1">
+<li><strong>Locate the Panel:</strong> Open your raw file in Camera Raw
+(or Lightroom) and navigate to the <strong>Optics</strong> panel on the
+right toolbar.</li>
+<li><strong>Enable Profile Corrections:</strong> Check the box labeled
+<strong>Use profile corrections</strong> (or toggle it on).</li>
+<li><strong>Verify the Lens Match:</strong> Camera Raw will usually read
+the EXIF data and select the exact Make, Model, and Profile
+automatically. If the lens is not recognized (such as with fully manual
+vintage lenses), you can manually select the manufacturer and model from
+the dropdown menus.</li>
+<li><strong>Fine-Tune Adjustments:</strong> Below the profile selection,
+you can adjust the <strong>Distortion</strong> and
+<strong>Vignetting</strong> sliders between 0 and 200 to dial back or
+exaggerate the corrections depending on your creative preference.</li>
+</ol>
+<h3 id="when-to-use-profile-corrections">When to Use Profile
+Corrections</h3>
+<p>Profile corrections should generally be applied at the beginning of
+your raw development workflow. Correcting distortion changes the
+geometry and composition of the frame, which can influence how you crop,
+straighten horizons, and apply local masks. Applying these corrections
+early ensures that your compositional decisions and localized
+adjustments are made on a physically accurate version of the image.</p></article>
+        <div id="comments-container"></div>
+        <script>
+            const utterancesScript = document.createElement('script');
+            utterancesScript.setAttribute('src', 'https://utteranc.es/client.js');
+            utterancesScript.setAttribute('repo', 'salivity/image-editing'); 
+            utterancesScript.setAttribute('issue-term', 'pathname'); 
+            const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            utterancesScript.setAttribute('theme', currentTheme === 'dark' ? 'github-dark' : 'github-light'); 
+            utterancesScript.setAttribute('crossorigin', 'anonymous');
+            utterancesScript.async = true;
+            document.getElementById('comments-container').appendChild(utterancesScript);
+        </script>
+    
+        </div>
+    </div>
+    
+    </main>
+    <footer>
+        <nav>
+            <ul class="social-links">
+            </ul>
+        </nav>
+        <nav>
+            <ul class="footer-links">
+                <li><a href="https://smvc.dev/contact">Contact</a></li>
+                <li><a href="/image-editing/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/image-editing/terms-and-conditions">Terms and Conditions</a></li>
+            </ul>
+        </nav>
+        <div class="copyright">
+            Copyright &copy; <span id="current-year"></span>
+        </div>
+    </footer>
+</body>
+</html>

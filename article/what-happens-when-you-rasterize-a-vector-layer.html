@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Happens When You Rasterize a Vector Layer? - image-editing</title>
+    <meta name="description" content="Rasterizing a vector layer converts mathematical, infinitely scalable paths, text, or shapes into a static grid of colored pixels known as a bitmap. While this process permanently eliminates the ability to scale the graphic without quality loss, it unlock">
+    <link rel="canonical" href="https://salivity.github.io/image-editing/article/what-happens-when-you-rasterize-a-vector-layer">
+    <link rel="search" type="application/opensearchdescription+xml" title="image-editing" href="/image-editing/opensearch.xml">
+    <link rel="icon" href="/image-editing/favicon.ico">
+    <link rel="stylesheet" href="/image-editing/css/style.css">
+    <link media="print" rel="stylesheet" href="/image-editing/css/print.css">
+    <script src="/image-editing/js/fuse.min.js"></script>
+    <script src="/image-editing/js/script.js"></script>
+    <script id="MathJax-script" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/4.1.3/tex-chtml.min.js" defer></script>
+    <script src="/monetize/monetize.js"></script>
+    <script src="/social/social.js"></script>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="What Happens When You Rasterize a Vector Layer? - image-editing" />
+    <meta property="og:url" content="https://salivity.github.io/image-editing/article/what-happens-when-you-rasterize-a-vector-layer" />
+    <meta property="og:image" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:secure_url" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:width" content="1120" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:description" content="Rasterizing a vector layer converts mathematical, infinitely scalable paths, text, or shapes into a static grid of colored pixels known as a bitmap. While this process permanently eliminates the ability to scale the graphic without quality loss, it unlock" />
+    <link rel="manifest" href="/image-editing/pwa/manifest.json" />
+</head>
+<body>
+    <header>
+        <a href="/image-editing/" aria-label="Go To Home Page" title="Go To Home Page" id="logo">
+            <span>salivity.github.io/</span><span>image-editing</span>
+        </a>
+        <nav>
+            <ul class="header-links">
+                <li><a href="/image-editing/search" title="Search" aria-label="Go To Search Page"><svg class="svg-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"></path></svg></a></li>
+                <li><a id="theme-toggle" title="Theme" href="javascript:void(0);" aria-label="Toggle Website Theme"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+    <div class="article-layout">
+        <aside id="profile-sidebar" class="profile-column" aria-label="Author Profile"></aside>
+        <div class="article-main-column">
+            <article><h1 id="what-happens-when-you-rasterize-a-vector-layer">What Happens
+When You Rasterize a Vector Layer?</h1>
+<p>Rasterizing a vector layer converts mathematical, infinitely scalable
+paths, text, or shapes into a static grid of colored pixels known as a
+bitmap. While this process permanently eliminates the ability to scale
+the graphic without quality loss, it unlocks standard pixel-based
+editing tools like brushes, erasers, blending effects, and artistic
+filters. Once rasterized, the layer is bound to the document's current
+resolution and can no longer be edited as dynamic shapes or live
+type.</p>
+<h3 id="the-conversion-from-math-to-pixels">The Conversion from Math to
+Pixels</h3>
+<p>Vector graphics rely on mathematical formulas to define lines,
+curves, anchor points, and fills. When you trigger the rasterization
+process, the image editing program calculates how those vectors
+intersect with the document’s pixel grid. The software renders the
+shapes into individual pixels assigned specific color and opacity
+values. The underlying geometry disappears, leaving behind a flat bitmap
+image on that layer.</p>
+<h3 id="loss-of-scalability-and-resolution-independence">Loss of
+Scalability and Resolution Independence</h3>
+<p>The primary disadvantage of rasterization is the loss of resolution
+independence:</p>
+<ul>
+<li><strong>Upscaling Causes Degradation:</strong> Vector shapes can be
+enlarged infinitely without losing sharpness. Once rasterized, enlarging
+the layer forces the software to interpolate new pixels, resulting in
+pixelation, jagged edges (aliasing), and blurriness.</li>
+<li><strong>Locked DPI:</strong> The sharpness of the rasterized layer
+is permanently tied to the resolution (DPI/PPI) of the document at the
+moment the conversion took place.</li>
+</ul>
+<h3 id="loss-of-parametric-and-vector-editing">Loss of Parametric and
+Vector Editing</h3>
+<p>Rasterization strips away all specialized vector parameters:</p>
+<ul>
+<li><strong>Text Becomes Uneditable:</strong> Live text layers become
+static pictures of letters. You can no longer change fonts, fix typos,
+adjust kerning, or modify line spacing.</li>
+<li><strong>No Path Adjustments:</strong> You lose access to control
+handles and anchor points. You cannot use the pen tool or direct
+selection tools to reshape curves.</li>
+<li><strong>Fixed Stroke and Fill:</strong> Dynamic attributes, such as
+independently editable strokes or gradients assigned along a path, are
+baked into the pixels.</li>
+</ul>
+<h3 id="unlocking-pixel-based-tools">Unlocking Pixel-Based Tools</h3>
+<p>Despite the limitations, rasterization is often necessary for
+advanced visual design:</p>
+<ul>
+<li><strong>Direct Painting and Retouching:</strong> You can now use
+tools like the Brush, Pencil, Eraser, Clone Stamp, and Healing Brush
+directly on the graphic.</li>
+<li><strong>Pixel Adjustments and Blurs:</strong> Many destructive
+filters—such as motion blur, lens blur, noise, and liquify
+effects—require a pixel grid to function and cannot be applied directly
+to vector paths.</li>
+<li><strong>Seamless Blending:</strong> Pixel data allows for complex
+smudging, sharpening, and color blending with surrounding raster
+elements.</li>
+</ul>
+<h3 id="best-practices-before-rasterizing">Best Practices Before
+Rasterizing</h3>
+<p>Because rasterization is generally destructive, workflow preservation
+is critical:</p>
+<ol type="1">
+<li><strong>Duplicate the Layer:</strong> Create a copy of the original
+vector or text layer and hide it before rasterizing the active one.</li>
+<li><strong>Finalize the Dimensions:</strong> Ensure the image is at its
+final display size or resolution before rasterizing to avoid needing to
+scale it upward later.</li>
+<li><strong>Use Smart Objects or Layer Masks:</strong> Where possible,
+convert vectors into smart objects or apply clipping masks to achieve
+raster-like effects without flattening the underlying vector data.</li>
+</ol></article>
+        <div id="comments-container"></div>
+        <script>
+            const utterancesScript = document.createElement('script');
+            utterancesScript.setAttribute('src', 'https://utteranc.es/client.js');
+            utterancesScript.setAttribute('repo', 'salivity/image-editing'); 
+            utterancesScript.setAttribute('issue-term', 'pathname'); 
+            const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            utterancesScript.setAttribute('theme', currentTheme === 'dark' ? 'github-dark' : 'github-light'); 
+            utterancesScript.setAttribute('crossorigin', 'anonymous');
+            utterancesScript.async = true;
+            document.getElementById('comments-container').appendChild(utterancesScript);
+        </script>
+    
+        </div>
+    </div>
+    
+    </main>
+    <footer>
+        <nav>
+            <ul class="social-links">
+            </ul>
+        </nav>
+        <nav>
+            <ul class="footer-links">
+                <li><a href="https://smvc.dev/contact">Contact</a></li>
+                <li><a href="/image-editing/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/image-editing/terms-and-conditions">Terms and Conditions</a></li>
+            </ul>
+        </nav>
+        <div class="copyright">
+            Copyright &copy; <span id="current-year"></span>
+        </div>
+    </footer>
+</body>
+</html>

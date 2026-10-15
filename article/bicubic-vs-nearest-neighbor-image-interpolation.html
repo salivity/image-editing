@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bicubic vs Nearest Neighbor Image Interpolation - image-editing</title>
+    <meta name="description" content="When resizing digital images, editing software relies on interpolation algorithms to calculate and generate new pixel values that did not exist in the original file. The two most common methods—Nearest Neighbor and Bicubic interpolation—handle this task w">
+    <link rel="canonical" href="https://salivity.github.io/image-editing/article/bicubic-vs-nearest-neighbor-image-interpolation">
+    <link rel="search" type="application/opensearchdescription+xml" title="image-editing" href="/image-editing/opensearch.xml">
+    <link rel="icon" href="/image-editing/favicon.ico">
+    <link rel="stylesheet" href="/image-editing/css/style.css">
+    <link media="print" rel="stylesheet" href="/image-editing/css/print.css">
+    <script src="/image-editing/js/fuse.min.js"></script>
+    <script src="/image-editing/js/script.js"></script>
+    <script id="MathJax-script" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/4.1.3/tex-chtml.min.js" defer></script>
+    <script src="/monetize/monetize.js"></script>
+    <script src="/social/social.js"></script>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Bicubic vs Nearest Neighbor Image Interpolation - image-editing" />
+    <meta property="og:url" content="https://salivity.github.io/image-editing/article/bicubic-vs-nearest-neighbor-image-interpolation" />
+    <meta property="og:image" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:secure_url" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:width" content="1120" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:description" content="When resizing digital images, editing software relies on interpolation algorithms to calculate and generate new pixel values that did not exist in the original file. The two most common methods—Nearest Neighbor and Bicubic interpolation—handle this task w" />
+    <link rel="manifest" href="/image-editing/pwa/manifest.json" />
+</head>
+<body>
+    <header>
+        <a href="/image-editing/" aria-label="Go To Home Page" title="Go To Home Page" id="logo">
+            <span>salivity.github.io/</span><span>image-editing</span>
+        </a>
+        <nav>
+            <ul class="header-links">
+                <li><a href="/image-editing/search" title="Search" aria-label="Go To Search Page"><svg class="svg-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"></path></svg></a></li>
+                <li><a id="theme-toggle" title="Theme" href="javascript:void(0);" aria-label="Toggle Website Theme"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+    <div class="article-layout">
+        <aside id="profile-sidebar" class="profile-column" aria-label="Author Profile"></aside>
+        <div class="article-main-column">
+            <article><h1 id="bicubic-vs-nearest-neighbor-image-interpolation">Bicubic vs
+Nearest Neighbor Image Interpolation</h1>
+<p>When resizing digital images, editing software relies on
+interpolation algorithms to calculate and generate new pixel values that
+did not exist in the original file. The two most common methods—Nearest
+Neighbor and Bicubic interpolation—handle this task with fundamentally
+different priorities: Nearest Neighbor duplicates the closest existing
+pixel to retain hard, blocky edges, whereas Bicubic samples a wider grid
+of surrounding pixels to generate smooth, natural transitions.
+Understanding the mechanics, visual outcomes, and trade-offs of these
+techniques ensures you select the right method whether working with
+high-resolution photography, digital art, or retro graphics.</p>
+<h3 id="what-is-image-interpolation">What Is Image Interpolation?</h3>
+<p>Interpolation is the mathematical process used to approximate values
+between known data points. In digital image editing, changing an image's
+dimensions (upscaling or downscaling) disrupts the fixed pixel grid. To
+display the resized image accurately, editing programs must either
+insert new pixels or discard excess ones. The interpolation method
+chosen determines the color, brightness, and sharpness of these modified
+pixels.</p>
+<h3 id="nearest-neighbor-interpolation">Nearest Neighbor
+Interpolation</h3>
+<p>Nearest Neighbor is the simplest and fastest resampling algorithm
+available in image processing.</p>
+<ul>
+<li><strong>How It Works:</strong> When an image is resized, the
+algorithm finds the pixel in the original image that is geographically
+closest to the new pixel location and copies its exact color value. It
+does not calculate averages or blend colors.</li>
+<li><strong>Visual Characteristics:</strong> The output retains maximum
+contrast and hard edges, but it introduces severe aliasing (jagged edges
+or "jaggies") and pronounced pixelation when enlarged.</li>
+<li><strong>Best Use Cases:</strong>
+<ul>
+<li>Pixel art and retro game assets where sharp, distinct pixel borders
+must be preserved.</li>
+<li>Masks, selections, or technical maps (such as UV or indexing maps)
+where introducing blended, intermediate color values would corrupt the
+data.</li>
+</ul></li>
+</ul>
+<h3 id="bicubic-interpolation">Bicubic Interpolation</h3>
+<p>Bicubic interpolation is a complex, higher-order algorithm designed
+to prioritize smooth transitions over raw rendering speed.</p>
+<ul>
+<li><strong>How It Works:</strong> Rather than looking at a single
+adjacent pixel, Bicubic analyzes a 4x4 grid—16 neighboring pixels in
+total. It applies cubic polynomial functions along both axes (horizontal
+and vertical) to calculate a weighted average for the new pixel. Pixels
+closer to the target coordinate carry more weight than those farther
+away.</li>
+<li><strong>Visual Characteristics:</strong> Bicubic produces
+significantly smoother gradients, curves, and edges compared to simpler
+methods. It minimizes jagged stair-stepping artifacts, though it can
+introduce slight softening or blur across fine details. Modern software
+often provides variants, such as Bicubic Smoother (optimized for
+enlarging) and Bicubic Sharper (optimized for reducing).</li>
+<li><strong>Best Use Cases:</strong>
+<ul>
+<li>Photographs and continuous-tone imagery where realism and gradual
+tonal transitions are critical.</li>
+<li>Standard downsampling and upsampling of complex digital paintings or
+print media.</li>
+</ul></li>
+</ul>
+<h3 id="summary-of-differences">Summary of Differences</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Feature</th>
+<th style="text-align: left;">Nearest Neighbor</th>
+<th style="text-align: left;">Bicubic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Sample Size</strong></td>
+<td style="text-align: left;">1 adjacent pixel</td>
+<td style="text-align: left;">16 surrounding pixels (4x4 grid)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Processing Speed</strong></td>
+<td style="text-align: left;">Extremely fast</td>
+<td style="text-align: left;">Slower, computationally intensive</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Edge Quality</strong></td>
+<td style="text-align: left;">Hard, jagged, pixelated</td>
+<td style="text-align: left;">Soft, smooth, anti-aliased</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Color Fidelity</strong></td>
+<td style="text-align: left;">Retains only original palette</td>
+<td style="text-align: left;">Introduces new intermediate shades</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Ideal Application</strong></td>
+<td style="text-align: left;">Pixel art, technical masks</td>
+<td style="text-align: left;">Photographs, continuous gradients</td>
+</tr>
+</tbody>
+</table>
+<p>Choosing between Nearest Neighbor and Bicubic comes down to the
+nature of your source material. Use Nearest Neighbor when every
+individual pixel boundary represents deliberate artistic or technical
+data, and switch to Bicubic when resizing natural, complex images that
+require clean, photorealistic transitions.</p></article>
+        <div id="comments-container"></div>
+        <script>
+            const utterancesScript = document.createElement('script');
+            utterancesScript.setAttribute('src', 'https://utteranc.es/client.js');
+            utterancesScript.setAttribute('repo', 'salivity/image-editing'); 
+            utterancesScript.setAttribute('issue-term', 'pathname'); 
+            const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            utterancesScript.setAttribute('theme', currentTheme === 'dark' ? 'github-dark' : 'github-light'); 
+            utterancesScript.setAttribute('crossorigin', 'anonymous');
+            utterancesScript.async = true;
+            document.getElementById('comments-container').appendChild(utterancesScript);
+        </script>
+    
+        </div>
+    </div>
+    
+    </main>
+    <footer>
+        <nav>
+            <ul class="social-links">
+            </ul>
+        </nav>
+        <nav>
+            <ul class="footer-links">
+                <li><a href="https://smvc.dev/contact">Contact</a></li>
+                <li><a href="/image-editing/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/image-editing/terms-and-conditions">Terms and Conditions</a></li>
+            </ul>
+        </nav>
+        <div class="copyright">
+            Copyright &copy; <span id="current-year"></span>
+        </div>
+    </footer>
+</body>
+</html>

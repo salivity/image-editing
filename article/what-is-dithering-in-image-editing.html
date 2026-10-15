@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Is Dithering in Image Editing? - image-editing</title>
+    <meta name="description" content="Dithering is a digital image processing technique used to create the illusion of color depth in images that have a restricted color palette. When an image is converted from millions of colors to a smaller set—such as the 256-color limit of a GIF—dithering">
+    <link rel="canonical" href="https://salivity.github.io/image-editing/article/what-is-dithering-in-image-editing">
+    <link rel="search" type="application/opensearchdescription+xml" title="image-editing" href="/image-editing/opensearch.xml">
+    <link rel="icon" href="/image-editing/favicon.ico">
+    <link rel="stylesheet" href="/image-editing/css/style.css">
+    <link media="print" rel="stylesheet" href="/image-editing/css/print.css">
+    <script src="/image-editing/js/fuse.min.js"></script>
+    <script src="/image-editing/js/script.js"></script>
+    <script id="MathJax-script" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/4.1.3/tex-chtml.min.js" defer></script>
+    <script src="/monetize/monetize.js"></script>
+    <script src="/social/social.js"></script>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="What Is Dithering in Image Editing? - image-editing" />
+    <meta property="og:url" content="https://salivity.github.io/image-editing/article/what-is-dithering-in-image-editing" />
+    <meta property="og:image" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:secure_url" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:width" content="1120" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:description" content="Dithering is a digital image processing technique used to create the illusion of color depth in images that have a restricted color palette. When an image is converted from millions of colors to a smaller set—such as the 256-color limit of a GIF—dithering" />
+    <link rel="manifest" href="/image-editing/pwa/manifest.json" />
+</head>
+<body>
+    <header>
+        <a href="/image-editing/" aria-label="Go To Home Page" title="Go To Home Page" id="logo">
+            <span>salivity.github.io/</span><span>image-editing</span>
+        </a>
+        <nav>
+            <ul class="header-links">
+                <li><a href="/image-editing/search" title="Search" aria-label="Go To Search Page"><svg class="svg-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"></path></svg></a></li>
+                <li><a id="theme-toggle" title="Theme" href="javascript:void(0);" aria-label="Toggle Website Theme"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+    <div class="article-layout">
+        <aside id="profile-sidebar" class="profile-column" aria-label="Author Profile"></aside>
+        <div class="article-main-column">
+            <article><h1 id="what-is-dithering-in-image-editing">What Is Dithering in Image
+Editing?</h1>
+<p>Dithering is a digital image processing technique used to create the
+illusion of color depth in images that have a restricted color palette.
+When an image is converted from millions of colors to a smaller set—such
+as the 256-color limit of a GIF—dithering rearranges pixels of available
+colors into specific patterns or noise. This article explains what
+dithering is, why it is essential for avoiding visual artifacts during
+color palette reduction, and how common dithering algorithms work to
+preserve image quality.</p>
+<h3 id="the-purpose-of-palette-reduction">The Purpose of Palette
+Reduction</h3>
+<p>Digital images typically use 24-bit "true color," capable of
+displaying over 16 million distinct shades. However, certain graphic
+formats, legacy hardware, retro game development, and web optimization
+practices require reducing an image's color space to an indexed palette
+(often 8-bit or 256 colors, or even fewer).</p>
+<p>When software reduces an image's color depth without dithering, it
+performs simple color quantization. Every pixel in the original image is
+mapped strictly to the closest matching color in the restricted palette.
+This process frequently causes two major problems:</p>
+<ul>
+<li><strong>Color Banding:</strong> Smooth gradients (like skies,
+sunsets, or skin tones) are converted into harsh, abrupt blocks of solid
+color, an artifact known as posterization.</li>
+<li><strong>Loss of Detail:</strong> Subtle shadows, textures, and
+highlights disappear because distinct neighboring shades are forced into
+the same flat color value.</li>
+</ul>
+<h3 id="how-dithering-works">How Dithering Works</h3>
+<p>Dithering solves the problems of quantization by exploiting the way
+the human eye perceives visual information. When tiny pixels of two
+different colors are placed close together, the human visual system
+blends them into an intermediate hue that is not actually present in the
+palette. For instance, alternating black and white pixels in a tight
+grid create the visual perception of medium gray.</p>
+<p>By scattering available colors across adjacent pixels, dithering
+simulates the missing intermediate colors. This technique softens the
+boundaries between color steps, transforming noticeable banding into a
+smoother, more natural transition.</p>
+<h3 id="common-dithering-techniques">Common Dithering Techniques</h3>
+<p>Different algorithms handle pixel distribution in various ways, each
+with distinct visual characteristics:</p>
+<ul>
+<li><strong>Ordered Dithering:</strong> Uses a predefined threshold
+matrix (such as the Bayer matrix) to determine pixel placement. This
+method is fast and computationally lightweight, but it generates
+repetitive, cross-hatch, or geometric patterns that are easily
+noticeable at higher magnifications.</li>
+<li><strong>Error Diffusion:</strong> The most widely used approach for
+photographic images, with the Floyd-Steinberg algorithm being the
+standard example. When a pixel's color is rounded to the nearest palette
+color, an "error" (the difference between the original and available
+color) is calculated. The algorithm pushes this error value onto
+neighboring pixels that have not yet been rendered, effectively
+balancing the overall brightness and tone across the entire image.</li>
+<li><strong>Noise (Random) Dithering:</strong> Adds random white noise
+to the image values before quantization. While it avoids geometric
+artifacts, it introduces visible grain and is rarely preferred over
+error diffusion in modern workflows.</li>
+</ul>
+<h3 id="balancing-quality-and-file-size">Balancing Quality and File
+Size</h3>
+<p>While dithering dramatically improves visual fidelity in
+indexed-color images, it involves a trade-off. Dithering introduces
+high-frequency pixel variations, effectively increasing image
+complexity. For lossless compression formats like GIF and PNG, this
+noise disrupts runs of identical horizontal pixels, which can lead to
+larger file sizes. Consequently, modern image editors often allow
+creators to adjust the dithering percentage, providing control over the
+balance between smooth visual transitions and optimal file
+compression.</p></article>
+        <div id="comments-container"></div>
+        <script>
+            const utterancesScript = document.createElement('script');
+            utterancesScript.setAttribute('src', 'https://utteranc.es/client.js');
+            utterancesScript.setAttribute('repo', 'salivity/image-editing'); 
+            utterancesScript.setAttribute('issue-term', 'pathname'); 
+            const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            utterancesScript.setAttribute('theme', currentTheme === 'dark' ? 'github-dark' : 'github-light'); 
+            utterancesScript.setAttribute('crossorigin', 'anonymous');
+            utterancesScript.async = true;
+            document.getElementById('comments-container').appendChild(utterancesScript);
+        </script>
+    
+        </div>
+    </div>
+    
+    </main>
+    <footer>
+        <nav>
+            <ul class="social-links">
+            </ul>
+        </nav>
+        <nav>
+            <ul class="footer-links">
+                <li><a href="https://smvc.dev/contact">Contact</a></li>
+                <li><a href="/image-editing/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/image-editing/terms-and-conditions">Terms and Conditions</a></li>
+            </ul>
+        </nav>
+        <div class="copyright">
+            Copyright &copy; <span id="current-year"></span>
+        </div>
+    </footer>
+</body>
+</html>

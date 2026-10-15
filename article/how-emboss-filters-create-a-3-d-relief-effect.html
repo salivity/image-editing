@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Emboss Filters Create a 3D Relief Effect - image-editing</title>
+    <meta name="description" content="The emboss filter transforms a flat two-dimensional digital image into an apparently three-dimensional textured relief by identifying directional edges, calculating pixel contrast, and projecting highlights and shadows over a neutral gray canvas. Rather t">
+    <link rel="canonical" href="https://salivity.github.io/image-editing/article/how-emboss-filters-create-a-3-d-relief-effect">
+    <link rel="search" type="application/opensearchdescription+xml" title="image-editing" href="/image-editing/opensearch.xml">
+    <link rel="icon" href="/image-editing/favicon.ico">
+    <link rel="stylesheet" href="/image-editing/css/style.css">
+    <link media="print" rel="stylesheet" href="/image-editing/css/print.css">
+    <script src="/image-editing/js/fuse.min.js"></script>
+    <script src="/image-editing/js/script.js"></script>
+    <script id="MathJax-script" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/4.1.3/tex-chtml.min.js" defer></script>
+    <script src="/monetize/monetize.js"></script>
+    <script src="/social/social.js"></script>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="How Emboss Filters Create a 3D Relief Effect - image-editing" />
+    <meta property="og:url" content="https://salivity.github.io/image-editing/article/how-emboss-filters-create-a-3-d-relief-effect" />
+    <meta property="og:image" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:secure_url" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:width" content="1120" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:description" content="The emboss filter transforms a flat two-dimensional digital image into an apparently three-dimensional textured relief by identifying directional edges, calculating pixel contrast, and projecting highlights and shadows over a neutral gray canvas. Rather t" />
+    <link rel="manifest" href="/image-editing/pwa/manifest.json" />
+</head>
+<body>
+    <header>
+        <a href="/image-editing/" aria-label="Go To Home Page" title="Go To Home Page" id="logo">
+            <span>salivity.github.io/</span><span>image-editing</span>
+        </a>
+        <nav>
+            <ul class="header-links">
+                <li><a href="/image-editing/search" title="Search" aria-label="Go To Search Page"><svg class="svg-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"></path></svg></a></li>
+                <li><a id="theme-toggle" title="Theme" href="javascript:void(0);" aria-label="Toggle Website Theme"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+    <div class="article-layout">
+        <aside id="profile-sidebar" class="profile-column" aria-label="Author Profile"></aside>
+        <div class="article-main-column">
+            <article><h1 id="how-emboss-filters-create-a-3d-relief-effect">How Emboss Filters
+Create a 3D Relief Effect</h1>
+<p>The emboss filter transforms a flat two-dimensional digital image
+into an apparently three-dimensional textured relief by identifying
+directional edges, calculating pixel contrast, and projecting highlights
+and shadows over a neutral gray canvas. Rather than actually altering
+geometric depth, the filter exploits human optical perception, replacing
+flat color data with simulated directional lighting that mimics physical
+engraving, stamping, or carving.</p>
+<p>At the core of the embossing process is an image processing algorithm
+called convolution. During convolution, a small matrix of mathematical
+values known as a kernel—typically a 3x3 grid—slides across every pixel
+of the source image. This kernel calculates the difference in brightness
+between adjacent pixels located on opposite sides of a central target
+pixel along a specified directional axis, such as from top-left to
+bottom-right.</p>
+<p>When the kernel passes over an area of uniform color or smooth
+gradient, the mathematical difference between neighboring pixels is zero
+or nearly zero. In the final output, these flat areas are assigned a
+value of 50 percent neutral gray (RGB 128, 128, 128). Because the
+differences cancel out, large sections of flat backgrounds lose their
+original hue and saturation, reducing the visual noise and isolating the
+edges.</p>
+<p>Where sharp color or luminance boundaries exist, the kernel detects a
+significant difference. Pixels on the side facing the simulated light
+source yield a positive value and are brightened toward white, forming a
+highlight. Conversely, pixels on the opposite side produce a negative
+value and are darkened toward black, forming a shadow.</p>
+<p>Software algorithms typically allow the user to control the angle and
+the depth of this effect. Adjusting the angle changes the orientation of
+the numbers within the convolution matrix, shifting the perceived light
+source around a 360-degree radius. Modifying the depth or intensity
+multiplies the contrast values, widening the boundary between the light
+and dark edges to make the relief appear taller or deeply stamped.</p>
+<p>The final three-dimensional illusion relies on how the human brain
+interprets light. Because natural light typically originates from an
+angle, humans instinctively perceive raised surfaces when highlights are
+paired alongside complementary drop shadows. By replacing original color
+data with mathematically aligned highlights and shadows against a
+neutral gray plane, the emboss filter convincingly simulates a physical,
+tactile surface on a completely flat screen.</p></article>
+        <div id="comments-container"></div>
+        <script>
+            const utterancesScript = document.createElement('script');
+            utterancesScript.setAttribute('src', 'https://utteranc.es/client.js');
+            utterancesScript.setAttribute('repo', 'salivity/image-editing'); 
+            utterancesScript.setAttribute('issue-term', 'pathname'); 
+            const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            utterancesScript.setAttribute('theme', currentTheme === 'dark' ? 'github-dark' : 'github-light'); 
+            utterancesScript.setAttribute('crossorigin', 'anonymous');
+            utterancesScript.async = true;
+            document.getElementById('comments-container').appendChild(utterancesScript);
+        </script>
+    
+        </div>
+    </div>
+    
+    </main>
+    <footer>
+        <nav>
+            <ul class="social-links">
+            </ul>
+        </nav>
+        <nav>
+            <ul class="footer-links">
+                <li><a href="https://smvc.dev/contact">Contact</a></li>
+                <li><a href="/image-editing/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/image-editing/terms-and-conditions">Terms and Conditions</a></li>
+            </ul>
+        </nav>
+        <div class="copyright">
+            Copyright &copy; <span id="current-year"></span>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaussian Blur vs Lens Blur: Differences in Highlights - image-editing</title>
+    <meta name="description" content="When editing images, choosing between Gaussian blur and lens blur drastically alters how bright areas are rendered. While Gaussian blur applies a purely mathematical algorithm that smudges all pixels uniformly, lens blur simulates optical physics by mimic">
+    <link rel="canonical" href="https://salivity.github.io/image-editing/article/gaussian-blur-vs-lens-blur-differences-in-highlights">
+    <link rel="search" type="application/opensearchdescription+xml" title="image-editing" href="/image-editing/opensearch.xml">
+    <link rel="icon" href="/image-editing/favicon.ico">
+    <link rel="stylesheet" href="/image-editing/css/style.css">
+    <link media="print" rel="stylesheet" href="/image-editing/css/print.css">
+    <script src="/image-editing/js/fuse.min.js"></script>
+    <script src="/image-editing/js/script.js"></script>
+    <script id="MathJax-script" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/4.1.3/tex-chtml.min.js" defer></script>
+    <script src="/monetize/monetize.js"></script>
+    <script src="/social/social.js"></script>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Gaussian Blur vs Lens Blur: Differences in Highlights - image-editing" />
+    <meta property="og:url" content="https://salivity.github.io/image-editing/article/gaussian-blur-vs-lens-blur-differences-in-highlights" />
+    <meta property="og:image" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:secure_url" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:width" content="1120" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:description" content="When editing images, choosing between Gaussian blur and lens blur drastically alters how bright areas are rendered. While Gaussian blur applies a purely mathematical algorithm that smudges all pixels uniformly, lens blur simulates optical physics by mimic" />
+    <link rel="manifest" href="/image-editing/pwa/manifest.json" />
+</head>
+<body>
+    <header>
+        <a href="/image-editing/" aria-label="Go To Home Page" title="Go To Home Page" id="logo">
+            <span>salivity.github.io/</span><span>image-editing</span>
+        </a>
+        <nav>
+            <ul class="header-links">
+                <li><a href="/image-editing/search" title="Search" aria-label="Go To Search Page"><svg class="svg-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"></path></svg></a></li>
+                <li><a id="theme-toggle" title="Theme" href="javascript:void(0);" aria-label="Toggle Website Theme"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+    <div class="article-layout">
+        <aside id="profile-sidebar" class="profile-column" aria-label="Author Profile"></aside>
+        <div class="article-main-column">
+            <article><h1 id="gaussian-blur-vs-lens-blur-differences-in-highlights">Gaussian
+Blur vs Lens Blur: Differences in Highlights</h1>
+<p>When editing images, choosing between Gaussian blur and lens blur
+drastically alters how bright areas are rendered. While Gaussian blur
+applies a purely mathematical algorithm that smudges all pixels
+uniformly, lens blur simulates optical physics by mimicking how a camera
+lens renders out-of-focus light. Consequently, Gaussian blur flattens
+and dims highlights into a dull, hazy glow, whereas lens blur preserves
+the luminance of specular highlights, transforming them into realistic
+optical shapes known as bokeh.</p>
+<h2 id="how-gaussian-blur-treats-highlights">How Gaussian Blur Treats
+Highlights</h2>
+<p>Gaussian blur operates using a bell-curve mathematical function to
+average the color and luminosity values of neighboring pixels. Because
+it applies this calculation equally across the entire selection without
+regard for optical physics, bright highlights are simply smeared into
+the darker surrounding areas.</p>
+<p>This process causes specular highlights to lose their intensity
+rapidly. Instead of retaining their bright, punchy appearance, the
+highlights become diffuse, muddy, and dim. The result is a flat, smudged
+aesthetic that looks distinctly digital and artificial, as real camera
+lenses do not naturally distribute light in a uniform Gaussian
+curve.</p>
+<h2 id="how-lens-blur-treats-highlights">How Lens Blur Treats
+Highlights</h2>
+<p>Lens blur mimics the physical behavior of a real camera lens
+aperture. Rather than averaging pixel values uniformly, it maps out
+points of light and redistributes them into the shape of the simulated
+aperture blades (such as a circle, hexagon, or octagon).</p>
+<p>In image editing software, lens blur tools typically include
+dedicated specular highlight controls, such as a highlight brightness
+and threshold slider. These settings allow the brightest points in an
+image to exceed the blur averaging calculation. As a result, highlights
+retain their punchy exposure and bloom into crisp, geometric bokeh
+discs. The edges of these highlight discs remain well-defined relative
+to the overall softness of the background, accurately replicating
+optical depth of field.</p>
+<h2 id="direct-comparison">Direct Comparison</h2>
+<ul>
+<li><strong>Luminance and Contrast:</strong> Gaussian blur drastically
+reduces the contrast of bright spots by averaging them into darker
+surrounding pixels. Lens blur maintains high contrast by keeping
+highlights bright while blurring the rest of the image.</li>
+<li><strong>Shape and Edge Definition:</strong> Gaussian blur generates
+soft, amorphous gradients with no defined edges. Lens blur produces
+distinct geometric shapes (bokeh) dictated by the chosen blade count of
+the virtual aperture.</li>
+<li><strong>Visual Realism:</strong> Gaussian blur creates a milky or
+foggy overlay across high-exposure points, signaling an obvious digital
+effect. Lens blur preserves the optical brilliance of light sources,
+providing a photorealistic, cinematic shallow depth of field.</li>
+</ul></article>
+        <div id="comments-container"></div>
+        <script>
+            const utterancesScript = document.createElement('script');
+            utterancesScript.setAttribute('src', 'https://utteranc.es/client.js');
+            utterancesScript.setAttribute('repo', 'salivity/image-editing'); 
+            utterancesScript.setAttribute('issue-term', 'pathname'); 
+            const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            utterancesScript.setAttribute('theme', currentTheme === 'dark' ? 'github-dark' : 'github-light'); 
+            utterancesScript.setAttribute('crossorigin', 'anonymous');
+            utterancesScript.async = true;
+            document.getElementById('comments-container').appendChild(utterancesScript);
+        </script>
+    
+        </div>
+    </div>
+    
+    </main>
+    <footer>
+        <nav>
+            <ul class="social-links">
+            </ul>
+        </nav>
+        <nav>
+            <ul class="footer-links">
+                <li><a href="https://smvc.dev/contact">Contact</a></li>
+                <li><a href="/image-editing/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/image-editing/terms-and-conditions">Terms and Conditions</a></li>
+            </ul>
+        </nav>
+        <div class="copyright">
+            Copyright &copy; <span id="current-year"></span>
+        </div>
+    </footer>
+</body>
+</html>

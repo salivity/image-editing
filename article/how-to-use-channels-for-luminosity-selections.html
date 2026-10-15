@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Use Channels for Luminosity Selections - image-editing</title>
+    <meta name="description" content="Luminosity selections allow photo editors to isolate specific tonal ranges—such as deep shadows, precise midtones, or delicate highlights—based entirely on pixel brightness values. By using the Channels panel in raster image editing software like Adobe Ph">
+    <link rel="canonical" href="https://salivity.github.io/image-editing/article/how-to-use-channels-for-luminosity-selections">
+    <link rel="search" type="application/opensearchdescription+xml" title="image-editing" href="/image-editing/opensearch.xml">
+    <link rel="icon" href="/image-editing/favicon.ico">
+    <link rel="stylesheet" href="/image-editing/css/style.css">
+    <link media="print" rel="stylesheet" href="/image-editing/css/print.css">
+    <script src="/image-editing/js/fuse.min.js"></script>
+    <script src="/image-editing/js/script.js"></script>
+    <script id="MathJax-script" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/4.1.3/tex-chtml.min.js" defer></script>
+    <script src="/monetize/monetize.js"></script>
+    <script src="/social/social.js"></script>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="How to Use Channels for Luminosity Selections - image-editing" />
+    <meta property="og:url" content="https://salivity.github.io/image-editing/article/how-to-use-channels-for-luminosity-selections" />
+    <meta property="og:image" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:secure_url" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:width" content="1120" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:description" content="Luminosity selections allow photo editors to isolate specific tonal ranges—such as deep shadows, precise midtones, or delicate highlights—based entirely on pixel brightness values. By using the Channels panel in raster image editing software like Adobe Ph" />
+    <link rel="manifest" href="/image-editing/pwa/manifest.json" />
+</head>
+<body>
+    <header>
+        <a href="/image-editing/" aria-label="Go To Home Page" title="Go To Home Page" id="logo">
+            <span>salivity.github.io/</span><span>image-editing</span>
+        </a>
+        <nav>
+            <ul class="header-links">
+                <li><a href="/image-editing/search" title="Search" aria-label="Go To Search Page"><svg class="svg-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"></path></svg></a></li>
+                <li><a id="theme-toggle" title="Theme" href="javascript:void(0);" aria-label="Toggle Website Theme"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+    <div class="article-layout">
+        <aside id="profile-sidebar" class="profile-column" aria-label="Author Profile"></aside>
+        <div class="article-main-column">
+            <article><h1 id="how-to-use-channels-for-luminosity-selections">How to Use
+Channels for Luminosity Selections</h1>
+<p>Luminosity selections allow photo editors to isolate specific tonal
+ranges—such as deep shadows, precise midtones, or delicate
+highlights—based entirely on pixel brightness values. By using the
+Channels panel in raster image editing software like Adobe Photoshop or
+GIMP, you can harness grayscale brightness data to build automated,
+perfectly feathered selections without harsh edges. This guide explains
+step-by-step how to generate, refine, and apply highlight, shadow, and
+midtone luminosity masks using native channel operations.</p>
+<h3 id="understanding-channels-and-luminosity">Understanding Channels
+and Luminosity</h3>
+<p>Every standard digital image is composed of primary color channels
+(Red, Green, and Blue) along with an overarching composite RGB channel.
+The composite channel is inherently a grayscale representation of the
+image's overall luminance: white pixels represent pure brightness, black
+pixels represent total darkness, and shades of gray represent varying
+tonal gradations. Because selections interpret white as 100% selected,
+black as 0% selected, and gray as partial transparency, the brightness
+information in the Channels panel can be converted directly into
+seamless tonal masks.</p>
+<h3 id="creating-highlight-selections-the-lights">Creating Highlight
+Selections (The Lights)</h3>
+<p>Highlight selections form the foundation of all luminosity
+masking.</p>
+<ol type="1">
+<li><strong>Create the Base Highlight Selection:</strong> Open the
+<strong>Channels</strong> panel. Hold <strong>Ctrl</strong> (Windows) or
+<strong>Cmd</strong> (macOS) and click directly on the thumbnail of the
+composite <strong>RGB</strong> channel. This loads a selection
+containing all pixels above 50% brightness.</li>
+<li><strong>Save the Selection:</strong> Click the <strong>Save
+Selection as Channel</strong> icon at the bottom of the panel (a square
+with a white circle inside). Rename this new alpha channel
+<strong>Lights 1</strong>.</li>
+<li><strong>Narrow the Highlights:</strong> To target only the brightest
+highlights, load the "Lights 1" selection. Press <strong>Ctrl + Alt +
+Shift</strong> (Windows) or <strong>Cmd + Option + Shift</strong>
+(macOS) and click the <strong>Lights 1</strong> thumbnail to intersect
+the selection with itself.</li>
+<li><strong>Save Iterations:</strong> Save this refined selection as
+<strong>Lights 2</strong>. Repeating the intersection process creates
+progressively narrower selections (<strong>Lights 3</strong>,
+<strong>Lights 4</strong>), isolating only extreme specular
+highlights.</li>
+</ol>
+<h3 id="creating-shadow-selections-the-darks">Creating Shadow Selections
+(The Darks)</h3>
+<p>Shadow masks are the inverse of highlight masks and isolate darker
+tones.</p>
+<ol type="1">
+<li><strong>Create the Base Shadow Selection:</strong> Load the base
+highlight selection by holding <strong>Ctrl/Cmd</strong> and clicking
+the <strong>RGB</strong> composite channel.</li>
+<li><strong>Invert the Selection:</strong> Invert the active selection
+by pressing <strong>Ctrl + Shift + I</strong> (Windows) or <strong>Cmd +
+Shift + I</strong> (macOS). The active selection now targets everything
+below 50% luminance.</li>
+<li><strong>Save the Channel:</strong> Click the <strong>Save Selection
+as Channel</strong> button and rename the resulting mask <strong>Darks
+1</strong>.</li>
+<li><strong>Narrow the Shadows:</strong> To isolate deeper shadows, load
+"Darks 1" and intersect it with itself using <strong>Ctrl + Alt +
+Shift</strong> (Windows) or <strong>Cmd + Option + Shift</strong>
+(macOS) while clicking the <strong>Darks 1</strong> thumbnail. Save
+successive iterations as <strong>Darks 2</strong> and <strong>Darks
+3</strong> for deep, localized shadow targeting.</li>
+</ol>
+<h3 id="isolating-midtones">Isolating Midtones</h3>
+<p>Midtones represent the values between highlights and shadows and
+require subtraction operations to isolate.</p>
+<ol type="1">
+<li><strong>Select the Entire Canvas:</strong> Press <strong>Ctrl +
+A</strong> (Windows) or <strong>Cmd + A</strong> (macOS) to select the
+entire image.</li>
+<li><strong>Subtract Highlights and Shadows:</strong> Hold <strong>Ctrl
++ Alt</strong> (Windows) or <strong>Cmd + Option</strong> (macOS) and
+click the <strong>Lights 1</strong> channel to subtract the highlights
+from the active selection. Next, continue holding <strong>Ctrl +
+Alt</strong> / <strong>Cmd + Option</strong> and click the <strong>Darks
+1</strong> channel to subtract the shadows.</li>
+<li><strong>Save the Result:</strong> The remaining selection contains
+only midtone values. Save this selection as an alpha channel named
+<strong>Midtones 1</strong>.</li>
+<li><strong>Target Narrower Midtones:</strong> To target only the narrow
+center of the tonal spectrum, repeat this process using narrower
+highlight and shadow channels (e.g., subtract Lights 2 and Darks 2 from
+the entire canvas).</li>
+</ol>
+<h3 id="refining-and-applying-the-channels">Refining and Applying the
+Channels</h3>
+<p>Once stored in the Channels panel, these alpha channels provide
+complete, non-destructive control over image adjustments:</p>
+<ul>
+<li><strong>Applying to Adjustment Layers:</strong> With an active
+selection loaded from any channel, create a new adjustment layer (such
+as Curves, Levels, or Hue/Saturation). The active selection
+automatically applies as the layer mask.</li>
+<li><strong>Direct Channel Editing:</strong> You can customize any alpha
+channel directly. Select the channel in the panel and apply a
+<strong>Curves</strong> or <strong>Levels</strong> adjustment
+(<strong>Ctrl/Cmd + M</strong> or <strong>Ctrl/Cmd + L</strong>) to
+boost contrast, clip deep blacks, or push highlights to pure white,
+tailoring the falloff curve to the specific image.</li>
+</ul></article>
+        <div id="comments-container"></div>
+        <script>
+            const utterancesScript = document.createElement('script');
+            utterancesScript.setAttribute('src', 'https://utteranc.es/client.js');
+            utterancesScript.setAttribute('repo', 'salivity/image-editing'); 
+            utterancesScript.setAttribute('issue-term', 'pathname'); 
+            const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            utterancesScript.setAttribute('theme', currentTheme === 'dark' ? 'github-dark' : 'github-light'); 
+            utterancesScript.setAttribute('crossorigin', 'anonymous');
+            utterancesScript.async = true;
+            document.getElementById('comments-container').appendChild(utterancesScript);
+        </script>
+    
+        </div>
+    </div>
+    
+    </main>
+    <footer>
+        <nav>
+            <ul class="social-links">
+            </ul>
+        </nav>
+        <nav>
+            <ul class="footer-links">
+                <li><a href="https://smvc.dev/contact">Contact</a></li>
+                <li><a href="/image-editing/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/image-editing/terms-and-conditions">Terms and Conditions</a></li>
+            </ul>
+        </nav>
+        <div class="copyright">
+            Copyright &copy; <span id="current-year"></span>
+        </div>
+    </footer>
+</body>
+</html>

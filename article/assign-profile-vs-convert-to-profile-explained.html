@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assign Profile vs Convert to Profile Explained - image-editing</title>
+    <meta name="description" content="In digital image editing, color profiles define how color numbers translate into the actual colors you see on screen or in print. The core difference between assigning a profile and converting to a profile lies in what happens to the image&#39;s raw color dat">
+    <link rel="canonical" href="https://salivity.github.io/image-editing/article/assign-profile-vs-convert-to-profile-explained">
+    <link rel="search" type="application/opensearchdescription+xml" title="image-editing" href="/image-editing/opensearch.xml">
+    <link rel="icon" href="/image-editing/favicon.ico">
+    <link rel="stylesheet" href="/image-editing/css/style.css">
+    <link media="print" rel="stylesheet" href="/image-editing/css/print.css">
+    <script src="/image-editing/js/fuse.min.js"></script>
+    <script src="/image-editing/js/script.js"></script>
+    <script id="MathJax-script" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/4.1.3/tex-chtml.min.js" defer></script>
+    <script src="/monetize/monetize.js"></script>
+    <script src="/social/social.js"></script>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Assign Profile vs Convert to Profile Explained - image-editing" />
+    <meta property="og:url" content="https://salivity.github.io/image-editing/article/assign-profile-vs-convert-to-profile-explained" />
+    <meta property="og:image" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:secure_url" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:width" content="1120" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:description" content="In digital image editing, color profiles define how color numbers translate into the actual colors you see on screen or in print. The core difference between assigning a profile and converting to a profile lies in what happens to the image&#39;s raw color dat" />
+    <link rel="manifest" href="/image-editing/pwa/manifest.json" />
+</head>
+<body>
+    <header>
+        <a href="/image-editing/" aria-label="Go To Home Page" title="Go To Home Page" id="logo">
+            <span>salivity.github.io/</span><span>image-editing</span>
+        </a>
+        <nav>
+            <ul class="header-links">
+                <li><a href="/image-editing/search" title="Search" aria-label="Go To Search Page"><svg class="svg-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"></path></svg></a></li>
+                <li><a id="theme-toggle" title="Theme" href="javascript:void(0);" aria-label="Toggle Website Theme"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+    <div class="article-layout">
+        <aside id="profile-sidebar" class="profile-column" aria-label="Author Profile"></aside>
+        <div class="article-main-column">
+            <article><h1 id="assign-profile-vs-convert-to-profile-explained">Assign Profile
+vs Convert to Profile Explained</h1>
+<p>In digital image editing, color profiles define how color numbers
+translate into the actual colors you see on screen or in print. The core
+difference between assigning a profile and converting to a profile lies
+in what happens to the image's raw color data versus its visual
+appearance. <strong>Assign Profile</strong> keeps the underlying color
+values identical and changes the visual appearance by applying a new
+interpretation, while <strong>Convert to Profile</strong> alters the
+underlying color values in order to keep the visual appearance as
+consistent as possible across different color spaces.</p>
+<h3 id="understanding-color-numbers-and-profiles">Understanding Color
+Numbers and Profiles</h3>
+<p>Every digital image consists of pixels with numerical color
+values—such as specific red, green, and blue (RGB) values ranging from 0
+to 255. However, the number value <code>R: 255, G: 0, B: 0</code> does
+not define a precise physical color on its own. A color profile (like
+sRGB, Adobe RGB, or ProPhoto RGB) acts as a dictionary or map that gives
+those numbers their real-world meaning.</p>
+<h3 id="what-does-assign-profile-do">What Does "Assign Profile" Do?</h3>
+<p>When you choose <strong>Assign Profile</strong>, you attach a new
+color profile to the file without changing the image’s underlying pixel
+values.</p>
+<ul>
+<li><strong>The Mechanism:</strong> The numerical RGB or CMYK data
+remains completely untouched. Only the "tag" or interpretation attached
+to the file changes.</li>
+<li><strong>The Visual Result:</strong> The image's appearance usually
+changes dramatically on screen. For example, assigning Adobe RGB to an
+sRGB image will cause the colors to look overly saturated, because the
+software now interprets the existing numbers within a much larger color
+space.</li>
+<li><strong>When to Use It:</strong>
+<ul>
+<li>When an image has no embedded profile (untagged) and you need to
+specify its native color space.</li>
+<li>When an image was incorrectly tagged by a scanner, camera, or
+software, and you need to restore its correct color rendering.</li>
+<li>You should rarely use this tool during standard workflows for
+properly tagged files.</li>
+</ul></li>
+</ul>
+<h3 id="what-does-convert-to-profile-do">What Does "Convert to Profile"
+Do?</h3>
+<p>When you choose <strong>Convert to Profile</strong>, the software
+translates the colors from their current profile into a destination
+profile.</p>
+<ul>
+<li><strong>The Mechanism:</strong> The software recalculates the
+image’s numerical pixel data. If a specific red is defined in Adobe RGB,
+the software calculates the new numerical equivalent required to
+represent that exact same shade in sRGB.</li>
+<li><strong>The Visual Result:</strong> The visual appearance remains as
+close to the original as physically possible, constrained only by the
+boundaries (gamut) of the target color space.</li>
+<li><strong>When to Use It:</strong>
+<ul>
+<li>Preparing an image for the web by converting it from Adobe RGB or
+ProPhoto RGB to sRGB.</li>
+<li>Preparing an image for a specific commercial press by converting RGB
+data to a designated CMYK profile.</li>
+<li>Sending files to an external lab or fine-art printer that requires a
+specific working profile.</li>
+</ul></li>
+</ul>
+<h3 id="summary-comparison">Summary Comparison</h3>
+<ul>
+<li><strong>Assign Profile:</strong> Changes the meaning of the numbers;
+numbers stay the same; appearance changes. Use to fix or define
+untagged/mistagged images.</li>
+<li><strong>Convert to Profile:</strong> Changes the numbers to maintain
+meaning; numbers change; appearance stays the same. Use to move an image
+between working spaces or output destinations.</li>
+</ul></article>
+        <div id="comments-container"></div>
+        <script>
+            const utterancesScript = document.createElement('script');
+            utterancesScript.setAttribute('src', 'https://utteranc.es/client.js');
+            utterancesScript.setAttribute('repo', 'salivity/image-editing'); 
+            utterancesScript.setAttribute('issue-term', 'pathname'); 
+            const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            utterancesScript.setAttribute('theme', currentTheme === 'dark' ? 'github-dark' : 'github-light'); 
+            utterancesScript.setAttribute('crossorigin', 'anonymous');
+            utterancesScript.async = true;
+            document.getElementById('comments-container').appendChild(utterancesScript);
+        </script>
+    
+        </div>
+    </div>
+    
+    </main>
+    <footer>
+        <nav>
+            <ul class="social-links">
+            </ul>
+        </nav>
+        <nav>
+            <ul class="footer-links">
+                <li><a href="https://smvc.dev/contact">Contact</a></li>
+                <li><a href="/image-editing/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/image-editing/terms-and-conditions">Terms and Conditions</a></li>
+            </ul>
+        </nav>
+        <div class="copyright">
+            Copyright &copy; <span id="current-year"></span>
+        </div>
+    </footer>
+</body>
+</html>

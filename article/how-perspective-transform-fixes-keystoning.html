@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Perspective Transform Fixes Keystoning - image-editing</title>
+    <meta name="description" content="Keystoning occurs when photographing tall buildings from the ground, causing the vertical lines of the structure to converge and appear as though the building is falling backward. The perspective transform tool in modern photo editing software corrects th">
+    <link rel="canonical" href="https://salivity.github.io/image-editing/article/how-perspective-transform-fixes-keystoning">
+    <link rel="search" type="application/opensearchdescription+xml" title="image-editing" href="/image-editing/opensearch.xml">
+    <link rel="icon" href="/image-editing/favicon.ico">
+    <link rel="stylesheet" href="/image-editing/css/style.css">
+    <link media="print" rel="stylesheet" href="/image-editing/css/print.css">
+    <script src="/image-editing/js/fuse.min.js"></script>
+    <script src="/image-editing/js/script.js"></script>
+    <script id="MathJax-script" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/4.1.3/tex-chtml.min.js" defer></script>
+    <script src="/monetize/monetize.js"></script>
+    <script src="/social/social.js"></script>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="How Perspective Transform Fixes Keystoning - image-editing" />
+    <meta property="og:url" content="https://salivity.github.io/image-editing/article/how-perspective-transform-fixes-keystoning" />
+    <meta property="og:image" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:secure_url" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:width" content="1120" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:description" content="Keystoning occurs when photographing tall buildings from the ground, causing the vertical lines of the structure to converge and appear as though the building is falling backward. The perspective transform tool in modern photo editing software corrects th" />
+    <link rel="manifest" href="/image-editing/pwa/manifest.json" />
+</head>
+<body>
+    <header>
+        <a href="/image-editing/" aria-label="Go To Home Page" title="Go To Home Page" id="logo">
+            <span>salivity.github.io/</span><span>image-editing</span>
+        </a>
+        <nav>
+            <ul class="header-links">
+                <li><a href="/image-editing/search" title="Search" aria-label="Go To Search Page"><svg class="svg-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"></path></svg></a></li>
+                <li><a id="theme-toggle" title="Theme" href="javascript:void(0);" aria-label="Toggle Website Theme"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+    <div class="article-layout">
+        <aside id="profile-sidebar" class="profile-column" aria-label="Author Profile"></aside>
+        <div class="article-main-column">
+            <article><h1 id="how-perspective-transform-fixes-keystoning">How Perspective
+Transform Fixes Keystoning</h1>
+<p>Keystoning occurs when photographing tall buildings from the ground,
+causing the vertical lines of the structure to converge and appear as
+though the building is falling backward. The perspective transform tool
+in modern photo editing software corrects this distortion by digitally
+stretching, compressing, and re-aligning the image's coordinate plane,
+restoring the building’s parallel vertical lines to reflect its true
+real-world geometry.</p>
+<h3 id="the-cause-of-keystoning-distortion">The Cause of Keystoning
+Distortion</h3>
+<p>When a camera is tilted upward to fit the entirety of a skyscraper or
+historic monument into the frame, the camera sensor is no longer
+parallel to the building's facade. Because the top of the building is
+significantly farther from the camera lens than the base, it is rendered
+smaller on the sensor. This optical phenomenon creates a trapezoidal
+effect—known as keystoning—where parallel architectural edges angle
+inward toward a vanishing point above the frame.</p>
+<h3 id="the-mechanics-of-perspective-transformation">The Mechanics of
+Perspective Transformation</h3>
+<p>The perspective transform tool operates using a mathematical mapping
+technique called planar homography. Rather than moving pixels along
+simple horizontal or vertical axes, the tool calculates a 3D-to-2D
+spatial transformation that alters the virtual viewing angle of the
+photograph after it has been taken.</p>
+<p>When activated, the tool typically overlays a grid with adjustable
+corner pins over the image. To fix keystoning, you align these corner
+pins with the slanted architectural edges of the building:</p>
+<ol type="1">
+<li><strong>Grid Placement:</strong> The editor places guidelines along
+the converging edges of the building's walls, windows, or columns.</li>
+<li><strong>Plane Realignment:</strong> By moving the top control pins
+outward, the software progressively stretches the narrower top section
+of the building horizontally until the angled lines become strictly
+vertical (90 degrees relative to the horizon). Alternatively,
+compressing the base achieves the same parallel result.</li>
+<li><strong>Pixel Interpolation:</strong> During this adjustment, the
+software resamples the image, calculating new color values for the newly
+stretched areas through interpolation algorithms (such as bicubic or
+Lanczos resampling) to maintain sharpness.</li>
+</ol>
+<h3 id="correcting-vertical-scale-and-compression">Correcting Vertical
+Scale and Compression</h3>
+<p>A common byproduct of widening the top of a building is vertical
+compression, which can make the structure appear unnaturally wide or
+squished. Advanced perspective transform tools account for this by
+incorporating vertical scale sliders or maintaining proportional
+constraints. Adjusting the vertical scale stretches the image upward,
+preserving the building's accurate height-to-width ratio and preventing
+an artificial, squat appearance.</p>
+<h3 id="cropping-and-canvas-considerations">Cropping and Canvas
+Considerations</h3>
+<p>Because transforming a trapezoid back into a rectangle necessarily
+changes the overall shape of the image boundary, empty wedges of canvas
+are created along the edges. The final stage of fixing keystoning
+involves either cropping the frame to fit inside the new rectangular
+bounds of the building, or utilizing content-aware fill algorithms to
+automatically reconstruct the missing peripheral elements, such as sky
+or pavement.</p></article>
+        <div id="comments-container"></div>
+        <script>
+            const utterancesScript = document.createElement('script');
+            utterancesScript.setAttribute('src', 'https://utteranc.es/client.js');
+            utterancesScript.setAttribute('repo', 'salivity/image-editing'); 
+            utterancesScript.setAttribute('issue-term', 'pathname'); 
+            const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            utterancesScript.setAttribute('theme', currentTheme === 'dark' ? 'github-dark' : 'github-light'); 
+            utterancesScript.setAttribute('crossorigin', 'anonymous');
+            utterancesScript.async = true;
+            document.getElementById('comments-container').appendChild(utterancesScript);
+        </script>
+    
+        </div>
+    </div>
+    
+    </main>
+    <footer>
+        <nav>
+            <ul class="social-links">
+            </ul>
+        </nav>
+        <nav>
+            <ul class="footer-links">
+                <li><a href="https://smvc.dev/contact">Contact</a></li>
+                <li><a href="/image-editing/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/image-editing/terms-and-conditions">Terms and Conditions</a></li>
+            </ul>
+        </nav>
+        <div class="copyright">
+            Copyright &copy; <span id="current-year"></span>
+        </div>
+    </footer>
+</body>
+</html>

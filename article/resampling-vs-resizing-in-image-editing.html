@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resampling vs Resizing in Image Editing - image-editing</title>
+    <meta name="description" content="This article explains the fundamental differences between image resampling and resizing in digital photo editing. While often used interchangeably, resizing alters the physical display or print dimensions of an image without changing its underlying pixel">
+    <link rel="canonical" href="https://salivity.github.io/image-editing/article/resampling-vs-resizing-in-image-editing">
+    <link rel="search" type="application/opensearchdescription+xml" title="image-editing" href="/image-editing/opensearch.xml">
+    <link rel="icon" href="/image-editing/favicon.ico">
+    <link rel="stylesheet" href="/image-editing/css/style.css">
+    <link media="print" rel="stylesheet" href="/image-editing/css/print.css">
+    <script src="/image-editing/js/fuse.min.js"></script>
+    <script src="/image-editing/js/script.js"></script>
+    <script id="MathJax-script" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/4.1.3/tex-chtml.min.js" defer></script>
+    <script src="/monetize/monetize.js"></script>
+    <script src="/social/social.js"></script>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Resampling vs Resizing in Image Editing - image-editing" />
+    <meta property="og:url" content="https://salivity.github.io/image-editing/article/resampling-vs-resizing-in-image-editing" />
+    <meta property="og:image" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:secure_url" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:width" content="1120" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:description" content="This article explains the fundamental differences between image resampling and resizing in digital photo editing. While often used interchangeably, resizing alters the physical display or print dimensions of an image without changing its underlying pixel" />
+    <link rel="manifest" href="/image-editing/pwa/manifest.json" />
+</head>
+<body>
+    <header>
+        <a href="/image-editing/" aria-label="Go To Home Page" title="Go To Home Page" id="logo">
+            <span>salivity.github.io/</span><span>image-editing</span>
+        </a>
+        <nav>
+            <ul class="header-links">
+                <li><a href="/image-editing/search" title="Search" aria-label="Go To Search Page"><svg class="svg-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"></path></svg></a></li>
+                <li><a id="theme-toggle" title="Theme" href="javascript:void(0);" aria-label="Toggle Website Theme"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+    <div class="article-layout">
+        <aside id="profile-sidebar" class="profile-column" aria-label="Author Profile"></aside>
+        <div class="article-main-column">
+            <article><h1 id="resampling-vs-resizing-in-image-editing">Resampling vs Resizing
+in Image Editing</h1>
+<p>This article explains the fundamental differences between image
+resampling and resizing in digital photo editing. While often used
+interchangeably, resizing alters the physical display or print
+dimensions of an image without changing its underlying pixel count,
+whereas resampling directly modifies the total number of pixels through
+mathematical interpolation. Understanding this distinction is essential
+for optimizing file sizes, maintaining image quality, and preparing
+graphics properly for web and print.</p>
+<h2 id="what-is-image-resizing">What Is Image Resizing?</h2>
+<p>Resizing changes the physical dimensions or print resolution of an
+image without altering the total amount of pixel data it contains.</p>
+<p>When you resize an image, you are essentially changing how densely
+packed the pixels are when output to a screen or paper—measured in
+pixels per inch (PPI) or dots per inch (DPI). For example, an image that
+is 3000 x 2000 pixels printed at 300 PPI will measure 10 x 6.67 inches.
+If you resize it to print at 150 PPI, the physical size becomes 20 x
+13.33 inches, but the image still consists of the exact same 6,000,000
+pixels. Because no pixels are added or removed, the original data and
+digital file size remain unchanged.</p>
+<h2 id="what-is-image-resampling">What Is Image Resampling?</h2>
+<p>Resampling changes the total pixel dimensions of an image, altering
+the actual amount of data stored in the file.</p>
+<p>When you resample, an image editing program uses mathematical
+algorithms (interpolation) to calculate new pixel values:</p>
+<ul>
+<li><strong>Downsampling (reducing pixels):</strong> The software
+deletes pixels to make the file smaller. This reduces file size and
+storage requirements, making it ideal for web use. Once discarded,
+original detail cannot be recovered.</li>
+<li><strong>Upsampling (increasing pixels):</strong> The software
+invents new pixels by analyzing neighboring pixel colors. While this
+allows the image to be displayed at larger dimensions, it does not add
+genuine detail and often results in softness, blurriness, or
+pixelation.</li>
+</ul>
+<p>Common interpolation methods include Nearest Neighbor (fast but
+jagged), Bilinear (moderate quality), and Bicubic (smoother, higher
+quality for gradients and fine details).</p>
+<h2 id="key-differences-between-resizing-and-resampling">Key Differences
+Between Resizing and Resampling</h2>
+<ul>
+<li><strong>Pixel Count:</strong> Resizing keeps the total number of
+pixels constant. Resampling increases or decreases the pixel count.</li>
+<li><strong>File Size:</strong> Resizing does not change the storage
+size (megabytes) of the file. Resampling directly impacts file size,
+making it larger or smaller.</li>
+<li><strong>Image Quality:</strong> Resizing does not degrade image
+data, though low PPI values can result in visibly coarse prints.
+Resampling permanently modifies pixel data, which can introduce
+blurriness during upsampling or permanent detail loss during
+downsampling.</li>
+</ul>
+<h2 id="when-to-use-each-technique">When to Use Each Technique</h2>
+<p>Use <strong>resizing</strong> when preparing an image for print and
+you need to fit a specific paper size without losing or manufacturing
+pixel data.</p>
+<p>Use <strong>resampling</strong> when preparing assets for digital
+platforms, such as websites, email campaigns, or social media, where
+specific pixel dimensions and small file sizes are required for fast
+loading times.</p></article>
+        <div id="comments-container"></div>
+        <script>
+            const utterancesScript = document.createElement('script');
+            utterancesScript.setAttribute('src', 'https://utteranc.es/client.js');
+            utterancesScript.setAttribute('repo', 'salivity/image-editing'); 
+            utterancesScript.setAttribute('issue-term', 'pathname'); 
+            const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            utterancesScript.setAttribute('theme', currentTheme === 'dark' ? 'github-dark' : 'github-light'); 
+            utterancesScript.setAttribute('crossorigin', 'anonymous');
+            utterancesScript.async = true;
+            document.getElementById('comments-container').appendChild(utterancesScript);
+        </script>
+    
+        </div>
+    </div>
+    
+    </main>
+    <footer>
+        <nav>
+            <ul class="social-links">
+            </ul>
+        </nav>
+        <nav>
+            <ul class="footer-links">
+                <li><a href="https://smvc.dev/contact">Contact</a></li>
+                <li><a href="/image-editing/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/image-editing/terms-and-conditions">Terms and Conditions</a></li>
+            </ul>
+        </nav>
+        <div class="copyright">
+            Copyright &copy; <span id="current-year"></span>
+        </div>
+    </footer>
+</body>
+</html>

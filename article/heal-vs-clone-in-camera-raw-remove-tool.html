@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heal vs Clone in Camera Raw Remove Tool - image-editing</title>
+    <meta name="description" content="This article explores the fundamental differences between the Heal and Clone modes within Adobe Camera Raw’s Remove tool. By understanding how each mode processes pixels, texture, and color, you will learn how to choose the right method for removing blemi">
+    <link rel="canonical" href="https://salivity.github.io/image-editing/article/heal-vs-clone-in-camera-raw-remove-tool">
+    <link rel="search" type="application/opensearchdescription+xml" title="image-editing" href="/image-editing/opensearch.xml">
+    <link rel="icon" href="/image-editing/favicon.ico">
+    <link rel="stylesheet" href="/image-editing/css/style.css">
+    <link media="print" rel="stylesheet" href="/image-editing/css/print.css">
+    <script src="/image-editing/js/fuse.min.js"></script>
+    <script src="/image-editing/js/script.js"></script>
+    <script id="MathJax-script" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/4.1.3/tex-chtml.min.js" defer></script>
+    <script src="/monetize/monetize.js"></script>
+    <script src="/social/social.js"></script>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Heal vs Clone in Camera Raw Remove Tool - image-editing" />
+    <meta property="og:url" content="https://salivity.github.io/image-editing/article/heal-vs-clone-in-camera-raw-remove-tool" />
+    <meta property="og:image" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:secure_url" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:width" content="1120" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:description" content="This article explores the fundamental differences between the Heal and Clone modes within Adobe Camera Raw’s Remove tool. By understanding how each mode processes pixels, texture, and color, you will learn how to choose the right method for removing blemi" />
+    <link rel="manifest" href="/image-editing/pwa/manifest.json" />
+</head>
+<body>
+    <header>
+        <a href="/image-editing/" aria-label="Go To Home Page" title="Go To Home Page" id="logo">
+            <span>salivity.github.io/</span><span>image-editing</span>
+        </a>
+        <nav>
+            <ul class="header-links">
+                <li><a href="/image-editing/search" title="Search" aria-label="Go To Search Page"><svg class="svg-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"></path></svg></a></li>
+                <li><a id="theme-toggle" title="Theme" href="javascript:void(0);" aria-label="Toggle Website Theme"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+    <div class="article-layout">
+        <aside id="profile-sidebar" class="profile-column" aria-label="Author Profile"></aside>
+        <div class="article-main-column">
+            <article><h1 id="heal-vs-clone-in-camera-raw-remove-tool">Heal vs Clone in Camera
+Raw Remove Tool</h1>
+<p>This article explores the fundamental differences between the Heal
+and Clone modes within Adobe Camera Raw’s Remove tool. By understanding
+how each mode processes pixels, texture, and color, you will learn how
+to choose the right method for removing blemishes, unwanted objects, and
+distractions without leaving visible artifacts in your images.</p>
+<h3 id="understanding-the-clone-tool">Understanding the Clone Tool</h3>
+<p>The Clone mode functions as an exact pixel duplicator. When you set a
+source point, the Clone tool copies the precise pixels—including their
+color, saturation, luminosity, and texture—and pastes them directly over
+the target area.</p>
+<p>Because the Clone tool performs no automatic blending, what you
+sample is precisely what appears on the target area. This predictability
+makes it the superior choice when working along sharp edges, defined
+lines, high-contrast borders, or repetitive patterns where
+color-blending algorithms would otherwise cause unnatural smudging.</p>
+<h3 id="understanding-the-heal-tool">Understanding the Heal Tool</h3>
+<p>The Heal mode is designed for seamless, intelligent blending. Instead
+of copying exact pixels, it takes the underlying texture from your
+chosen source point and blends it with the color, brightness, and tone
+of the destination area.</p>
+<p>The software analyzes the surrounding pixels of the target area to
+calculate smooth transitions. This makes Heal ideal for skin retouching
+(such as removing acne or wrinkles) and cleaning up sensor dust spots on
+smooth gradients like skies, where an identical copy would look like an
+obvious patch.</p>
+<h3 id="core-differences">Core Differences</h3>
+<ul>
+<li><strong>Color and Luminance:</strong> Clone transfers identical
+color and tone from the source. Heal adapts to the color and lighting of
+the destination area while only borrowing the texture from the
+source.</li>
+<li><strong>Edge Handling:</strong> Clone preserves crisp, hard edges
+without bleeding. Heal often causes edge smudging or "halos" if the
+source area and target area have drastically different exposure levels
+or colors.</li>
+<li><strong>Predictability:</strong> Clone produces completely
+predictable results because it does not alter sampled pixels. Heal
+relies on an algorithm that may occasionally produce unexpected
+discoloration if it samples near high-contrast borders.</li>
+</ul>
+<h3 id="when-to-use-each-mode">When to Use Each Mode</h3>
+<p>Choose <strong>Heal</strong> when working on:</p>
+<ul>
+<li>Facial blemishes, scars, and stray hairs on skin.</li>
+<li>Sensor dust on clear skies, walls, or out-of-focus backgrounds.</li>
+<li>Smooth gradients where strict pixel replication would create visible
+seams.</li>
+</ul>
+<p>Choose <strong>Clone</strong> when working on:</p>
+<ul>
+<li>Removing objects placed directly against sharp architectural lines
+or horizon boundaries.</li>
+<li>Textures with uniform patterns (like brick walls, fabrics, or wood
+grain).</li>
+<li>Areas where the Heal tool creates muddy, discolored patches due to
+nearby contrasting elements.</li>
+</ul></article>
+        <div id="comments-container"></div>
+        <script>
+            const utterancesScript = document.createElement('script');
+            utterancesScript.setAttribute('src', 'https://utteranc.es/client.js');
+            utterancesScript.setAttribute('repo', 'salivity/image-editing'); 
+            utterancesScript.setAttribute('issue-term', 'pathname'); 
+            const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            utterancesScript.setAttribute('theme', currentTheme === 'dark' ? 'github-dark' : 'github-light'); 
+            utterancesScript.setAttribute('crossorigin', 'anonymous');
+            utterancesScript.async = true;
+            document.getElementById('comments-container').appendChild(utterancesScript);
+        </script>
+    
+        </div>
+    </div>
+    
+    </main>
+    <footer>
+        <nav>
+            <ul class="social-links">
+            </ul>
+        </nav>
+        <nav>
+            <ul class="footer-links">
+                <li><a href="https://smvc.dev/contact">Contact</a></li>
+                <li><a href="/image-editing/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/image-editing/terms-and-conditions">Terms and Conditions</a></li>
+            </ul>
+        </nav>
+        <div class="copyright">
+            Copyright &copy; <span id="current-year"></span>
+        </div>
+    </footer>
+</body>
+</html>

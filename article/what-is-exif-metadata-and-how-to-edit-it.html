@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Is EXIF Metadata and How to Edit It - image-editing</title>
+    <meta name="description" content="EXIF (Exchangeable Image File Format) metadata is hidden information embedded directly within digital images that records camera settings, timestamps, device profiles, and geographical locations. This article outlines what EXIF data includes, the reasons">
+    <link rel="canonical" href="https://salivity.github.io/image-editing/article/what-is-exif-metadata-and-how-to-edit-it">
+    <link rel="search" type="application/opensearchdescription+xml" title="image-editing" href="/image-editing/opensearch.xml">
+    <link rel="icon" href="/image-editing/favicon.ico">
+    <link rel="stylesheet" href="/image-editing/css/style.css">
+    <link media="print" rel="stylesheet" href="/image-editing/css/print.css">
+    <script src="/image-editing/js/fuse.min.js"></script>
+    <script src="/image-editing/js/script.js"></script>
+    <script id="MathJax-script" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/4.1.3/tex-chtml.min.js" defer></script>
+    <script src="/monetize/monetize.js"></script>
+    <script src="/social/social.js"></script>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="What Is EXIF Metadata and How to Edit It - image-editing" />
+    <meta property="og:url" content="https://salivity.github.io/image-editing/article/what-is-exif-metadata-and-how-to-edit-it" />
+    <meta property="og:image" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:secure_url" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:width" content="1120" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:description" content="EXIF (Exchangeable Image File Format) metadata is hidden information embedded directly within digital images that records camera settings, timestamps, device profiles, and geographical locations. This article outlines what EXIF data includes, the reasons" />
+    <link rel="manifest" href="/image-editing/pwa/manifest.json" />
+</head>
+<body>
+    <header>
+        <a href="/image-editing/" aria-label="Go To Home Page" title="Go To Home Page" id="logo">
+            <span>salivity.github.io/</span><span>image-editing</span>
+        </a>
+        <nav>
+            <ul class="header-links">
+                <li><a href="/image-editing/search" title="Search" aria-label="Go To Search Page"><svg class="svg-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"></path></svg></a></li>
+                <li><a id="theme-toggle" title="Theme" href="javascript:void(0);" aria-label="Toggle Website Theme"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+    <div class="article-layout">
+        <aside id="profile-sidebar" class="profile-column" aria-label="Author Profile"></aside>
+        <div class="article-main-column">
+            <article><h1 id="what-is-exif-metadata-and-how-to-edit-it">What Is EXIF Metadata
+and How to Edit It</h1>
+<p>EXIF (Exchangeable Image File Format) metadata is hidden information
+embedded directly within digital images that records camera settings,
+timestamps, device profiles, and geographical locations. This article
+outlines what EXIF data includes, the reasons photographers and editors
+alter it, and the specific methods used to view, change, or remove these
+details during the image editing process.</p>
+<h2 id="understanding-exif-metadata">Understanding EXIF Metadata</h2>
+<p>When a digital camera or smartphone takes a photo, it creates a
+standard image file (such as JPEG, HEIC, or RAW) and writes technical
+parameters into the file header. This dataset serves as a digital
+fingerprint of the exact moment the photo was captured.</p>
+<p>Common EXIF data fields include:</p>
+<ul>
+<li><strong>Camera hardware:</strong> Device make, model, serial number,
+and lens specifications.</li>
+<li><strong>Exposure settings:</strong> Shutter speed, aperture
+(f-stop), ISO sensitivity, focal length, and metering mode.</li>
+<li><strong>Capture details:</strong> Exact date, time, and flash
+status.</li>
+<li><strong>Geolocation:</strong> GPS coordinates (latitude, longitude,
+altitude) identifying where the photo was shot.</li>
+<li><strong>Color profiles:</strong> White balance settings and color
+space (such as sRGB or Adobe RGB).</li>
+</ul>
+<h2 id="why-modify-exif-data">Why Modify EXIF Data?</h2>
+<p>Users modify metadata for several practical reasons:</p>
+<ul>
+<li><strong>Privacy Protection:</strong> Sharing raw photos online can
+reveal home addresses, travel patterns, or daily routines through
+embedded GPS coordinates. Stripping this data protects user
+anonymity.</li>
+<li><strong>Correcting Discrepancies:</strong> If a camera clock was set
+to the wrong time zone or an incorrect date, batch editing timestamps
+ensures chronological accuracy in photo libraries.</li>
+<li><strong>Adding Authorship:</strong> Creators often inject copyright
+notices, creator names, and contact details to protect their
+intellectual property.</li>
+<li><strong>File Size Reduction:</strong> While minimal, removing
+unnecessary metadata slightly reduces overall file size for faster web
+loading.</li>
+</ul>
+<h2 id="how-exif-metadata-is-modified-during-editing">How EXIF Metadata
+is Modified During Editing</h2>
+<p>Metadata modification occurs either automatically through export
+workflows or manually using specialized tools.</p>
+<h3 id="1-dedicated-photo-editors-photoshop-lightroom-gimp">1. Dedicated
+Photo Editors (Photoshop, Lightroom, GIMP)</h3>
+<p>Professional photo editors allow granular control over metadata
+during both editing and exporting phases:</p>
+<ul>
+<li><strong>During Editing:</strong> In programs like Adobe Lightroom or
+Adobe Photoshop, users can open the <strong>File Info</strong> or
+<strong>Metadata</strong> panel. Here, fields such as creator name,
+headline, caption, and copyright status can be added or updated
+directly.</li>
+<li><strong>During Export:</strong> Export modules typically feature a
+metadata dropdown menu. Users can choose presets such as "All Metadata,"
+"Copyright Only," or "None." Selecting options like "Save for Web" in
+Photoshop strips out GPS and camera hardware details while leaving the
+visual image intact.</li>
+</ul>
+<h3 id="2-operating-system-tools">2. Operating System Tools</h3>
+<p>Both Windows and macOS provide basic, built-in methods to adjust or
+delete EXIF fields without third-party editing software:</p>
+<ul>
+<li><strong>Windows:</strong> Right-click the image file, select
+<strong>Properties</strong>, and navigate to the
+<strong>Details</strong> tab. Clicking <strong>"Remove Properties and
+Personal Information"</strong> creates a copy with all personal
+information stripped, or allows selective removal of specific fields
+like camera model or capture date.</li>
+<li><strong>macOS:</strong> Open the photo in <strong>Preview</strong>,
+press <code>Command + I</code> to open the Inspector, and click the
+<strong>GPS</strong> tab to delete location information, or use the
+<strong>Photos</strong> app to adjust the date, time, and location via
+the <strong>Image</strong> menu.</li>
+</ul>
+<h3 id="3-command-line-utilities-exiftool">3. Command-Line Utilities
+(ExifTool)</h3>
+<p>For advanced users and automated workflows, dedicated tools like
+ExifTool offer comprehensive read, write, and delete access to virtually
+every metadata tag across hundreds of file formats.</p>
+<p>A single command can erase all metadata:
+<code>exiftool -all= image.jpg</code></p>
+<p>Similarly, specific fields such as time offsets or artist tags can be
+batch-modified across thousands of files simultaneously.</p>
+<h3 id="4-mobile-apps-and-online-scrubber-tools">4. Mobile Apps and
+Online Scrubber Tools</h3>
+<p>Mobile operating systems often feature built-in privacy toggles. For
+example, iOS allows users to hide or adjust location data directly
+inside the Photos app before sharing an image. Third-party mobile apps
+and browser-based scrubbers can also purge metadata before an image is
+posted to social platforms or public forums.</p></article>
+        <div id="comments-container"></div>
+        <script>
+            const utterancesScript = document.createElement('script');
+            utterancesScript.setAttribute('src', 'https://utteranc.es/client.js');
+            utterancesScript.setAttribute('repo', 'salivity/image-editing'); 
+            utterancesScript.setAttribute('issue-term', 'pathname'); 
+            const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            utterancesScript.setAttribute('theme', currentTheme === 'dark' ? 'github-dark' : 'github-light'); 
+            utterancesScript.setAttribute('crossorigin', 'anonymous');
+            utterancesScript.async = true;
+            document.getElementById('comments-container').appendChild(utterancesScript);
+        </script>
+    
+        </div>
+    </div>
+    
+    </main>
+    <footer>
+        <nav>
+            <ul class="social-links">
+            </ul>
+        </nav>
+        <nav>
+            <ul class="footer-links">
+                <li><a href="https://smvc.dev/contact">Contact</a></li>
+                <li><a href="/image-editing/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/image-editing/terms-and-conditions">Terms and Conditions</a></li>
+            </ul>
+        </nav>
+        <div class="copyright">
+            Copyright &copy; <span id="current-year"></span>
+        </div>
+    </footer>
+</body>
+</html>

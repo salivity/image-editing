@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luminosity Masks for Exposure Blending - image-editing</title>
+    <meta name="description" content="Luminosity masks are an essential tool in advanced exposure blending, allowing photographers to merge multiple bracketed images seamlessly based on tonal values. By isolating specific brightness ranges—such as highlights, shadows, and midtones—these masks">
+    <link rel="canonical" href="https://salivity.github.io/image-editing/article/luminosity-masks-for-exposure-blending">
+    <link rel="search" type="application/opensearchdescription+xml" title="image-editing" href="/image-editing/opensearch.xml">
+    <link rel="icon" href="/image-editing/favicon.ico">
+    <link rel="stylesheet" href="/image-editing/css/style.css">
+    <link media="print" rel="stylesheet" href="/image-editing/css/print.css">
+    <script src="/image-editing/js/fuse.min.js"></script>
+    <script src="/image-editing/js/script.js"></script>
+    <script id="MathJax-script" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/4.1.3/tex-chtml.min.js" defer></script>
+    <script src="/monetize/monetize.js"></script>
+    <script src="/social/social.js"></script>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Luminosity Masks for Exposure Blending - image-editing" />
+    <meta property="og:url" content="https://salivity.github.io/image-editing/article/luminosity-masks-for-exposure-blending" />
+    <meta property="og:image" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:secure_url" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:width" content="1120" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:description" content="Luminosity masks are an essential tool in advanced exposure blending, allowing photographers to merge multiple bracketed images seamlessly based on tonal values. By isolating specific brightness ranges—such as highlights, shadows, and midtones—these masks" />
+    <link rel="manifest" href="/image-editing/pwa/manifest.json" />
+</head>
+<body>
+    <header>
+        <a href="/image-editing/" aria-label="Go To Home Page" title="Go To Home Page" id="logo">
+            <span>salivity.github.io/</span><span>image-editing</span>
+        </a>
+        <nav>
+            <ul class="header-links">
+                <li><a href="/image-editing/search" title="Search" aria-label="Go To Search Page"><svg class="svg-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"></path></svg></a></li>
+                <li><a id="theme-toggle" title="Theme" href="javascript:void(0);" aria-label="Toggle Website Theme"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+    <div class="article-layout">
+        <aside id="profile-sidebar" class="profile-column" aria-label="Author Profile"></aside>
+        <div class="article-main-column">
+            <article><h1 id="luminosity-masks-for-exposure-blending">Luminosity Masks for
+Exposure Blending</h1>
+<p>Luminosity masks are an essential tool in advanced exposure blending,
+allowing photographers to merge multiple bracketed images seamlessly
+based on tonal values. By isolating specific brightness ranges—such as
+highlights, shadows, and midtones—these masks enable precise control
+over where different exposures reveal themselves. This article examines
+how luminosity masks function, why they surpass traditional blending
+methods, and their specific role in producing natural,
+high-dynamic-range images without artifacts.</p>
+<h2 id="understanding-luminosity-masks">Understanding Luminosity
+Masks</h2>
+<p>Unlike standard selection tools that rely on hard edges or manual
+brushing, luminosity masks are generated directly from the pixel data of
+an image. They create selections based entirely on luminance
+(brightness). Because they are 8-bit or 16-bit grayscale representations
+of the image itself, they feature gradual, feathered transitions between
+fully selected (white), partially selected (gray), and unselected
+(black) areas.</p>
+<p>In editing software like Adobe Photoshop, these masks are typically
+categorized into three core groups:</p>
+<ul>
+<li><strong>Highlights:</strong> Targeting varying intensities of bright
+areas.</li>
+<li><strong>Shadows:</strong> Targeting varying depths of dark
+areas.</li>
+<li><strong>Midtones:</strong> Targeting the tonal spectrum between
+highlights and shadows.</li>
+</ul>
+<h2 id="the-role-of-luminosity-masks-in-exposure-blending">The Role of
+Luminosity Masks in Exposure Blending</h2>
+<h3 id="1-eliminating-halos-and-edge-artifacts">1. Eliminating Halos and
+Edge Artifacts</h3>
+<p>Traditional exposure blending techniques—such as global HDR
+tone-mapping, magnetic lasso selections, or basic gradient masks—often
+create unnatural halos around high-contrast boundaries, such as mountain
+ridges or tree lines against a bright sky. Because luminosity masks
+select pixels strictly by tone rather than physical edges, the
+transition between the base exposure and the blended exposure blends
+naturally at the pixel level, completely eliminating edge fringing.</p>
+<h3 id="2-targeted-dynamic-range-recovery">2. Targeted Dynamic Range
+Recovery</h3>
+<p>When dealing with scenes of extreme dynamic range, such as a backlit
+landscape or an interior with bright windows, a single exposure is often
+insufficient. Luminosity masks allow an editor to isolate just the
+blown-out highlights from an underexposed frame and inject them into a
+balanced base exposure. Similarly, shadow masks can reveal clean,
+noise-free shadow details from an overexposed frame without washing out
+adjacent midtones.</p>
+<h3 id="3-avoiding-the-flat-hdr-look">3. Avoiding the Flat "HDR
+Look"</h3>
+<p>Automated HDR software often compresses dynamic range globally,
+resulting in low contrast, unnatural saturation, and a muddy appearance.
+Luminosity masks give editors granular control over the opacity and
+curve of each blend. By blending only the specific tonal bands that
+require correction, the global contrast and mood of the scene remain
+intact.</p>
+<h3 id="4-non-destructive-and-flexible-adjustments">4. Non-Destructive
+and Flexible Adjustments</h3>
+<p>Luminosity masks are applied to layer masks rather than directly onto
+pixel data. This provides complete non-destructive control. Editors can
+adjust the density of the mask, combine masks using Boolean operations
+(intersecting, adding, or subtracting tones), or apply curve adjustments
+directly to the mask to fine-tune the exact threshold of the blended
+exposure.</p>
+<h2 id="summary-of-practical-workflow">Summary of Practical
+Workflow</h2>
+<p>A typical exposure blending workflow using luminosity masks
+involves:</p>
+<ol type="1">
+<li>Aligning bracketed exposures as layers in an editing program,
+typically with the normal exposure on the bottom, underexposure in the
+middle, and overexposure on top.</li>
+<li>Generating a targeted highlight mask to reveal the darker exposure
+only where highlights are clipped.</li>
+<li>Generating a targeted shadow mask to reveal the brighter exposure
+only where shadows lose detail.</li>
+<li>Refining the mask curves to ensure transitions remain imperceptible
+to the viewer.</li>
+</ol>
+<p>Through this process, luminosity masks turn high-contrast scenes into
+balanced, true-to-life images while maintaining the highest possible
+image quality.</p></article>
+        <div id="comments-container"></div>
+        <script>
+            const utterancesScript = document.createElement('script');
+            utterancesScript.setAttribute('src', 'https://utteranc.es/client.js');
+            utterancesScript.setAttribute('repo', 'salivity/image-editing'); 
+            utterancesScript.setAttribute('issue-term', 'pathname'); 
+            const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            utterancesScript.setAttribute('theme', currentTheme === 'dark' ? 'github-dark' : 'github-light'); 
+            utterancesScript.setAttribute('crossorigin', 'anonymous');
+            utterancesScript.async = true;
+            document.getElementById('comments-container').appendChild(utterancesScript);
+        </script>
+    
+        </div>
+    </div>
+    
+    </main>
+    <footer>
+        <nav>
+            <ul class="social-links">
+            </ul>
+        </nav>
+        <nav>
+            <ul class="footer-links">
+                <li><a href="https://smvc.dev/contact">Contact</a></li>
+                <li><a href="/image-editing/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/image-editing/terms-and-conditions">Terms and Conditions</a></li>
+            </ul>
+        </nav>
+        <div class="copyright">
+            Copyright &copy; <span id="current-year"></span>
+        </div>
+    </footer>
+</body>
+</html>
