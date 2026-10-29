@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Automate Image Resizing and Watermarking - image-editing</title>
+    <meta name="description" content="Batch processing images eliminates repetitive manual labor, ensures visual consistency across brand assets, and significantly accelerates your workflow. This guide outlines how to create a custom automated action in professional photo editing software—spe">
+    <link rel="canonical" href="https://salivity.github.io/image-editing/article/how-to-automate-image-resizing-and-watermarking">
+    <link rel="search" type="application/opensearchdescription+xml" title="image-editing" href="/image-editing/opensearch.xml">
+    <link rel="icon" href="/image-editing/favicon.ico">
+    <link rel="stylesheet" href="/image-editing/css/style.css">
+    <link media="print" rel="stylesheet" href="/image-editing/css/print.css">
+    <script src="/image-editing/js/fuse.min.js"></script>
+    <script src="/image-editing/js/script.js"></script>
+    <script id="MathJax-script" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/4.1.3/tex-chtml.min.js" defer></script>
+    <script src="/monetize/monetize.js"></script>
+    <script src="/social/social.js"></script>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="How to Automate Image Resizing and Watermarking - image-editing" />
+    <meta property="og:url" content="https://salivity.github.io/image-editing/article/how-to-automate-image-resizing-and-watermarking" />
+    <meta property="og:image" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:secure_url" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:width" content="1120" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:description" content="Batch processing images eliminates repetitive manual labor, ensures visual consistency across brand assets, and significantly accelerates your workflow. This guide outlines how to create a custom automated action in professional photo editing software—spe" />
+    <link rel="manifest" href="/image-editing/pwa/manifest.json" />
+</head>
+<body>
+    <header>
+        <a href="/image-editing/" aria-label="Go To Home Page" title="Go To Home Page" id="logo">
+            <span>salivity.github.io/</span><span>image-editing</span>
+        </a>
+        <nav>
+            <ul class="header-links">
+                <li><a href="/image-editing/search" title="Search" aria-label="Go To Search Page"><svg class="svg-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"></path></svg></a></li>
+                <li><a id="theme-toggle" title="Theme" href="javascript:void(0);" aria-label="Toggle Website Theme"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+    <div class="article-layout">
+        <aside id="profile-sidebar" class="profile-column" aria-label="Author Profile"></aside>
+        <div class="article-main-column">
+            <article><h1 id="how-to-automate-image-resizing-and-watermarking">How to Automate
+Image Resizing and Watermarking</h1>
+<p>Batch processing images eliminates repetitive manual labor, ensures
+visual consistency across brand assets, and significantly accelerates
+your workflow. This guide outlines how to create a custom automated
+action in professional photo editing software—specifically Adobe
+Photoshop—to resize images to specific dimensions, apply a watermark
+graphic, and export the finalized files in bulk.</p>
+<h2 id="preparing-your-assets">Preparing Your Assets</h2>
+<p>Before recording the automation, organize your working environment to
+avoid errors during execution:</p>
+<ol type="1">
+<li>Create a transparent PNG file of your watermark (logo or text) and
+save it in a permanent folder on your drive. Moving this file later will
+break the action.</li>
+<li>Place a few representative sample images into a dedicated "Source"
+test folder.</li>
+<li>Create an empty "Output" folder to store the processed results.</li>
+</ol>
+<h2 id="recording-the-action">Recording the Action</h2>
+<ol type="1">
+<li>Open one sample image in your editor.</li>
+<li>Open the Actions panel via <strong>Window &gt;
+Actions</strong>.</li>
+<li>Click the <strong>Create New Set</strong> (folder icon) button to
+create a dedicated group, name it "Batch Processing," and click
+<strong>OK</strong>.</li>
+<li>Click the <strong>Create New Action</strong> (plus icon) button,
+name the action "Resize and Watermark," and click
+<strong>Record</strong>. The recording indicator will turn red.</li>
+</ol>
+<h2 id="step-1-resizing-the-image">Step 1: Resizing the Image</h2>
+<p>To make sure the action handles images of varying aspect ratios and
+orientations without distortion:</p>
+<ol type="1">
+<li>Navigate to <strong>File &gt; Automate &gt; Fit Image</strong>.</li>
+<li>Enter your maximum allowed dimensions (for example, Width: 1920
+pixels, Height: 1080 pixels). This command constrains the image within
+these bounds regardless of whether it is portrait or landscape, avoiding
+the distortion that standard image dimension adjustments can cause.</li>
+<li>Click <strong>OK</strong>.</li>
+</ol>
+<h2 id="step-2-placing-the-watermark">Step 2: Placing the Watermark</h2>
+<ol type="1">
+<li>Navigate to <strong>File &gt; Place Embedded</strong>.</li>
+<li>Select your transparent watermark PNG file and click
+<strong>Place</strong>.</li>
+<li>Press <strong>Enter</strong> to commit the initial placement.</li>
+<li>Select both the watermark layer and the background layer in the
+Layers panel.</li>
+<li>Use the alignment tools in the top options bar (such as
+<strong>Align Bottom Edges</strong> and <strong>Align Right
+Edges</strong>) to anchor the watermark to a consistent corner.</li>
+<li>(Optional) Select only the watermark layer and adjust the
+<strong>Opacity</strong> (e.g., 70%) or use the Move tool while holding
+<strong>Shift</strong> to nudge the watermark away from the
+borders.</li>
+<li>Flatten the image by navigating to <strong>Layer &gt; Flatten
+Image</strong> to ensure the layers merge correctly before export.</li>
+</ol>
+<h2 id="step-3-saving-and-finalizing-the-recording">Step 3: Saving and
+Finalizing the Recording</h2>
+<ol type="1">
+<li>Go to <strong>File &gt; Save As</strong> (or <strong>Export &gt;
+Save for Web</strong>).</li>
+<li>Choose your preferred file format (such as JPEG) and select your
+target quality. Save this single test file into your "Output"
+folder.</li>
+<li>Close the active image document without saving changes to the
+original raw asset.</li>
+<li>Click the square <strong>Stop</strong> button at the bottom of the
+Actions panel to end the recording.</li>
+</ol>
+<h2 id="running-the-batch-process">Running the Batch Process</h2>
+<p>Once the action is recorded, you can apply it to hundreds of photos
+automatically:</p>
+<ol type="1">
+<li>Navigate to <strong>File &gt; Automate &gt; Batch</strong>.</li>
+<li>Under the <strong>Play</strong> section, set the
+<strong>Set</strong> to "Batch Processing" and the
+<strong>Action</strong> to "Resize and Watermark."</li>
+<li>Under the <strong>Source</strong> section, select
+<strong>Folder</strong> and choose your "Source" directory containing
+the raw assets.</li>
+<li>Under the <strong>Destination</strong> section, select
+<strong>Folder</strong> and choose your "Output" directory. Check the
+option to <strong>Override Action "Save As" Commands</strong> if you
+want the batch dialog to govern file naming conventions
+automatically.</li>
+<li>Click <strong>OK</strong> to start the batch automation. The
+software will process, resize, watermark, and save every file
+sequentially.</li>
+</ol></article>
+        <div id='disqus_thread'></div>
+        <script>
+
+            var disqus_config = function () {
+                this.page.url =         'https://salivity.github.io/image-editing/article/how-to-automate-image-resizing-and-watermarking';  
+                //this.page.identifier =  PAGE_IDENTIFIER; 
+            };
+            
+            (function() {
+                var d = document, s = d.createElement('script');
+                s.src = 'https://salivity-github-io.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+    
+        </div>
+    </div>
+    
+    </main>
+    <footer>
+        <nav>
+            <ul class="social-links">
+            </ul>
+        </nav>
+        <nav>
+            <ul class="footer-links">
+                <li><a href="https://smvc.dev/contact">Contact</a></li>
+                <li><a href="/image-editing/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/image-editing/terms-and-conditions">Terms and Conditions</a></li>
+            </ul>
+        </nav>
+        <div class="copyright">
+            Copyright &copy; <span id="current-year"></span>
+        </div>
+    </footer>
+</body>
+</html>

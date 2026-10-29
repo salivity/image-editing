@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ideal Grain Size and Roughness for Film Simulation - image-editing</title>
+    <meta name="description" content="When simulating film in digital image editing, the ideal grain size and roughness depend on a balance between technical emulation and output format. Achieving an authentic look requires aligning your grain settings with the simulated film stock&#39;s ISO, the">
+    <link rel="canonical" href="https://salivity.github.io/image-editing/article/ideal-grain-size-and-roughness-for-film-simulation">
+    <link rel="search" type="application/opensearchdescription+xml" title="image-editing" href="/image-editing/opensearch.xml">
+    <link rel="icon" href="/image-editing/favicon.ico">
+    <link rel="stylesheet" href="/image-editing/css/style.css">
+    <link media="print" rel="stylesheet" href="/image-editing/css/print.css">
+    <script src="/image-editing/js/fuse.min.js"></script>
+    <script src="/image-editing/js/script.js"></script>
+    <script id="MathJax-script" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/4.1.3/tex-chtml.min.js" defer></script>
+    <script src="/monetize/monetize.js"></script>
+    <script src="/social/social.js"></script>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Ideal Grain Size and Roughness for Film Simulation - image-editing" />
+    <meta property="og:url" content="https://salivity.github.io/image-editing/article/ideal-grain-size-and-roughness-for-film-simulation" />
+    <meta property="og:image" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:secure_url" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:width" content="1120" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:description" content="When simulating film in digital image editing, the ideal grain size and roughness depend on a balance between technical emulation and output format. Achieving an authentic look requires aligning your grain settings with the simulated film stock&#39;s ISO, the" />
+    <link rel="manifest" href="/image-editing/pwa/manifest.json" />
+</head>
+<body>
+    <header>
+        <a href="/image-editing/" aria-label="Go To Home Page" title="Go To Home Page" id="logo">
+            <span>salivity.github.io/</span><span>image-editing</span>
+        </a>
+        <nav>
+            <ul class="header-links">
+                <li><a href="/image-editing/search" title="Search" aria-label="Go To Search Page"><svg class="svg-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"></path></svg></a></li>
+                <li><a id="theme-toggle" title="Theme" href="javascript:void(0);" aria-label="Toggle Website Theme"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+    <div class="article-layout">
+        <aside id="profile-sidebar" class="profile-column" aria-label="Author Profile"></aside>
+        <div class="article-main-column">
+            <article><h1 id="ideal-grain-size-and-roughness-for-film-simulation">Ideal Grain
+Size and Roughness for Film Simulation</h1>
+<p>When simulating film in digital image editing, the ideal grain size
+and roughness depend on a balance between technical emulation and output
+format. Achieving an authentic look requires aligning your grain
+settings with the simulated film stock's ISO, the physical film format
+(such as 35mm versus medium format), the digital resolution of your base
+image, and the final display medium. By understanding how these
+variables interact, you can avoid the look of harsh digital sensor noise
+and instead replicate the organic, tactile texture of real silver halide
+crystals.</p>
+<h2 id="film-stock-and-iso-rating">Film Stock and ISO Rating</h2>
+<p>The primary factor determining grain structure is the specific film
+emulsion being emulated, dictated largely by its sensitivity rating
+(ISO/ASA):</p>
+<ul>
+<li><strong>Low-ISO Stocks (ISO 50–100):</strong> Real low-speed films
+(e.g., Kodak Ektar, Ilford Pan F) feature extremely fine, tightly packed
+silver halide crystals. In software, this requires a small grain size
+and low roughness. The effect should be subtle, resolving as smooth
+tonality rather than distinct flecks.</li>
+<li><strong>Medium-ISO Stocks (ISO 400):</strong> Emulsions like Kodak
+Tri-X or Portra 400 are the standard for classic film texture. They
+require a moderate grain size with balanced roughness, where grain is
+clearly visible in flat areas and midtones without obscuring fine
+details.</li>
+<li><strong>High-ISO Stocks (ISO 800–3200):</strong> High-speed films
+(e.g., Ilford Delta 3200) utilize large, irregular crystal clusters. To
+emulate this, increase both size and roughness significantly. Higher
+roughness introduces the clumping effect characteristic of fast chemical
+development.</li>
+</ul>
+<h2 id="physical-film-format">Physical Film Format</h2>
+<p>The size of the physical negative relative to the final viewing size
+heavily influences perceived grain:</p>
+<ul>
+<li><strong>35mm Format:</strong> Because a small 24x36mm negative must
+be magnified significantly to produce a print, the grain appears
+comparatively large and distinct. Use larger size and higher roughness
+parameters to mimic 35mm photography.</li>
+<li><strong>Medium and Large Format (120 and 4x5):</strong> Larger
+negatives require less enlargement. An ISO 400 film shot on a 6x7 medium
+format camera exhibits much finer, less intrusive grain than the
+identical stock shot on 35mm. For medium-format emulation, decrease
+grain size and lower the roughness.</li>
+</ul>
+<h2 id="digital-sensor-resolution">Digital Sensor Resolution</h2>
+<p>Grain algorithms in editing software (such as Lightroom, Capture One,
+or dedicated plugins) often render grain at the pixel level. A grain
+setting applied to a 24-megapixel file will appear substantially larger
+than the same numerical setting applied to a 60-megapixel file when
+viewed at 100%.</p>
+<p>When working with high-resolution files, increase the grain size
+parameter so the texture does not become microscopically small,
+rendering it indistinguishable from standard digital luminance
+noise.</p>
+<h2 id="output-medium-and-viewing-distance">Output Medium and Viewing
+Distance</h2>
+<p>The intended destination of the photograph dictates how aggressive
+your grain parameters should be:</p>
+<ul>
+<li><strong>Print:</strong> Halftone screening and the natural
+absorption of ink into paper fibers naturally soften sharp edges. To
+retain a visible film texture in physical prints, set grain size and
+roughness slightly higher than what appears ideal on a calibrated
+monitor.</li>
+<li><strong>Digital Displays and Social Media:</strong> High-density
+displays (such as Retina screens) and aggressive platform compression
+algorithms can distort fine grain. Extremely small, sharp grain may be
+compressed into blocky compression artifacts. For web use, a slightly
+larger grain size combined with moderate roughness maintains the organic
+appearance without triggering compression degradation.</li>
+</ul>
+<h2 id="tonal-placement-and-luminance-behavior">Tonal Placement and
+Luminance Behavior</h2>
+<p>Film grain does not distribute evenly across an exposure. In
+traditional film:</p>
+<ul>
+<li><strong>Highlights:</strong> Contain the least density of silver
+crystals in negative film, meaning bright highlights exhibit very little
+grain.</li>
+<li><strong>Midtones:</strong> Display the most prominent and defined
+grain structure.</li>
+<li><strong>Shadows:</strong> Exhibit texture, but clumping can reduce
+visibility in deep blacks.</li>
+</ul>
+<p>Ensure your editing tool distributes roughness and size unevenly
+across the tonal range—concentrating grain primarily in the midtones and
+preserving clean, open highlights—to maintain the authentic look of
+photochemical film rather than an artificial digital overlay.</p></article>
+        <div id='disqus_thread'></div>
+        <script>
+
+            var disqus_config = function () {
+                this.page.url =         'https://salivity.github.io/image-editing/article/ideal-grain-size-and-roughness-for-film-simulation';  
+                //this.page.identifier =  PAGE_IDENTIFIER; 
+            };
+            
+            (function() {
+                var d = document, s = d.createElement('script');
+                s.src = 'https://salivity-github-io.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+    
+        </div>
+    </div>
+    
+    </main>
+    <footer>
+        <nav>
+            <ul class="social-links">
+            </ul>
+        </nav>
+        <nav>
+            <ul class="footer-links">
+                <li><a href="https://smvc.dev/contact">Contact</a></li>
+                <li><a href="/image-editing/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/image-editing/terms-and-conditions">Terms and Conditions</a></li>
+            </ul>
+        </nav>
+        <div class="copyright">
+            Copyright &copy; <span id="current-year"></span>
+        </div>
+    </footer>
+</body>
+</html>

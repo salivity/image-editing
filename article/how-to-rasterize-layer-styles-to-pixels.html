@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Rasterize Layer Styles to Pixels - image-editing</title>
+    <meta name="description" content="Rasterizing layer styles permanently merges dynamic effects—such as drop shadows, strokes, glows, and bevels—directly into the base pixel data of a layer. While layer styles remain non-destructive and editable by default, rasterizing them is necessary whe">
+    <link rel="canonical" href="https://salivity.github.io/image-editing/article/how-to-rasterize-layer-styles-to-pixels">
+    <link rel="search" type="application/opensearchdescription+xml" title="image-editing" href="/image-editing/opensearch.xml">
+    <link rel="icon" href="/image-editing/favicon.ico">
+    <link rel="stylesheet" href="/image-editing/css/style.css">
+    <link media="print" rel="stylesheet" href="/image-editing/css/print.css">
+    <script src="/image-editing/js/fuse.min.js"></script>
+    <script src="/image-editing/js/script.js"></script>
+    <script id="MathJax-script" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/4.1.3/tex-chtml.min.js" defer></script>
+    <script src="/monetize/monetize.js"></script>
+    <script src="/social/social.js"></script>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="How to Rasterize Layer Styles to Pixels - image-editing" />
+    <meta property="og:url" content="https://salivity.github.io/image-editing/article/how-to-rasterize-layer-styles-to-pixels" />
+    <meta property="og:image" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:secure_url" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:width" content="1120" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:description" content="Rasterizing layer styles permanently merges dynamic effects—such as drop shadows, strokes, glows, and bevels—directly into the base pixel data of a layer. While layer styles remain non-destructive and editable by default, rasterizing them is necessary whe" />
+    <link rel="manifest" href="/image-editing/pwa/manifest.json" />
+</head>
+<body>
+    <header>
+        <a href="/image-editing/" aria-label="Go To Home Page" title="Go To Home Page" id="logo">
+            <span>salivity.github.io/</span><span>image-editing</span>
+        </a>
+        <nav>
+            <ul class="header-links">
+                <li><a href="/image-editing/search" title="Search" aria-label="Go To Search Page"><svg class="svg-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"></path></svg></a></li>
+                <li><a id="theme-toggle" title="Theme" href="javascript:void(0);" aria-label="Toggle Website Theme"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+    <div class="article-layout">
+        <aside id="profile-sidebar" class="profile-column" aria-label="Author Profile"></aside>
+        <div class="article-main-column">
+            <article><h1 id="how-to-rasterize-layer-styles-to-pixels">How to Rasterize Layer
+Styles to Pixels</h1>
+<p>Rasterizing layer styles permanently merges dynamic effects—such as
+drop shadows, strokes, glows, and bevels—directly into the base pixel
+data of a layer. While layer styles remain non-destructive and editable
+by default, rasterizing them is necessary when you need to manipulate
+the effects using pixel tools like the Eraser, Brush, or Smudge tool, or
+to prevent effects from scaling improperly during transformations. This
+guide covers the standard methods to flatten and permanently commit
+layer styles to pixels in image editing software such as Adobe
+Photoshop.</p>
+<h3 id="method-1-use-the-rasterize-layer-style-command">Method 1: Use
+the Rasterize Layer Style Command</h3>
+<p>The fastest way to bake effects directly into the current layer is
+using the built-in context menu.</p>
+<ol type="1">
+<li>Open the <strong>Layers</strong> panel.</li>
+<li>Right-click (or Control-click on macOS) on the specific layer
+containing the styles you want to flatten.</li>
+<li>Select <strong>Rasterize Layer Style</strong> from the context
+menu.</li>
+</ol>
+<p>The layer effects list under the layer will disappear, and all visual
+styles will become permanent pixels on that single layer.</p>
+<h3 id="method-2-merge-with-a-blank-layer">Method 2: Merge with a Blank
+Layer</h3>
+<p>If you want to preserve the transparency bounds of the canvas or
+ensure complex blend modes bake accurately, merging the styled layer
+with an empty layer is a reliable alternative.</p>
+<ol type="1">
+<li>Create a new, transparent layer directly beneath your styled layer
+by clicking the <strong>New Layer</strong> icon.</li>
+<li>Select the styled layer, hold <code>Shift</code>, and click the
+empty layer below it to select both.</li>
+<li>Press <code>Ctrl + E</code> (Windows) or <code>Cmd + E</code>
+(macOS) to merge them.</li>
+</ol>
+<p>This forces the editor to calculate the appearance of the layer
+styles and render them into the transparent pixel data of the merged
+result.</p>
+<h3 id="method-3-group-and-rasterize">Method 3: Group and Rasterize</h3>
+<p>For layers that have clipping masks or rely on grouped blend modes,
+grouping provides a clean workflow.</p>
+<ol type="1">
+<li>Select the styled layer and press <code>Ctrl + G</code> (Windows) or
+<code>Cmd + G</code> (macOS) to place it into a layer group.</li>
+<li>Right-click the newly created folder in the Layers panel.</li>
+<li>Select <strong>Rasterize Layer</strong> or <strong>Merge
+Group</strong>.</li>
+</ol>
+<p>This converts the entire group, including all nested styles, into one
+flat pixel layer.</p>
+<h3 id="important-considerations-before-rasterizing">Important
+Considerations Before Rasterizing</h3>
+<ul>
+<li><strong>Loss of Editability:</strong> Once rasterized, individual
+style parameters (such as shadow distance, color overlay, or stroke
+width) can no longer be adjusted via the Layer Style dialog.</li>
+<li><strong>Resolution Dependency:</strong> Baked pixels scale
+differently than live vector-like effects. Ensure your document is at
+the final output resolution before committing the rasterization.</li>
+<li><strong>Create a Backup:</strong> To maintain flexibility, duplicate
+the original layer (<code>Ctrl + J</code> / <code>Cmd + J</code>) and
+hide the original before rasterizing the copy.</li>
+</ul></article>
+        <div id='disqus_thread'></div>
+        <script>
+
+            var disqus_config = function () {
+                this.page.url =         'https://salivity.github.io/image-editing/article/how-to-rasterize-layer-styles-to-pixels';  
+                //this.page.identifier =  PAGE_IDENTIFIER; 
+            };
+            
+            (function() {
+                var d = document, s = d.createElement('script');
+                s.src = 'https://salivity-github-io.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+    
+        </div>
+    </div>
+    
+    </main>
+    <footer>
+        <nav>
+            <ul class="social-links">
+            </ul>
+        </nav>
+        <nav>
+            <ul class="footer-links">
+                <li><a href="https://smvc.dev/contact">Contact</a></li>
+                <li><a href="/image-editing/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/image-editing/terms-and-conditions">Terms and Conditions</a></li>
+            </ul>
+        </nav>
+        <div class="copyright">
+            Copyright &copy; <span id="current-year"></span>
+        </div>
+    </footer>
+</body>
+</html>

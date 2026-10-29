@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Is Bitmap Color Mode in Image Editing? - image-editing</title>
+    <meta name="description" content="Bitmap color mode is an image specification that restricts an image strictly to two colors: pure black and pure white. This article provides an overview of how bitmap mode functions at a data level, how image editors discard color and grayscale informatio">
+    <link rel="canonical" href="https://salivity.github.io/image-editing/article/what-is-bitmap-color-mode-in-image-editing">
+    <link rel="search" type="application/opensearchdescription+xml" title="image-editing" href="/image-editing/opensearch.xml">
+    <link rel="icon" href="/image-editing/favicon.ico">
+    <link rel="stylesheet" href="/image-editing/css/style.css">
+    <link media="print" rel="stylesheet" href="/image-editing/css/print.css">
+    <script src="/image-editing/js/fuse.min.js"></script>
+    <script src="/image-editing/js/script.js"></script>
+    <script id="MathJax-script" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/4.1.3/tex-chtml.min.js" defer></script>
+    <script src="/monetize/monetize.js"></script>
+    <script src="/social/social.js"></script>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="What Is Bitmap Color Mode in Image Editing? - image-editing" />
+    <meta property="og:url" content="https://salivity.github.io/image-editing/article/what-is-bitmap-color-mode-in-image-editing" />
+    <meta property="og:image" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:secure_url" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:width" content="1120" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:description" content="Bitmap color mode is an image specification that restricts an image strictly to two colors: pure black and pure white. This article provides an overview of how bitmap mode functions at a data level, how image editors discard color and grayscale informatio" />
+    <link rel="manifest" href="/image-editing/pwa/manifest.json" />
+</head>
+<body>
+    <header>
+        <a href="/image-editing/" aria-label="Go To Home Page" title="Go To Home Page" id="logo">
+            <span>salivity.github.io/</span><span>image-editing</span>
+        </a>
+        <nav>
+            <ul class="header-links">
+                <li><a href="/image-editing/search" title="Search" aria-label="Go To Search Page"><svg class="svg-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"></path></svg></a></li>
+                <li><a id="theme-toggle" title="Theme" href="javascript:void(0);" aria-label="Toggle Website Theme"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+    <div class="article-layout">
+        <aside id="profile-sidebar" class="profile-column" aria-label="Author Profile"></aside>
+        <div class="article-main-column">
+            <article><h1 id="what-is-bitmap-color-mode-in-image-editing">What Is Bitmap Color
+Mode in Image Editing?</h1>
+<p>Bitmap color mode is an image specification that restricts an image
+strictly to two colors: pure black and pure white. This article provides
+an overview of how bitmap mode functions at a data level, how image
+editors discard color and grayscale information to produce binary
+images, the conversion methods used to simulate tonal depth, and the
+modern applications of this low-data format.</p>
+<h2 id="understanding-bitmap-color-mode">Understanding Bitmap Color
+Mode</h2>
+<p>In digital imaging, bitmap color mode—often referred to as 1-bit
+color—is the simplest form of raster graphic encoding. Unlike standard
+RGB or CMYK images that support millions of colors, or 8-bit grayscale
+images that contain 256 levels of gray, a 1-bit bitmap assigns only a
+single binary digit (0 or 1) to each pixel. A bit value of 0 typically
+represents pure black, while a bit value of 1 represents pure white.
+There are no intermediate gray pixels, mid-tones, or transparency
+channels.</p>
+<p>Because bitmap mode only recognizes two values, an image must first
+be converted into a standard grayscale format before an image editing
+program will allow a conversion to bitmap mode.</p>
+<h2 id="how-bitmap-mode-converts-images-to-black-and-white">How Bitmap
+Mode Converts Images to Black and White</h2>
+<p>When transforming a grayscale image into a bitmap, the editing
+software strips away all intermediate tones through a process known as
+binarization. Depending on the intended output, image editors use
+several algorithms to decide whether a gray pixel becomes black or
+white.</p>
+<h3 id="50-threshold">50% Threshold</h3>
+<p>The threshold method is the most direct conversion technique. The
+software evaluates the brightness value of every pixel on a scale from 0
+(black) to 255 (white). It establishes a hard cutoff point—traditionally
+at 50% luminance (value 128). Any pixel darker than 128 is turned into
+pure black, while any pixel at or above 128 is turned into pure white.
+This produces high-contrast, stark line art with sharp, jagged edges and
+completely eliminates soft gradients.</p>
+<h3 id="dithering">Dithering</h3>
+<p>Because a simple threshold often destroys photographic detail,
+editors use dithering to create the optical illusion of gray tones.
+Dithering algorithms, such as Floyd-Steinberg error diffusion or pattern
+dithering, distribute black and white pixels in varying densities:</p>
+<ul>
+<li><strong>Diffusion Dither:</strong> The algorithm evaluates a pixel,
+forces it to black or white, calculates the difference (the "error")
+between the original gray value and the resulting binary state, and
+pushes that mathematical error onto adjacent pixels. This creates a
+fine, random-looking speckle pattern that closely approximates
+continuous-tone gradients.</li>
+<li><strong>Pattern Dither:</strong> The software applies a fixed,
+geometric matrix of dots to mimic shades of gray. While it produces a
+more structured, digital appearance, it renders uniform mid-tones
+cleanly without random noise.</li>
+</ul>
+<h3 id="halftone-screen">Halftone Screen</h3>
+<p>A halftone screen mimics traditional commercial printing techniques
+by converting continuous grayscale tones into regular geometric
+patterns, most commonly round dots, lines, or diamonds. In this mode,
+areas with darker tones receive larger, overlapping dots, while lighter
+areas receive smaller dots with more white space between them. Editors
+allow users to specify the frequency (lines per inch) and angle of the
+screen to achieve specific mechanical print effects.</p>
+<h2 id="advantages-and-practical-applications">Advantages and Practical
+Applications</h2>
+<p>Reducing an image to bitmap color mode dramatically decreases file
+size. Because each pixel consumes only one bit of memory instead of the
+24 or 32 bits required by color spaces, bitmap files are exceptionally
+lightweight.</p>
+<p>Bitmap color mode remains essential across several industries:</p>
+<ul>
+<li><strong>Commercial Printing and Prepress:</strong> Bitmap mode is
+widely used for creating crisp vector-like line art, technical
+illustrations, and black-and-white plates for screen printing or
+stamping.</li>
+<li><strong>Document Archiving and OCR:</strong> Scanned documents
+processed in bitmap mode provide high edge contrast, which speeds up
+optical character recognition (OCR) and reduces storage footprints for
+digital text archives.</li>
+<li><strong>Low-Power Displays:</strong> E-ink readers and low-power
+monochrome screens use 1-bit bitmap data natively to refresh pixels
+without intensive processing power.</li>
+<li><strong>Digital Art and Retro Graphics:</strong> Designers
+frequently utilize bitmap conversions to produce distinct 1-bit
+aesthetics reminiscent of early computing environments and stylized
+digital print media.</li>
+</ul></article>
+        <div id='disqus_thread'></div>
+        <script>
+
+            var disqus_config = function () {
+                this.page.url =         'https://salivity.github.io/image-editing/article/what-is-bitmap-color-mode-in-image-editing';  
+                //this.page.identifier =  PAGE_IDENTIFIER; 
+            };
+            
+            (function() {
+                var d = document, s = d.createElement('script');
+                s.src = 'https://salivity-github-io.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+    
+        </div>
+    </div>
+    
+    </main>
+    <footer>
+        <nav>
+            <ul class="social-links">
+            </ul>
+        </nav>
+        <nav>
+            <ul class="footer-links">
+                <li><a href="https://smvc.dev/contact">Contact</a></li>
+                <li><a href="/image-editing/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/image-editing/terms-and-conditions">Terms and Conditions</a></li>
+            </ul>
+        </nav>
+        <div class="copyright">
+            Copyright &copy; <span id="current-year"></span>
+        </div>
+    </footer>
+</body>
+</html>

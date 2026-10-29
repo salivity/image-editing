@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Remove Ghosting Artifacts in HDR Blending - image-editing</title>
+    <meta name="description" content="Ghosting artifacts occur during High Dynamic Range (HDR) processing when subjects move across bracketed exposures, leaving behind translucent or duplicated &quot;ghost&quot; silhouettes. This guide covers how to eliminate these artifacts using automated software de">
+    <link rel="canonical" href="https://salivity.github.io/image-editing/article/how-to-remove-ghosting-artifacts-in-hdr-blending">
+    <link rel="search" type="application/opensearchdescription+xml" title="image-editing" href="/image-editing/opensearch.xml">
+    <link rel="icon" href="/image-editing/favicon.ico">
+    <link rel="stylesheet" href="/image-editing/css/style.css">
+    <link media="print" rel="stylesheet" href="/image-editing/css/print.css">
+    <script src="/image-editing/js/fuse.min.js"></script>
+    <script src="/image-editing/js/script.js"></script>
+    <script id="MathJax-script" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/4.1.3/tex-chtml.min.js" defer></script>
+    <script src="/monetize/monetize.js"></script>
+    <script src="/social/social.js"></script>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="How to Remove Ghosting Artifacts in HDR Blending - image-editing" />
+    <meta property="og:url" content="https://salivity.github.io/image-editing/article/how-to-remove-ghosting-artifacts-in-hdr-blending" />
+    <meta property="og:image" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:secure_url" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:width" content="1120" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:description" content="Ghosting artifacts occur during High Dynamic Range (HDR) processing when subjects move across bracketed exposures, leaving behind translucent or duplicated &quot;ghost&quot; silhouettes. This guide covers how to eliminate these artifacts using automated software de" />
+    <link rel="manifest" href="/image-editing/pwa/manifest.json" />
+</head>
+<body>
+    <header>
+        <a href="/image-editing/" aria-label="Go To Home Page" title="Go To Home Page" id="logo">
+            <span>salivity.github.io/</span><span>image-editing</span>
+        </a>
+        <nav>
+            <ul class="header-links">
+                <li><a href="/image-editing/search" title="Search" aria-label="Go To Search Page"><svg class="svg-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"></path></svg></a></li>
+                <li><a id="theme-toggle" title="Theme" href="javascript:void(0);" aria-label="Toggle Website Theme"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+    <div class="article-layout">
+        <aside id="profile-sidebar" class="profile-column" aria-label="Author Profile"></aside>
+        <div class="article-main-column">
+            <article><h1 id="how-to-remove-ghosting-artifacts-in-hdr-blending">How to Remove
+Ghosting Artifacts in HDR Blending</h1>
+<p>Ghosting artifacts occur during High Dynamic Range (HDR) processing
+when subjects move across bracketed exposures, leaving behind
+translucent or duplicated "ghost" silhouettes. This guide covers how to
+eliminate these artifacts using automated software de-ghosting
+algorithms, manual exposure blending with layer masks in Photoshop, and
+smart capture techniques to ensure clean, crisp HDR composites.</p>
+<h2 id="1-use-automated-software-de-ghosting">1. Use Automated Software
+De-Ghosting</h2>
+<p>Most modern HDR software packages—including Adobe Lightroom,
+Photoshop, and Photomatix—feature built-in de-ghosting engines designed
+to resolve motion automatically.</p>
+<ul>
+<li><strong>Select a Reference Frame:</strong> Automated tools work by
+picking one single frame from your bracketed sequence to act as the
+"truth" for any moving areas. If a person walked through the frame
+during exposure three, choose exposure one or two as your reference so
+the software freezes their position cleanly.</li>
+<li><strong>Adjust the De-Ghosting Strength:</strong> Set the detection
+threshold (typically Low, Medium, or High). Use the lowest setting that
+fully clears the artifact. Setting it too high can unnecessarily discard
+dynamic range data from static areas.</li>
+<li><strong>Inspect the Overlay:</strong> Turn on the de-ghosting
+overlay mask (often shown in red or green) to verify that only the
+moving subjects—such as foliage, water, or pedestrians—are being
+corrected.</li>
+</ul>
+<h2 id="2-manually-blend-exposures-using-layer-masks">2. Manually Blend
+Exposures Using Layer Masks</h2>
+<p>When automated de-ghosting leaves behind edge halos, smudges, or
+texture loss, manual exposure blending in Adobe Photoshop provides
+absolute control.</p>
+<ol type="1">
+<li><strong>Stack and Align:</strong> Load your bracketed exposures into
+Photoshop as layers in a single document. Select all layers and go to
+<strong>Edit &gt; Auto-Align Layers</strong> to correct for any minor
+camera shifts.</li>
+<li><strong>Designate a Base Layer:</strong> Place the exposure with the
+most natural-looking motion at the bottom or top of your layer
+stack.</li>
+<li><strong>Add Layer Masks:</strong> Add a black (hide-all) layer mask
+to the adjacent exposure containing the dynamic range data you need
+(e.g., recovered highlights or lifted shadows).</li>
+<li><strong>Paint with a Soft Brush:</strong> Use a soft-edged white
+brush set to a low opacity (20% to 50%) to paint over static areas, such
+as architecture or steady rock formations, bringing through the balanced
+light while avoiding the moving elements.</li>
+<li><strong>Clean the Edges:</strong> For areas where moving objects
+intersect static backgrounds (like swaying tree limbs against a bright
+sky), use the <strong>Clone Stamp</strong> or <strong>Content-Aware
+Fill</strong> on a separate blank layer to patch residual halos.</li>
+</ol>
+<h2 id="3-utilize-luminosity-masks-for-seamless-transitions">3. Utilize
+Luminosity Masks for Seamless Transitions</h2>
+<p>Luminosity masks isolate specific brightness values rather than color
+or position, allowing you to blend exposures without catching the moving
+edges of an object.</p>
+<ul>
+<li>Generate a luminosity selection targeting the highlights or deep
+shadows.</li>
+<li>Apply this selection to a layer mask on your adjusted exposure.</li>
+<li>Invert or paint out the moving sections entirely, allowing the
+reference frame's natural texture to show through without carrying over
+pixel ghosting from adjacent brackets.</li>
+</ul>
+<h2 id="4-prevent-ghosting-at-the-capture-stage">4. Prevent Ghosting at
+the Capture Stage</h2>
+<p>Fixing ghosting is easiest when minimized in-camera before editing
+begins.</p>
+<ul>
+<li><strong>Use High-Speed Continuous Shooting:</strong> Set your camera
+to its highest continuous frame rate so the time elapsed between
+bracketed shots is measured in fractions of a second.</li>
+<li><strong>Increase Shutter Speed:</strong> Raise your ISO slightly if
+necessary to keep shutter speeds fast enough to freeze motion in wind or
+foot traffic.</li>
+<li><strong>Limit the Bracket Count:</strong> Instead of five or seven
+frames, capture two or three well-spaced exposures (e.g., -2 EV, 0 EV,
++2 EV). Modern camera sensors offer enough dynamic range that fewer
+frames are needed to capture full scene detail, drastically cutting the
+chance of subject movement.</li>
+</ul></article>
+        <div id='disqus_thread'></div>
+        <script>
+
+            var disqus_config = function () {
+                this.page.url =         'https://salivity.github.io/image-editing/article/how-to-remove-ghosting-artifacts-in-hdr-blending';  
+                //this.page.identifier =  PAGE_IDENTIFIER; 
+            };
+            
+            (function() {
+                var d = document, s = d.createElement('script');
+                s.src = 'https://salivity-github-io.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+    
+        </div>
+    </div>
+    
+    </main>
+    <footer>
+        <nav>
+            <ul class="social-links">
+            </ul>
+        </nav>
+        <nav>
+            <ul class="footer-links">
+                <li><a href="https://smvc.dev/contact">Contact</a></li>
+                <li><a href="/image-editing/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/image-editing/terms-and-conditions">Terms and Conditions</a></li>
+            </ul>
+        </nav>
+        <div class="copyright">
+            Copyright &copy; <span id="current-year"></span>
+        </div>
+    </footer>
+</body>
+</html>

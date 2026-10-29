@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Create Square Bokeh Using Box Blur - image-editing</title>
+    <meta name="description" content="The box blur filter is a digital processing tool primarily used in creative photo manipulation to produce distinct, geometric square bokeh effects. While traditional in-camera bokeh produces round or polygonal highlights based on the shape of a physical l">
+    <link rel="canonical" href="https://salivity.github.io/image-editing/article/how-to-create-square-bokeh-using-box-blur">
+    <link rel="search" type="application/opensearchdescription+xml" title="image-editing" href="/image-editing/opensearch.xml">
+    <link rel="icon" href="/image-editing/favicon.ico">
+    <link rel="stylesheet" href="/image-editing/css/style.css">
+    <link media="print" rel="stylesheet" href="/image-editing/css/print.css">
+    <script src="/image-editing/js/fuse.min.js"></script>
+    <script src="/image-editing/js/script.js"></script>
+    <script id="MathJax-script" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/4.1.3/tex-chtml.min.js" defer></script>
+    <script src="/monetize/monetize.js"></script>
+    <script src="/social/social.js"></script>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="How to Create Square Bokeh Using Box Blur - image-editing" />
+    <meta property="og:url" content="https://salivity.github.io/image-editing/article/how-to-create-square-bokeh-using-box-blur" />
+    <meta property="og:image" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:secure_url" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:width" content="1120" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:description" content="The box blur filter is a digital processing tool primarily used in creative photo manipulation to produce distinct, geometric square bokeh effects. While traditional in-camera bokeh produces round or polygonal highlights based on the shape of a physical l" />
+    <link rel="manifest" href="/image-editing/pwa/manifest.json" />
+</head>
+<body>
+    <header>
+        <a href="/image-editing/" aria-label="Go To Home Page" title="Go To Home Page" id="logo">
+            <span>salivity.github.io/</span><span>image-editing</span>
+        </a>
+        <nav>
+            <ul class="header-links">
+                <li><a href="/image-editing/search" title="Search" aria-label="Go To Search Page"><svg class="svg-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"></path></svg></a></li>
+                <li><a id="theme-toggle" title="Theme" href="javascript:void(0);" aria-label="Toggle Website Theme"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+    <div class="article-layout">
+        <aside id="profile-sidebar" class="profile-column" aria-label="Author Profile"></aside>
+        <div class="article-main-column">
+            <article><h1 id="how-to-create-square-bokeh-using-box-blur">How to Create Square
+Bokeh Using Box Blur</h1>
+<p>The box blur filter is a digital processing tool primarily used in
+creative photo manipulation to produce distinct, geometric square bokeh
+effects. While traditional in-camera bokeh produces round or polygonal
+highlights based on the shape of a physical lens aperture, image editing
+software can emulate a square aperture using algorithms. This article
+explains how the box blur algorithm functions, why it naturally creates
+square-shaped light artifacts, and how to effectively apply it to
+isolate highlights and generate stylized out-of-focus backgrounds.</p>
+<h3 id="the-mechanics-of-the-box-blur-filter">The Mechanics of the Box
+Blur Filter</h3>
+<p>In digital image processing, a blur filter works by recalculating the
+color value of each pixel based on the values of surrounding pixels.
+Most common blurs, such as Gaussian blur, use a weighted average that
+assigns more importance to pixels closer to the center, resulting in
+smooth, circular gradients.</p>
+<p>A box blur, by contrast, operates on a square grid known as a kernel.
+It calculates the direct mathematical average of all pixels inside that
+square window, giving equal weight to every pixel within the boundary.
+Because the sampling area is inherently a square with sharp boundaries,
+any intense, isolated point of light passing through the filter is
+expanded into a uniform square shape.</p>
+<h3 id="simulating-a-square-aperture">Simulating a Square Aperture</h3>
+<p>In physical photography, bokeh occurs when points of light in an
+out-of-focus plane take on the geometric shape of the camera's aperture
+blades. Photographers sometimes achieve custom bokeh shapes by placing
+cutout masks over their lenses.</p>
+<p>In post-processing, the box blur filter serves as the digital
+equivalent of a square aperture mask. When applied to bright specular
+highlights—such as city lights, sunlight reflecting off water, or fairy
+lights—the box blur transforms those circular light discs into clean,
+sharp-edged squares. This gives images an avant-garde, retro, or
+stylized architectural aesthetic that standard camera optics cannot
+achieve on their own.</p>
+<h3 id="practical-workflow-for-square-bokeh">Practical Workflow for
+Square Bokeh</h3>
+<p>Applying a box blur directly to an entire photograph often leads to
+an unappealing, low-fidelity blur across midtones and shadows. To create
+realistic and visually striking square bokeh, editors typically use a
+multi-step technique:</p>
+<ol type="1">
+<li><strong>Duplicate the Target Layer:</strong> Create a duplicate of
+the base image to separate the background elements from the foreground
+subject.</li>
+<li><strong>Isolate the Highlights:</strong> Use a luminosity mask,
+threshold adjustment, or levels adjustment on the duplicated layer to
+eliminate dark and midtone areas, leaving only the brightest light
+sources visible against black.</li>
+<li><strong>Apply the Box Blur:</strong> Set the box blur radius to
+determine the size of the square bokeh. A higher pixel radius produces
+larger squares, mimicking a wider aperture and a shallower depth of
+field.</li>
+<li><strong>Blend the Highlights:</strong> Change the blend mode of the
+blurred layer to "Screen," "Linear Dodge (Add)," or "Lighten." This
+removes the black background and seamlessly overlays the illuminated
+square shapes onto the scene.</li>
+<li><strong>Mask the Foreground:</strong> Paint away the blur effect
+from the primary subject using a layer mask to keep the subject sharp
+while leaving the background populated with square bokeh.</li>
+</ol>
+<h3 id="aesthetic-applications">Aesthetic Applications</h3>
+<p>The box blur's square bokeh is widely used in digital art, sci-fi
+concept design, and creative portraiture. It introduces structured,
+modern geometry into backgrounds that would otherwise appear soft and
+naturalistic. By utilizing the mathematically square nature of the box
+blur kernel, editors have full creative control over the size,
+intensity, and placement of unique geometric highlights.</p></article>
+        <div id='disqus_thread'></div>
+        <script>
+
+            var disqus_config = function () {
+                this.page.url =         'https://salivity.github.io/image-editing/article/how-to-create-square-bokeh-using-box-blur';  
+                //this.page.identifier =  PAGE_IDENTIFIER; 
+            };
+            
+            (function() {
+                var d = document, s = d.createElement('script');
+                s.src = 'https://salivity-github-io.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+    
+        </div>
+    </div>
+    
+    </main>
+    <footer>
+        <nav>
+            <ul class="social-links">
+            </ul>
+        </nav>
+        <nav>
+            <ul class="footer-links">
+                <li><a href="https://smvc.dev/contact">Contact</a></li>
+                <li><a href="/image-editing/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/image-editing/terms-and-conditions">Terms and Conditions</a></li>
+            </ul>
+        </nav>
+        <div class="copyright">
+            Copyright &copy; <span id="current-year"></span>
+        </div>
+    </footer>
+</body>
+</html>

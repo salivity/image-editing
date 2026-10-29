@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layer Opacity vs Fill Opacity in Image Editing - image-editing</title>
+    <meta name="description" content="In digital image editing programs like Adobe Photoshop, understanding the distinction between layer opacity and fill opacity is essential for precise visual control. While both settings reduce the visibility of an element, layer opacity adjusts the transp">
+    <link rel="canonical" href="https://salivity.github.io/image-editing/article/layer-opacity-vs-fill-opacity-in-image-editing">
+    <link rel="search" type="application/opensearchdescription+xml" title="image-editing" href="/image-editing/opensearch.xml">
+    <link rel="icon" href="/image-editing/favicon.ico">
+    <link rel="stylesheet" href="/image-editing/css/style.css">
+    <link media="print" rel="stylesheet" href="/image-editing/css/print.css">
+    <script src="/image-editing/js/fuse.min.js"></script>
+    <script src="/image-editing/js/script.js"></script>
+    <script id="MathJax-script" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/4.1.3/tex-chtml.min.js" defer></script>
+    <script src="/monetize/monetize.js"></script>
+    <script src="/social/social.js"></script>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Layer Opacity vs Fill Opacity in Image Editing - image-editing" />
+    <meta property="og:url" content="https://salivity.github.io/image-editing/article/layer-opacity-vs-fill-opacity-in-image-editing" />
+    <meta property="og:image" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:secure_url" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:width" content="1120" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:description" content="In digital image editing programs like Adobe Photoshop, understanding the distinction between layer opacity and fill opacity is essential for precise visual control. While both settings reduce the visibility of an element, layer opacity adjusts the transp" />
+    <link rel="manifest" href="/image-editing/pwa/manifest.json" />
+</head>
+<body>
+    <header>
+        <a href="/image-editing/" aria-label="Go To Home Page" title="Go To Home Page" id="logo">
+            <span>salivity.github.io/</span><span>image-editing</span>
+        </a>
+        <nav>
+            <ul class="header-links">
+                <li><a href="/image-editing/search" title="Search" aria-label="Go To Search Page"><svg class="svg-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"></path></svg></a></li>
+                <li><a id="theme-toggle" title="Theme" href="javascript:void(0);" aria-label="Toggle Website Theme"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+    <div class="article-layout">
+        <aside id="profile-sidebar" class="profile-column" aria-label="Author Profile"></aside>
+        <div class="article-main-column">
+            <article><h1 id="layer-opacity-vs-fill-opacity-in-image-editing">Layer Opacity vs
+Fill Opacity in Image Editing</h1>
+<p>In digital image editing programs like Adobe Photoshop, understanding
+the distinction between layer opacity and fill opacity is essential for
+precise visual control. While both settings reduce the visibility of an
+element, layer opacity adjusts the transparency of the entire
+layer—including all applied layer styles and effects—whereas fill
+opacity alters only the transparency of the underlying pixels or shapes,
+leaving layer styles such as strokes, drop shadows, and bevels
+completely visible.</p>
+<h2 id="what-is-layer-opacity">What Is Layer Opacity?</h2>
+<p>Layer opacity represents the master transparency control for a given
+layer. When you adjust the general opacity slider:</p>
+<ul>
+<li><strong>Affects Everything:</strong> The transparency change applies
+uniformly to the base artwork (pixels, text, or vector shapes) and every
+attached layer style (e.g., Stroke, Drop Shadow, Outer Glow, Bevel and
+Emboss).</li>
+<li><strong>Linear Disappearance:</strong> Lowering the layer opacity to
+50% makes both the object and its shadows or borders 50%
+transparent.</li>
+<li><strong>Complete Invisibility:</strong> Reducing the setting to 0%
+renders the entire layer—effects included—completely invisible.</li>
+</ul>
+<h2 id="what-is-fill-opacity">What Is Fill Opacity?</h2>
+<p>Fill opacity specifically targets the core content of a layer while
+ignoring any applied layer styles. When you modify the fill opacity
+slider:</p>
+<ul>
+<li><strong>Affects Only Base Content:</strong> The transparency
+adjustment applies solely to the original pixels, text characters, or
+vector fill colors.</li>
+<li><strong>Preserves Layer Effects:</strong> All attached layer effects
+remain at their designated strength and visibility, completely
+unaffected by the fill value.</li>
+<li><strong>Hidden Fill, Visible Effects:</strong> Setting fill opacity
+to 0% makes the base object invisible while keeping elements like
+outlines, glows, or drop shadows fully visible.</li>
+</ul>
+<h2 id="practical-examples-of-when-to-use-fill-opacity">Practical
+Examples of When to Use Fill Opacity</h2>
+<p>Fill opacity is an indispensable tool for specific design techniques
+that require transparent surfaces with distinct edges or shadows:</p>
+<ul>
+<li><strong>Glass and Water Effects:</strong> By setting fill opacity to
+0% and applying Bevel &amp; Emboss, Inner Shadow, and a subtle Drop
+Shadow, you create transparent glass or water droplets that refract
+light without displaying an opaque base color.</li>
+<li><strong>Outlined Text:</strong> If you want hollow text that shows
+the background image through the letters, apply a Stroke effect and
+lower the fill opacity to 0%. Layer opacity would fade both the text and
+the stroke simultaneously.</li>
+<li><strong>Embossed Watermarks:</strong> Photographers often protect
+images using text with 0% fill opacity and a Bevel &amp; Emboss or Drop
+Shadow effect, creating an unobtrusive, professional watermark.</li>
+<li><strong>Custom UI Elements:</strong> App and web designers use
+reduced fill opacity combined with inner glows and subtle borders to
+craft modern translucent cards and buttons (often called
+glassmorphism).</li>
+</ul>
+<h2 id="summary-of-differences">Summary of Differences</h2>
+<ul>
+<li><strong>Layer Opacity:</strong> Universal control. Adjusts the base
+pixels and all layer styles simultaneously.</li>
+<li><strong>Fill Opacity:</strong> Selective control. Adjusts only the
+base pixels, keeping all layer styles at 100% of their configured
+values.</li>
+</ul></article>
+        <div id='disqus_thread'></div>
+        <script>
+
+            var disqus_config = function () {
+                this.page.url =         'https://salivity.github.io/image-editing/article/layer-opacity-vs-fill-opacity-in-image-editing';  
+                //this.page.identifier =  PAGE_IDENTIFIER; 
+            };
+            
+            (function() {
+                var d = document, s = d.createElement('script');
+                s.src = 'https://salivity-github-io.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+    
+        </div>
+    </div>
+    
+    </main>
+    <footer>
+        <nav>
+            <ul class="social-links">
+            </ul>
+        </nav>
+        <nav>
+            <ul class="footer-links">
+                <li><a href="https://smvc.dev/contact">Contact</a></li>
+                <li><a href="/image-editing/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/image-editing/terms-and-conditions">Terms and Conditions</a></li>
+            </ul>
+        </nav>
+        <div class="copyright">
+            Copyright &copy; <span id="current-year"></span>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anti-Aliased vs Aliased Selections Explained - image-editing</title>
+    <meta name="description" content="This article provides a clear overview of the differences between anti-aliased and aliased selections in image editing software. It explains the mechanics behind both selection types, how they handle edge pixels and transparency, and how to choose the rig">
+    <link rel="canonical" href="https://salivity.github.io/image-editing/article/anti-aliased-vs-aliased-selections-explained">
+    <link rel="search" type="application/opensearchdescription+xml" title="image-editing" href="/image-editing/opensearch.xml">
+    <link rel="icon" href="/image-editing/favicon.ico">
+    <link rel="stylesheet" href="/image-editing/css/style.css">
+    <link media="print" rel="stylesheet" href="/image-editing/css/print.css">
+    <script src="/image-editing/js/fuse.min.js"></script>
+    <script src="/image-editing/js/script.js"></script>
+    <script id="MathJax-script" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/4.1.3/tex-chtml.min.js" defer></script>
+    <script src="/monetize/monetize.js"></script>
+    <script src="/social/social.js"></script>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Anti-Aliased vs Aliased Selections Explained - image-editing" />
+    <meta property="og:url" content="https://salivity.github.io/image-editing/article/anti-aliased-vs-aliased-selections-explained" />
+    <meta property="og:image" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:secure_url" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:width" content="1120" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:description" content="This article provides a clear overview of the differences between anti-aliased and aliased selections in image editing software. It explains the mechanics behind both selection types, how they handle edge pixels and transparency, and how to choose the rig" />
+    <link rel="manifest" href="/image-editing/pwa/manifest.json" />
+</head>
+<body>
+    <header>
+        <a href="/image-editing/" aria-label="Go To Home Page" title="Go To Home Page" id="logo">
+            <span>salivity.github.io/</span><span>image-editing</span>
+        </a>
+        <nav>
+            <ul class="header-links">
+                <li><a href="/image-editing/search" title="Search" aria-label="Go To Search Page"><svg class="svg-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"></path></svg></a></li>
+                <li><a id="theme-toggle" title="Theme" href="javascript:void(0);" aria-label="Toggle Website Theme"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+    <div class="article-layout">
+        <aside id="profile-sidebar" class="profile-column" aria-label="Author Profile"></aside>
+        <div class="article-main-column">
+            <article><h1 id="anti-aliased-vs-aliased-selections-explained">Anti-Aliased vs
+Aliased Selections Explained</h1>
+<p>This article provides a clear overview of the differences between
+anti-aliased and aliased selections in image editing software. It
+explains the mechanics behind both selection types, how they handle edge
+pixels and transparency, and how to choose the right method depending on
+whether you are working with photorealistic compositions or precision
+pixel art.</p>
+<h3 id="understanding-aliased-selections">Understanding Aliased
+Selections</h3>
+<p>An aliased selection operates on a binary, all-or-nothing principle.
+When you make an aliased selection, an edge pixel is either 100%
+selected or 0% selected. Because digital images are composed of square
+pixels arranged in a grid, diagonal lines and curves created with an
+aliased selection result in a visible "staircase" effect, commonly
+referred to as the "jaggies."</p>
+<p>Aliased selections do not create any semi-transparent pixels along
+the perimeter. This produces sharp, rough, and distinctly digital
+boundaries.</p>
+<h3 id="understanding-anti-aliased-selections">Understanding
+Anti-Aliased Selections</h3>
+<p>An anti-aliased selection softens the harsh staircase effect along
+curved and diagonal edges by introducing intermediate, semi-transparent
+pixels. Instead of a hard boundary between fully selected and unselected
+areas, anti-aliasing calculates the fraction of each pixel that falls
+within the selection boundary and assigns a corresponding level of
+opacity (alpha value).</p>
+<p>By blending the edge pixels with partial transparency, the transition
+between the selected object and the background appears smooth and
+natural to the human eye, even though the underlying pixel grid remains
+square.</p>
+<h3 id="key-differences">Key Differences</h3>
+<ul>
+<li><strong>Edge Smoothness:</strong> Aliased edges are jagged, sharp,
+and pixelated. Anti-aliased edges are visually smooth and blended.</li>
+<li><strong>Pixel Transparency:</strong> Aliased selections feature only
+fully opaque or fully transparent pixels at the boundary. Anti-aliased
+selections generate varying degrees of partial transparency along the
+edges.</li>
+<li><strong>Blending Capabilities:</strong> Anti-aliased selections
+blend seamlessly when moved, copied, or composited onto a new
+background. Aliased selections retain a rigid border that often looks
+unnatural against contrasting backgrounds.</li>
+<li><strong>Fill and Stroke Behavior:</strong> Using tools like the
+paint bucket or applying a stroke to an aliased selection results in
+hard, crisp outlines. Applying the same tools to an anti-aliased
+selection results in softer, feathered edges.</li>
+</ul>
+<h3 id="when-to-use-each-selection-type">When to Use Each Selection
+Type</h3>
+<p><strong>Use anti-aliased selections for:</strong></p>
+<ul>
+<li>Photo manipulation and retouching, where natural transitions between
+elements are essential.</li>
+<li>Isolating subjects from complex backgrounds to place them on new
+layers.</li>
+<li>Typography, logos, and general graphic design work where smooth
+curves are required.</li>
+</ul>
+<p><strong>Use aliased selections for:</strong></p>
+<ul>
+<li>Pixel art and retro-style game asset creation where distinct, solid
+pixels are intentional.</li>
+<li>Precision masking tasks where you must avoid unintended transparency
+or color contamination (halos) around edges.</li>
+<li>Working with tools like the Magic Wand when selecting solid, flat
+color fields for screen printing or index-color formats (such as
+GIFs).</li>
+</ul></article>
+        <div id='disqus_thread'></div>
+        <script>
+
+            var disqus_config = function () {
+                this.page.url =         'https://salivity.github.io/image-editing/article/anti-aliased-vs-aliased-selections-explained';  
+                //this.page.identifier =  PAGE_IDENTIFIER; 
+            };
+            
+            (function() {
+                var d = document, s = d.createElement('script');
+                s.src = 'https://salivity-github-io.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+    
+        </div>
+    </div>
+    
+    </main>
+    <footer>
+        <nav>
+            <ul class="social-links">
+            </ul>
+        </nav>
+        <nav>
+            <ul class="footer-links">
+                <li><a href="https://smvc.dev/contact">Contact</a></li>
+                <li><a href="/image-editing/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/image-editing/terms-and-conditions">Terms and Conditions</a></li>
+            </ul>
+        </nav>
+        <div class="copyright">
+            Copyright &copy; <span id="current-year"></span>
+        </div>
+    </footer>
+</body>
+</html>
