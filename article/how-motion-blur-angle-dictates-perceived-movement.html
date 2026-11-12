@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Motion Blur Angle Dictates Perceived Movement - image-editing</title>
+    <meta name="description" content="This article examines how the motion blur filter uses angular parameters to simulate directional velocity in static digital imagery. By altering the linear path along which pixels are blended, digital artists can precisely control the viewer&#39;s perception">
+    <link rel="canonical" href="https://salivity.github.io/image-editing/article/how-motion-blur-angle-dictates-perceived-movement">
+    <link rel="search" type="application/opensearchdescription+xml" title="image-editing" href="/image-editing/opensearch.xml">
+    <link rel="icon" href="/image-editing/favicon.ico">
+    <link rel="stylesheet" href="/image-editing/css/style.css">
+    <link media="print" rel="stylesheet" href="/image-editing/css/print.css">
+    <script src="/image-editing/js/fuse.min.js"></script>
+    <script src="/image-editing/js/script.js"></script>
+    <script id="MathJax-script" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/4.1.3/tex-chtml.min.js" defer></script>
+    <script src="/monetize/monetize.js"></script>
+    <script src="/social/social.js"></script>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="How Motion Blur Angle Dictates Perceived Movement - image-editing" />
+    <meta property="og:url" content="https://salivity.github.io/image-editing/article/how-motion-blur-angle-dictates-perceived-movement" />
+    <meta property="og:image" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:secure_url" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:width" content="1120" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:description" content="This article examines how the motion blur filter uses angular parameters to simulate directional velocity in static digital imagery. By altering the linear path along which pixels are blended, digital artists can precisely control the viewer&#39;s perception" />
+    <link rel="manifest" href="/image-editing/pwa/manifest.json" />
+</head>
+<body>
+    <header>
+        <a href="/image-editing/" aria-label="Go To Home Page" title="Go To Home Page" id="logo">
+            <span>salivity.github.io/</span><span>image-editing</span>
+        </a>
+        <nav>
+            <ul class="header-links">
+                <li><a href="/image-editing/search" title="Search" aria-label="Go To Search Page"><svg class="svg-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"></path></svg></a></li>
+                <li><a id="theme-toggle" title="Theme" href="javascript:void(0);" aria-label="Toggle Website Theme"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+    <div class="article-layout">
+        <aside id="profile-sidebar" class="profile-column" aria-label="Author Profile"></aside>
+        <div class="article-main-column">
+            <article><h1 id="how-motion-blur-angle-dictates-perceived-movement">How Motion
+Blur Angle Dictates Perceived Movement</h1>
+<p>This article examines how the motion blur filter uses angular
+parameters to simulate directional velocity in static digital imagery.
+By altering the linear path along which pixels are blended, digital
+artists can precisely control the viewer's perception of trajectory,
+speed, and kinetic energy. The following sections break down the
+mechanics behind this setting, how different angles communicate specific
+types of action, and the importance of aligning blur vectors with the
+visual context of a composition.</p>
+<h3 id="the-mechanics-of-the-angle-parameter">The Mechanics of the Angle
+Parameter</h3>
+<p>The motion blur filter functions by duplicating and smearing pixels
+along a designated straight path. The angle setting, typically measured
+in degrees ranging from -360° to 360° or 0° to 180°, acts as a
+directional vector. When an editor selects an angle, the algorithm
+evaluates pixel data and blends adjacent pixels exclusively along that
+specified trajectory. Instead of scattering light uniformly like a
+standard Gaussian blur, the motion blur strictly constrains image
+degradation to a single axis, tricking the human brain into interpreting
+the resulting streaks as physical velocity occurring in real time.</p>
+<h3
+id="directional-meaning-horizontal-vertical-and-diagonal">Directional
+Meaning: Horizontal, Vertical, and Diagonal</h3>
+<p>The specific degree chosen directly establishes the narrative of the
+motion:</p>
+<ul>
+<li><strong>Horizontal Angles (0° or 180°):</strong> This setting
+simulates lateral movement across the plane of vision. It is most
+commonly applied to subjects traveling across the screen, such as
+passing vehicles, sprinting athletes, or panning camera shots.</li>
+<li><strong>Vertical Angles (90° or -90°):</strong> A vertical angle
+communicates upward or downward velocity. This orientation is essential
+for depicting falling rain, dropping objects, ascending rockets, or
+camera tilts.</li>
+<li><strong>Diagonal Angles (e.g., 30° to 60°):</strong> Diagonal
+vectors convey dynamic, high-energy movement. They are frequently used
+in action sequences to represent diving aircraft, projectile
+trajectories, or sudden, erratic shifts in momentum.</li>
+</ul>
+<h3 id="aligning-angles-with-subject-geometry">Aligning Angles with
+Subject Geometry</h3>
+<p>For perceived motion to look authentic, the angle of the blur must
+align with the natural lines, perspective, and orientation of the
+subject. If a sports car is angled diagonally down a road at roughly 35
+degrees, applying a strictly horizontal (0-degree) blur breaks the
+illusion and creates an unnatural smear that contradicts the vehicle's
+perspective. Aligning the filter’s angle precisely with the vanishing
+lines of the subject ensures that the motion appears cohesive with the
+surrounding physical environment.</p>
+<h3 id="the-interplay-between-angle-and-distance">The Interplay Between
+Angle and Distance</h3>
+<p>While the angle dictates the path of travel, it works in tandem with
+the distance (or radius) parameter, which determines the length of the
+pixel smear. The angle establishes the "where" of the movement, while
+the distance establishes the "how fast." A precise angle paired with a
+small distance suggests subtle, controlled movement, whereas that same
+angle combined with a high distance value indicates extreme, high-speed
+travel along that specific vector. Mastering this relationship allows
+editors to inject convincing, kinetic life into completely static
+scenes.</p></article>
+        <div id='disqus_thread'></div>
+        <script>
+
+            var disqus_config = function () {
+                this.page.url =         'https://salivity.github.io/image-editing/article/how-motion-blur-angle-dictates-perceived-movement';  
+                //this.page.identifier =  PAGE_IDENTIFIER; 
+            };
+            
+            (function() {
+                var d = document, s = d.createElement('script');
+                s.src = 'https://salivity-github-io.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+    
+        </div>
+    </div>
+    
+    </main>
+    <footer>
+        <nav>
+            <ul class="social-links">
+            </ul>
+        </nav>
+        <nav>
+            <ul class="footer-links">
+                <li><a href="https://smvc.dev/contact">Contact</a></li>
+                <li><a href="/image-editing/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/image-editing/terms-and-conditions">Terms and Conditions</a></li>
+            </ul>
+        </nav>
+        <div class="copyright">
+            Copyright &copy; <span id="current-year"></span>
+        </div>
+    </footer>
+</body>
+</html>

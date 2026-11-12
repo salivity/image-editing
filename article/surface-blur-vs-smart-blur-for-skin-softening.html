@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surface Blur vs Smart Blur for Skin Softening - image-editing</title>
+    <meta name="description" content="Surface Blur and Smart Blur are both edge-preserving filters used in image retouching to smooth skin textures without destroying critical details like eyes, lips, and hair. While both tools aim to eliminate blemishes and uneven tones, they differ signific">
+    <link rel="canonical" href="https://salivity.github.io/image-editing/article/surface-blur-vs-smart-blur-for-skin-softening">
+    <link rel="search" type="application/opensearchdescription+xml" title="image-editing" href="/image-editing/opensearch.xml">
+    <link rel="icon" href="/image-editing/favicon.ico">
+    <link rel="stylesheet" href="/image-editing/css/style.css">
+    <link media="print" rel="stylesheet" href="/image-editing/css/print.css">
+    <script src="/image-editing/js/fuse.min.js"></script>
+    <script src="/image-editing/js/script.js"></script>
+    <script id="MathJax-script" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/4.1.3/tex-chtml.min.js" defer></script>
+    <script src="/monetize/monetize.js"></script>
+    <script src="/social/social.js"></script>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Surface Blur vs Smart Blur for Skin Softening - image-editing" />
+    <meta property="og:url" content="https://salivity.github.io/image-editing/article/surface-blur-vs-smart-blur-for-skin-softening" />
+    <meta property="og:image" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:secure_url" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:width" content="1120" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:description" content="Surface Blur and Smart Blur are both edge-preserving filters used in image retouching to smooth skin textures without destroying critical details like eyes, lips, and hair. While both tools aim to eliminate blemishes and uneven tones, they differ signific" />
+    <link rel="manifest" href="/image-editing/pwa/manifest.json" />
+</head>
+<body>
+    <header>
+        <a href="/image-editing/" aria-label="Go To Home Page" title="Go To Home Page" id="logo">
+            <span>salivity.github.io/</span><span>image-editing</span>
+        </a>
+        <nav>
+            <ul class="header-links">
+                <li><a href="/image-editing/search" title="Search" aria-label="Go To Search Page"><svg class="svg-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"></path></svg></a></li>
+                <li><a id="theme-toggle" title="Theme" href="javascript:void(0);" aria-label="Toggle Website Theme"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+    <div class="article-layout">
+        <aside id="profile-sidebar" class="profile-column" aria-label="Author Profile"></aside>
+        <div class="article-main-column">
+            <article><h1 id="surface-blur-vs-smart-blur-for-skin-softening">Surface Blur vs
+Smart Blur for Skin Softening</h1>
+<p>Surface Blur and Smart Blur are both edge-preserving filters used in
+image retouching to smooth skin textures without destroying critical
+details like eyes, lips, and hair. While both tools aim to eliminate
+blemishes and uneven tones, they differ significantly in their
+edge-detection algorithms, parameter controls, visual rendering, and
+artifact control. Understanding these differences allows retouchers to
+choose the right tool to achieve smooth, natural skin rather than an
+overly airbrushed, artificial look.</p>
+<h3 id="how-the-algorithms-detect-edges">How the Algorithms Detect
+Edges</h3>
+<p>The primary distinction between the two filters lies in how they
+differentiate between flat skin surfaces and sharp facial features.</p>
+<ul>
+<li><strong>Surface Blur</strong> evaluates the tonal difference between
+neighboring pixels on a continuous basis. When the tonal difference
+between pixels is smaller than the user-defined Threshold, the filter
+averages them together. When the difference exceeds that threshold, the
+filter preserves the contrast. This creates a smooth, gradual transition
+between blurred flat areas and sharp contours.</li>
+<li><strong>Smart Blur</strong> uses a traditional edge-detection
+algorithm (similar to Find Edges) to locate boundaries first, and then
+applies a blur to the non-edge areas. Because it establishes a
+definitive boundary before blurring, it often fails to recognize subtle,
+soft transitions on facial contours, interpreting them either as full
+flat areas or hard boundaries.</li>
+</ul>
+<h3 id="control-sliders-and-adjustability">Control Sliders and
+Adjustability</h3>
+<p>Both filters share similar terminology, but their operational
+parameters offer different levels of control:</p>
+<ul>
+<li><strong>Surface Blur</strong> utilizes two straightforward sliders:
+<strong>Radius</strong> (which determines the size of the pixel area
+sampled for the blur) and <strong>Threshold</strong> (which dictates how
+different the tonal values must be before an edge is registered). This
+simplicity makes it highly predictable when blending midtones and fine
+skin textures.</li>
+<li><strong>Smart Blur</strong> includes <strong>Radius</strong> and
+<strong>Threshold</strong>, but adds <strong>Quality</strong> (Low,
+Medium, High) and <strong>Mode</strong> (Normal, Edge Only, Overlay
+Edge) settings. While "Edge Only" and "Overlay Edge" can be useful for
+creating masks or stylized graphic effects, the general blur controls in
+"Normal" mode are less refined for micro-adjustments on skin.</li>
+</ul>
+<h3 id="visual-quality-and-artifacts">Visual Quality and Artifacts</h3>
+<p>When applied to human portraits, the difference in the final
+aesthetic is stark:</p>
+<ul>
+<li><strong>Haloing:</strong> Smart Blur frequently produces distinct
+halos or pixelated fringes around high-contrast transitions, such as the
+border between dark eyelashes and light skin, or the edges of the lips.
+Surface Blur blends these boundaries much more cleanly, reducing edge
+fringing.</li>
+<li><strong>Texture Retention:</strong> Smart Blur tends to flatten skin
+into uniform, plastic-looking patches, creating an outdated airbrush
+effect. Surface Blur retains more micro-contrast in low-frequency areas,
+producing a creamier, softer transition across highlights and shadows
+that looks closer to real makeup.</li>
+</ul>
+<h3 id="performance-and-compatibility">Performance and
+Compatibility</h3>
+<p>Smart Blur is a legacy filter originally coded for older 8-bit
+workflows and smaller image resolutions. While it processes quickly, it
+often struggles with high-resolution, modern camera files and can
+introduce banding on high-bit-depth images.</p>
+<p>Surface Blur is a newer, more computationally demanding filter. While
+it requires slightly more processing power to render on large megapixel
+files, it integrates natively into high-bit-depth (16-bit) workflows
+without causing color banding or posterization in delicate skin
+gradients.</p>
+<h3 id="recommendation-for-skin-softening">Recommendation for Skin
+Softening</h3>
+<p>For skin retouching, <strong>Surface Blur is the superior
+choice</strong>. When combined with layer masks or utilized inside a
+frequency separation workflow, Surface Blur creates gentle, continuous
+tonal transitions while keeping facial features crisp. Smart Blur should
+generally be reserved for technical edge-mapping or specialized stylized
+effects rather than realistic portrait retouching.</p></article>
+        <div id='disqus_thread'></div>
+        <script>
+
+            var disqus_config = function () {
+                this.page.url =         'https://salivity.github.io/image-editing/article/surface-blur-vs-smart-blur-for-skin-softening';  
+                //this.page.identifier =  PAGE_IDENTIFIER; 
+            };
+            
+            (function() {
+                var d = document, s = d.createElement('script');
+                s.src = 'https://salivity-github-io.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+    
+        </div>
+    </div>
+    
+    </main>
+    <footer>
+        <nav>
+            <ul class="social-links">
+            </ul>
+        </nav>
+        <nav>
+            <ul class="footer-links">
+                <li><a href="https://smvc.dev/contact">Contact</a></li>
+                <li><a href="/image-editing/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/image-editing/terms-and-conditions">Terms and Conditions</a></li>
+            </ul>
+        </nav>
+        <div class="copyright">
+            Copyright &copy; <span id="current-year"></span>
+        </div>
+    </footer>
+</body>
+</html>

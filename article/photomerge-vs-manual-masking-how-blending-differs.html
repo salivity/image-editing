@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photomerge vs Manual Masking: How Blending Differs - image-editing</title>
+    <meta name="description" content="Photomerge automation and manual masking represent two fundamentally different approaches to combining overlapping images into a seamless composite. While Photomerge relies on computational algorithms—such as optimal seam-line detection and multi-band fre">
+    <link rel="canonical" href="https://salivity.github.io/image-editing/article/photomerge-vs-manual-masking-how-blending-differs">
+    <link rel="search" type="application/opensearchdescription+xml" title="image-editing" href="/image-editing/opensearch.xml">
+    <link rel="icon" href="/image-editing/favicon.ico">
+    <link rel="stylesheet" href="/image-editing/css/style.css">
+    <link media="print" rel="stylesheet" href="/image-editing/css/print.css">
+    <script src="/image-editing/js/fuse.min.js"></script>
+    <script src="/image-editing/js/script.js"></script>
+    <script id="MathJax-script" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/4.1.3/tex-chtml.min.js" defer></script>
+    <script src="/monetize/monetize.js"></script>
+    <script src="/social/social.js"></script>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Photomerge vs Manual Masking: How Blending Differs - image-editing" />
+    <meta property="og:url" content="https://salivity.github.io/image-editing/article/photomerge-vs-manual-masking-how-blending-differs" />
+    <meta property="og:image" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:secure_url" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:width" content="1120" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:description" content="Photomerge automation and manual masking represent two fundamentally different approaches to combining overlapping images into a seamless composite. While Photomerge relies on computational algorithms—such as optimal seam-line detection and multi-band fre" />
+    <link rel="manifest" href="/image-editing/pwa/manifest.json" />
+</head>
+<body>
+    <header>
+        <a href="/image-editing/" aria-label="Go To Home Page" title="Go To Home Page" id="logo">
+            <span>salivity.github.io/</span><span>image-editing</span>
+        </a>
+        <nav>
+            <ul class="header-links">
+                <li><a href="/image-editing/search" title="Search" aria-label="Go To Search Page"><svg class="svg-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"></path></svg></a></li>
+                <li><a id="theme-toggle" title="Theme" href="javascript:void(0);" aria-label="Toggle Website Theme"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+    <div class="article-layout">
+        <aside id="profile-sidebar" class="profile-column" aria-label="Author Profile"></aside>
+        <div class="article-main-column">
+            <article><h1 id="photomerge-vs-manual-masking-how-blending-differs">Photomerge vs
+Manual Masking: How Blending Differs</h1>
+<p>Photomerge automation and manual masking represent two fundamentally
+different approaches to combining overlapping images into a seamless
+composite. While Photomerge relies on computational algorithms—such as
+optimal seam-line detection and multi-band frequency blending—to
+automatically reconcile exposure, tone, and alignment, manual masking
+gives the editor complete pixel-by-pixel control over transitions using
+transparency channels, brushes, and selections. Understanding these
+mechanical differences helps determine whether a project requires the
+speed of algorithmic stitching or the precision of human
+intervention.</p>
+<h3 id="automated-seam-placement-vs-defined-boundaries">Automated Seam
+Placement vs. Defined Boundaries</h3>
+<p>In automated Photomerge, the software analyzes overlapping regions
+between frames to calculate an optimal cut path, often utilizing
+graph-cut algorithms. The software identifies areas of high similarity
+and places the seam where differences in texture, tone, or movement are
+least perceptible. It deliberately avoids cutting through recognizable
+features or high-contrast edges when possible.</p>
+<p>Manual masking, by contrast, relies entirely on human judgment. The
+editor defines boundaries using layer masks, brush hardness, vector
+paths, or luminosity ranges. While manual selection requires
+significantly more time, it prevents the software from making erroneous
+assumptions—such as bisecting a moving subject or placing seams through
+repetitive patterns that confuse automated algorithms.</p>
+<h3 id="multi-band-blending-vs-direct-alpha-transitions">Multi-Band
+Blending vs. Direct Alpha Transitions</h3>
+<p>The core technical distinction between the two methods lies in how
+the boundary pixels are blended:</p>
+<ul>
+<li><strong>Photomerge (Multi-Band/Pyramid Blending):</strong> Automated
+blending decomposes overlapping image sections into multiple spatial
+frequency bands. Low frequencies (broad color, lighting variations, and
+exposure gradients) are blended across a wide transition zone to ensure
+background tones match imperceptibly. High frequencies (fine details and
+sharp textures) are blended across a very narrow zone to prevent
+blurring or double images. This prevents both visible seam lines and
+loss of fine detail.</li>
+<li><strong>Manual Masking (Direct Alpha Blending):</strong> Standard
+layer masks apply a linear or feathered alpha transition across all
+spatial frequencies simultaneously. When you feather a manual mask, both
+fine details and broad colors are softened equally. If exposures or
+colors between two layers do not match perfectly, a feathered manual
+edge often produces a visible halo, muddy tones, or a semi-transparent
+ghosting effect.</li>
+</ul>
+<h3 id="exposure-and-vignette-compensation">Exposure and Vignette
+Compensation</h3>
+<p>Photomerge evaluates the entire image set globally before finalizing
+the blend. It calculates lens distortion, vignetting falloff, and
+exposure discrepancies across overlapping frames, adjusting the dynamic
+range of each layer internally to create photometric consistency.</p>
+<p>With manual masking, exposure balancing must be performed manually.
+Editors must use adjustment layers, curves, color grading, and
+dodge-and-burn techniques to balance lighting differences between frames
+before or after applying the mask.</p>
+<h3 id="ghosting-artifacts-and-correction">Ghosting, Artifacts, and
+Correction</h3>
+<p>Because Photomerge automates seam selection, it can struggle with
+"ghosting"—the semi-transparent duplication of moving objects, such as
+pedestrians, foliage in the wind, or moving water. If the algorithm
+cannot identify a clean division, it may attempt to blend conflicting
+pixel data together or slice an object in half. Resolving this often
+requires expanding the automated layer masks after the blend is
+generated.</p>
+<p>Manual masking inherently avoids algorithmic ghosting because the
+editor dictates which layer possesses absolute dominance at any given
+pixel coordinate. For complex composite work where subjects change
+position between shots, manual masking remains the superior method for
+maintaining structural fidelity and deliberate compositional
+choices.</p></article>
+        <div id='disqus_thread'></div>
+        <script>
+
+            var disqus_config = function () {
+                this.page.url =         'https://salivity.github.io/image-editing/article/photomerge-vs-manual-masking-how-blending-differs';  
+                //this.page.identifier =  PAGE_IDENTIFIER; 
+            };
+            
+            (function() {
+                var d = document, s = d.createElement('script');
+                s.src = 'https://salivity-github-io.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+    
+        </div>
+    </div>
+    
+    </main>
+    <footer>
+        <nav>
+            <ul class="social-links">
+            </ul>
+        </nav>
+        <nav>
+            <ul class="footer-links">
+                <li><a href="https://smvc.dev/contact">Contact</a></li>
+                <li><a href="/image-editing/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/image-editing/terms-and-conditions">Terms and Conditions</a></li>
+            </ul>
+        </nav>
+        <div class="copyright">
+            Copyright &copy; <span id="current-year"></span>
+        </div>
+    </footer>
+</body>
+</html>

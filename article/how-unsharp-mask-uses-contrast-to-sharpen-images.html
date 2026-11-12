@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Unsharp Mask Uses Contrast to Sharpen Images - image-editing</title>
+    <meta name="description" content="The unsharp mask (USM) filter is a classic image editing tool that enhances apparent sharpness not by recovering lost detail, but by manipulating local edge contrast. Rather than increasing the actual resolution of an image, the filter creates the optical">
+    <link rel="canonical" href="https://salivity.github.io/image-editing/article/how-unsharp-mask-uses-contrast-to-sharpen-images">
+    <link rel="search" type="application/opensearchdescription+xml" title="image-editing" href="/image-editing/opensearch.xml">
+    <link rel="icon" href="/image-editing/favicon.ico">
+    <link rel="stylesheet" href="/image-editing/css/style.css">
+    <link media="print" rel="stylesheet" href="/image-editing/css/print.css">
+    <script src="/image-editing/js/fuse.min.js"></script>
+    <script src="/image-editing/js/script.js"></script>
+    <script id="MathJax-script" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/4.1.3/tex-chtml.min.js" defer></script>
+    <script src="/monetize/monetize.js"></script>
+    <script src="/social/social.js"></script>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="How Unsharp Mask Uses Contrast to Sharpen Images - image-editing" />
+    <meta property="og:url" content="https://salivity.github.io/image-editing/article/how-unsharp-mask-uses-contrast-to-sharpen-images" />
+    <meta property="og:image" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:secure_url" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:width" content="1120" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:description" content="The unsharp mask (USM) filter is a classic image editing tool that enhances apparent sharpness not by recovering lost detail, but by manipulating local edge contrast. Rather than increasing the actual resolution of an image, the filter creates the optical" />
+    <link rel="manifest" href="/image-editing/pwa/manifest.json" />
+</head>
+<body>
+    <header>
+        <a href="/image-editing/" aria-label="Go To Home Page" title="Go To Home Page" id="logo">
+            <span>salivity.github.io/</span><span>image-editing</span>
+        </a>
+        <nav>
+            <ul class="header-links">
+                <li><a href="/image-editing/search" title="Search" aria-label="Go To Search Page"><svg class="svg-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"></path></svg></a></li>
+                <li><a id="theme-toggle" title="Theme" href="javascript:void(0);" aria-label="Toggle Website Theme"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+    <div class="article-layout">
+        <aside id="profile-sidebar" class="profile-column" aria-label="Author Profile"></aside>
+        <div class="article-main-column">
+            <article><h1 id="how-unsharp-mask-uses-contrast-to-sharpen-images">How Unsharp
+Mask Uses Contrast to Sharpen Images</h1>
+<p>The unsharp mask (USM) filter is a classic image editing tool that
+enhances apparent sharpness not by recovering lost detail, but by
+manipulating local edge contrast. Rather than increasing the actual
+resolution of an image, the filter creates the optical illusion of
+sharpness by finding high-contrast transitions—such as borders and
+silhouettes—and exaggerating the difference between adjacent light and
+dark tones. By understanding the relationship between human visual
+perception and edge contrast, editors can effectively utilize this tool
+to make soft images appear crisp and defined.</p>
+<p>The name "unsharp mask" originates from traditional darkroom
+photography. In an analog workflow, technicians created a blurred
+(unsharp) positive film copy of the original negative. When sandwiched
+together with the original, the blurred mask canceled out low-frequency
+information, leaving only the fine, high-frequency details. Digital
+unsharp masking functions on the exact same mathematical principle: the
+software creates an internal, blurred duplicate of the image, subtracts
+it from the original to detect edges, and then uses that mask to boost
+contrast along those identified borders.</p>
+<p>The core mechanism behind this simulated sharpness relies on a visual
+property known as acutance. While resolution defines how much data or
+detail an image physically contains, acutance measures how quickly edge
+transitions occur. The human visual system interprets sharp transitions
+between light and dark as defined boundaries. When a boundary
+transitions gradually over several pixels, the brain perceives it as
+blurry or out of focus.</p>
+<p>To simulate sharpness, the unsharp mask filter creates localized
+halos along these transitions through undershoot and overshoot. On the
+lighter side of an edge, the filter increases the pixel brightness,
+creating an overshoot. On the darker side of the edge, it darkens the
+pixels, creating an undershoot. This artificial accentuation exploits a
+biological optical illusion called Mach bands, where the human eye
+exaggerates the contrast at the borders between different shades of
+gray. Because the dark side is darker and the bright side is brighter
+right at the line of contact, the brain interprets the object as
+significantly sharper than it actually is.</p>
+<p>To control this contrast manipulation without introducing distracting
+artifacts, the filter utilizes three primary parameters:</p>
+<ul>
+<li><strong>Amount:</strong> This setting controls the strength of the
+contrast boost. A higher amount makes the light edges brighter and the
+dark edges darker, intensifying the perceived sharpness. Setting this
+too high creates obvious, glowing halos.</li>
+<li><strong>Radius:</strong> This determines the width of the edge band
+where the contrast enhancement occurs. A smaller radius restricts the
+adjustment to fine details, whereas a larger radius broadens the
+contrast halo, which is useful for lower-resolution images or broader
+objects.</li>
+<li><strong>Threshold:</strong> This dictates how different adjacent
+pixel values must be before the filter recognizes them as an edge. By
+setting an appropriate threshold, the filter ignores subtle variations
+in flat areas—such as skin tones or smooth skies—ensuring that only
+genuine subject edges are enhanced while preventing unwanted digital
+noise or film grain from being sharpened.</li>
+</ul></article>
+        <div id='disqus_thread'></div>
+        <script>
+
+            var disqus_config = function () {
+                this.page.url =         'https://salivity.github.io/image-editing/article/how-unsharp-mask-uses-contrast-to-sharpen-images';  
+                //this.page.identifier =  PAGE_IDENTIFIER; 
+            };
+            
+            (function() {
+                var d = document, s = d.createElement('script');
+                s.src = 'https://salivity-github-io.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+    
+        </div>
+    </div>
+    
+    </main>
+    <footer>
+        <nav>
+            <ul class="social-links">
+            </ul>
+        </nav>
+        <nav>
+            <ul class="footer-links">
+                <li><a href="https://smvc.dev/contact">Contact</a></li>
+                <li><a href="/image-editing/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/image-editing/terms-and-conditions">Terms and Conditions</a></li>
+            </ul>
+        </nav>
+        <div class="copyright">
+            Copyright &copy; <span id="current-year"></span>
+        </div>
+    </footer>
+</body>
+</html>

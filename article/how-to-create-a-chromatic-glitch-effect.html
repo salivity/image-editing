@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Create a Chromatic Glitch Effect - image-editing</title>
+    <meta name="description" content="The chromatic glitch effect, commonly known as RGB split or chromatic aberration, replicates retro analog display errors and digital signal degradation by separating an image&#39;s primary color channels. This tutorial provides a step-by-step breakdown of how">
+    <link rel="canonical" href="https://salivity.github.io/image-editing/article/how-to-create-a-chromatic-glitch-effect">
+    <link rel="search" type="application/opensearchdescription+xml" title="image-editing" href="/image-editing/opensearch.xml">
+    <link rel="icon" href="/image-editing/favicon.ico">
+    <link rel="stylesheet" href="/image-editing/css/style.css">
+    <link media="print" rel="stylesheet" href="/image-editing/css/print.css">
+    <script src="/image-editing/js/fuse.min.js"></script>
+    <script src="/image-editing/js/script.js"></script>
+    <script id="MathJax-script" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/4.1.3/tex-chtml.min.js" defer></script>
+    <script src="/monetize/monetize.js"></script>
+    <script src="/social/social.js"></script>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="How to Create a Chromatic Glitch Effect - image-editing" />
+    <meta property="og:url" content="https://salivity.github.io/image-editing/article/how-to-create-a-chromatic-glitch-effect" />
+    <meta property="og:image" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:secure_url" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:width" content="1120" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:description" content="The chromatic glitch effect, commonly known as RGB split or chromatic aberration, replicates retro analog display errors and digital signal degradation by separating an image&#39;s primary color channels. This tutorial provides a step-by-step breakdown of how" />
+    <link rel="manifest" href="/image-editing/pwa/manifest.json" />
+</head>
+<body>
+    <header>
+        <a href="/image-editing/" aria-label="Go To Home Page" title="Go To Home Page" id="logo">
+            <span>salivity.github.io/</span><span>image-editing</span>
+        </a>
+        <nav>
+            <ul class="header-links">
+                <li><a href="/image-editing/search" title="Search" aria-label="Go To Search Page"><svg class="svg-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"></path></svg></a></li>
+                <li><a id="theme-toggle" title="Theme" href="javascript:void(0);" aria-label="Toggle Website Theme"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+    <div class="article-layout">
+        <aside id="profile-sidebar" class="profile-column" aria-label="Author Profile"></aside>
+        <div class="article-main-column">
+            <article><h1 id="how-to-create-a-chromatic-glitch-effect">How to Create a
+Chromatic Glitch Effect</h1>
+<p>The chromatic glitch effect, commonly known as RGB split or chromatic
+aberration, replicates retro analog display errors and digital signal
+degradation by separating an image's primary color channels. This
+tutorial provides a step-by-step breakdown of how to manually build this
+stylized effect in standard raster image editing software—such as Adobe
+Photoshop, GIMP, or Photopea—without relying on third-party plugins or
+automated filters.</p>
+<h3 id="step-1-prepare-the-base-image">Step 1: Prepare the Base
+Image</h3>
+<p>Open your chosen image in your editing software. Ensure the document
+color mode is set to <strong>RGB Color</strong>. If the layer is locked
+as a background layer, unlock it by double-clicking it and renaming it
+to "Base."</p>
+<h3 id="step-2-separate-the-rgb-channels">Step 2: Separate the RGB
+Channels</h3>
+<p>To create the color separation, you need to isolate the red, green,
+and blue channels onto distinct layers.</p>
+<ol type="1">
+<li>Duplicate the "Base" layer twice, resulting in three identical
+layers.</li>
+<li>Rename the bottom duplicate to <strong>Red</strong>, the middle
+duplicate to <strong>Green</strong>, and the top duplicate to
+<strong>Blue</strong>.</li>
+<li>Open the <strong>Blending Options</strong> or <strong>Layer
+Styles</strong> for the <strong>Red</strong> layer. In the Advanced
+Blending section, locate the <strong>Channels</strong> checkboxes (R, G,
+B) and uncheck <strong>G</strong> and <strong>B</strong>, leaving only
+the <strong>R</strong> channel active.</li>
+<li>Open the Blending Options for the <strong>Green</strong> layer, and
+uncheck <strong>R</strong> and <strong>B</strong>, leaving only the
+<strong>G</strong> channel active.</li>
+<li>Open the Blending Options for the <strong>Blue</strong> layer, and
+uncheck <strong>R</strong> and <strong>G</strong>, leaving only the
+<strong>B</strong> channel active.</li>
+<li>Set the blending mode of the top two layers (<strong>Green</strong>
+and <strong>Blue</strong>) to <strong>Screen</strong> (if your software
+does not automatically combine isolated channel layers). When aligned,
+the image will appear completely normal.</li>
+</ol>
+<h3 id="step-3-shift-the-color-channels">Step 3: Shift the Color
+Channels</h3>
+<ol type="1">
+<li>Select the <strong>Move Tool</strong>.</li>
+<li>Click on the <strong>Red</strong> layer. Use your keyboard arrow
+keys to nudge the layer 5 to 15 pixels to the left.</li>
+<li>Click on the <strong>Blue</strong> layer and nudge it 5 to 15 pixels
+to the right.</li>
+<li>Leave the <strong>Green</strong> layer centered as an anchor. This
+offset exposes the misaligned channels at high-contrast edges,
+generating the signature color-fringing effect.</li>
+</ol>
+<h3 id="step-4-add-glitch-slices">Step 4: Add Glitch Slices</h3>
+<p>To transform the basic chromatic aberration into a dynamic
+glitch:</p>
+<ol type="1">
+<li>Merge the three channel layers into a single flattened copy (e.g.,
+using <code>Ctrl+Alt+Shift+E</code> or
+<code>Cmd+Opt+Shift+E</code>).</li>
+<li>Select the <strong>Rectangular Marquee Tool</strong>.</li>
+<li>Draw thin, horizontal selection boxes across random sections of the
+image.</li>
+<li>Hold <code>Ctrl</code> (or <code>Cmd</code>) and drag the selected
+slice slightly to the left or right to displace the image data.</li>
+<li>Repeat this process with varying slice heights to create an erratic,
+corrupted appearance.</li>
+</ol>
+<h3 id="step-5-final-touches-scanlines-and-noise">Step 5: Final Touches
+(Scanlines and Noise)</h3>
+<ol type="1">
+<li><strong>Add Noise:</strong> Create a new top layer, fill it with 50%
+gray, apply a standard Gaussian or Uniform Noise filter, and set the
+layer blend mode to <strong>Soft Light</strong> or
+<strong>Overlay</strong> at 10–20% opacity.</li>
+<li><strong>Scanlines:</strong> Add horizontal line patterns set to
+<strong>Multiply</strong> at low opacity to simulate a CRT monitor or
+broken signal output.</li>
+</ol></article>
+        <div id='disqus_thread'></div>
+        <script>
+
+            var disqus_config = function () {
+                this.page.url =         'https://salivity.github.io/image-editing/article/how-to-create-a-chromatic-glitch-effect';  
+                //this.page.identifier =  PAGE_IDENTIFIER; 
+            };
+            
+            (function() {
+                var d = document, s = d.createElement('script');
+                s.src = 'https://salivity-github-io.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+    
+        </div>
+    </div>
+    
+    </main>
+    <footer>
+        <nav>
+            <ul class="social-links">
+            </ul>
+        </nav>
+        <nav>
+            <ul class="footer-links">
+                <li><a href="https://smvc.dev/contact">Contact</a></li>
+                <li><a href="/image-editing/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/image-editing/terms-and-conditions">Terms and Conditions</a></li>
+            </ul>
+        </nav>
+        <div class="copyright">
+            Copyright &copy; <span id="current-year"></span>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Size vs Image Size in Image Editing - image-editing</title>
+    <meta name="description" content="Understanding the difference between canvas size and image size is essential for anyone working with digital graphics, photo editing, or graphic design. While both operations alter the dimensions of your project, they affect the visual data in fundamental">
+    <link rel="canonical" href="https://salivity.github.io/image-editing/article/canvas-size-vs-image-size-in-image-editing">
+    <link rel="search" type="application/opensearchdescription+xml" title="image-editing" href="/image-editing/opensearch.xml">
+    <link rel="icon" href="/image-editing/favicon.ico">
+    <link rel="stylesheet" href="/image-editing/css/style.css">
+    <link media="print" rel="stylesheet" href="/image-editing/css/print.css">
+    <script src="/image-editing/js/fuse.min.js"></script>
+    <script src="/image-editing/js/script.js"></script>
+    <script id="MathJax-script" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/4.1.3/tex-chtml.min.js" defer></script>
+    <script src="/monetize/monetize.js"></script>
+    <script src="/social/social.js"></script>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Canvas Size vs Image Size in Image Editing - image-editing" />
+    <meta property="og:url" content="https://salivity.github.io/image-editing/article/canvas-size-vs-image-size-in-image-editing" />
+    <meta property="og:image" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:secure_url" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:width" content="1120" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:description" content="Understanding the difference between canvas size and image size is essential for anyone working with digital graphics, photo editing, or graphic design. While both operations alter the dimensions of your project, they affect the visual data in fundamental" />
+    <link rel="manifest" href="/image-editing/pwa/manifest.json" />
+</head>
+<body>
+    <header>
+        <a href="/image-editing/" aria-label="Go To Home Page" title="Go To Home Page" id="logo">
+            <span>salivity.github.io/</span><span>image-editing</span>
+        </a>
+        <nav>
+            <ul class="header-links">
+                <li><a href="/image-editing/search" title="Search" aria-label="Go To Search Page"><svg class="svg-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"></path></svg></a></li>
+                <li><a id="theme-toggle" title="Theme" href="javascript:void(0);" aria-label="Toggle Website Theme"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+    <div class="article-layout">
+        <aside id="profile-sidebar" class="profile-column" aria-label="Author Profile"></aside>
+        <div class="article-main-column">
+            <article><h1 id="canvas-size-vs-image-size-in-image-editing">Canvas Size vs Image
+Size in Image Editing</h1>
+<p>Understanding the difference between canvas size and image size is
+essential for anyone working with digital graphics, photo editing, or
+graphic design. While both operations alter the dimensions of your
+project, they affect the visual data in fundamentally different ways:
+changing the image size rescales, compresses, or stretches the existing
+pixels, whereas changing the canvas size alters the boundaries of the
+workspace around your content without modifying the scale of the
+original elements.</p>
+<h3 id="what-changing-image-size-does">What Changing Image Size
+Does</h3>
+<p>Changing the image size—often referred to as scaling or
+resampling—directly modifies the pixel dimensions and physical scale of
+the existing artwork or photograph.</p>
+<ul>
+<li><strong>Pixel Interpolation:</strong> When you increase or decrease
+the image size, the software uses algorithms to add or remove pixels.
+Decreasing the size discards pixel data, while enlarging it forces the
+software to create new pixels, which often leads to blurriness,
+pixelation, or loss of sharpness.</li>
+<li><strong>Proportional Scaling:</strong> By default, editing software
+constrains the aspect ratio so that height and width adjust together,
+preserving the original proportions of the subject matter.</li>
+<li><strong>File Size Impact:</strong> Resizing the image directly
+affects the overall file size. Downsizing reduces the file weight for
+web optimization, while upsizing increases it.</li>
+</ul>
+<h3 id="what-changing-canvas-size-does">What Changing Canvas Size
+Does</h3>
+<p>The canvas represents the total editable working area or "frame" that
+holds your image elements. Adjusting the canvas size modifies the
+boundaries of this container rather than the objects inside it.</p>
+<ul>
+<li><strong>Content Remains Untouched:</strong> Increasing or decreasing
+the canvas size does not stretch, shrink, or resample your existing
+layers or artwork. Every pixel within the original content stays exactly
+the same size and resolution.</li>
+<li><strong>Adding Workspace or Borders:</strong> Expanding the canvas
+creates new, empty space around the image. Depending on the software and
+background settings, this newly exposed area will appear transparent,
+white, or as a chosen background color—ideal for creating borders,
+adding text margins, or arranging multiple images.</li>
+<li><strong>Cropping via Reduction:</strong> Reducing the canvas size
+acts as an absolute crop. Any artwork extending beyond the new, smaller
+boundaries is clipped away or hidden from the visible area without being
+scaled down.</li>
+<li><strong>Anchor Positioning:</strong> When adjusting canvas size,
+programs typically allow you to set an anchor point (e.g., center,
+top-left, bottom-right) to dictate the direction in which the canvas
+expands or contracts.</li>
+</ul>
+<h3 id="summary-of-differences">Summary of Differences</h3>
+<ul>
+<li><strong>Effect on Graphics:</strong> Image size transforms the
+existing visual content; canvas size adjusts the frame surrounding the
+content.</li>
+<li><strong>Quality Changes:</strong> Resizing an image alters sharpness
+and detail through pixel resampling; resizing a canvas preserves the
+exact quality of the original pixels.</li>
+<li><strong>Primary Purpose:</strong> Image resizing is used to optimize
+photos for specific display dimensions (such as web pages or prints).
+Canvas resizing is used to add layout space, build collages, apply
+borders, or perform fixed-dimension crops.</li>
+</ul></article>
+        <div id='disqus_thread'></div>
+        <script>
+
+            var disqus_config = function () {
+                this.page.url =         'https://salivity.github.io/image-editing/article/canvas-size-vs-image-size-in-image-editing';  
+                //this.page.identifier =  PAGE_IDENTIFIER; 
+            };
+            
+            (function() {
+                var d = document, s = d.createElement('script');
+                s.src = 'https://salivity-github-io.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+    
+        </div>
+    </div>
+    
+    </main>
+    <footer>
+        <nav>
+            <ul class="social-links">
+            </ul>
+        </nav>
+        <nav>
+            <ul class="footer-links">
+                <li><a href="https://smvc.dev/contact">Contact</a></li>
+                <li><a href="/image-editing/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/image-editing/terms-and-conditions">Terms and Conditions</a></li>
+            </ul>
+        </nav>
+        <div class="copyright">
+            Copyright &copy; <span id="current-year"></span>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Assign URLs to Image Slices - image-editing</title>
+    <meta name="description" content="Assigning URLs to specific image slices allows you to create interactive, clickable web layouts directly from graphic designs. This guide covers how to set hyperlinks natively inside graphic design software like Adobe Photoshop before export, as well as h">
+    <link rel="canonical" href="https://salivity.github.io/image-editing/article/how-to-assign-ur-ls-to-image-slices">
+    <link rel="search" type="application/opensearchdescription+xml" title="image-editing" href="/image-editing/opensearch.xml">
+    <link rel="icon" href="/image-editing/favicon.ico">
+    <link rel="stylesheet" href="/image-editing/css/style.css">
+    <link media="print" rel="stylesheet" href="/image-editing/css/print.css">
+    <script src="/image-editing/js/fuse.min.js"></script>
+    <script src="/image-editing/js/script.js"></script>
+    <script id="MathJax-script" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/4.1.3/tex-chtml.min.js" defer></script>
+    <script src="/monetize/monetize.js"></script>
+    <script src="/social/social.js"></script>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="How to Assign URLs to Image Slices - image-editing" />
+    <meta property="og:url" content="https://salivity.github.io/image-editing/article/how-to-assign-ur-ls-to-image-slices" />
+    <meta property="og:image" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:secure_url" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:width" content="1120" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:description" content="Assigning URLs to specific image slices allows you to create interactive, clickable web layouts directly from graphic designs. This guide covers how to set hyperlinks natively inside graphic design software like Adobe Photoshop before export, as well as h" />
+    <link rel="manifest" href="/image-editing/pwa/manifest.json" />
+</head>
+<body>
+    <header>
+        <a href="/image-editing/" aria-label="Go To Home Page" title="Go To Home Page" id="logo">
+            <span>salivity.github.io/</span><span>image-editing</span>
+        </a>
+        <nav>
+            <ul class="header-links">
+                <li><a href="/image-editing/search" title="Search" aria-label="Go To Search Page"><svg class="svg-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"></path></svg></a></li>
+                <li><a id="theme-toggle" title="Theme" href="javascript:void(0);" aria-label="Toggle Website Theme"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+    <div class="article-layout">
+        <aside id="profile-sidebar" class="profile-column" aria-label="Author Profile"></aside>
+        <div class="article-main-column">
+            <article><h1 id="how-to-assign-urls-to-image-slices">How to Assign URLs to Image
+Slices</h1>
+<p>Assigning URLs to specific image slices allows you to create
+interactive, clickable web layouts directly from graphic designs. This
+guide covers how to set hyperlinks natively inside graphic design
+software like Adobe Photoshop before export, as well as how to link
+slices manually using HTML and CSS after the images are saved.</p>
+<h3 id="method-1-assigning-urls-inside-image-editing-software">Method 1:
+Assigning URLs Inside Image Editing Software</h3>
+<p>Traditional graphic design tools, most notably Adobe Photoshop, allow
+you to define hyperlink properties directly within the file before
+exporting the layout as an HTML/image package.</p>
+<ol type="1">
+<li><strong>Select the Slice:</strong> Choose the <strong>Slice Select
+Tool</strong> from the toolbar (grouped under the Crop Tool).</li>
+<li><strong>Open Slice Options:</strong> Double-click the specific slice
+you want to make clickable. Alternatively, right-click the slice and
+select <strong>Edit Slice Options</strong>.</li>
+<li><strong>Insert the URL:</strong> In the dialog box, locate the
+<strong>URL</strong> field and type or paste the complete destination
+link (for example, <code>https://www.example.com</code>).</li>
+<li><strong>Set the Target (Optional):</strong> In the
+<strong>Target</strong> field, specify how the link should open. Use
+<code>_blank</code> to open the URL in a new browser tab, or leave it
+blank to open it in the same window.</li>
+<li><strong>Add Alt Text:</strong> Enter descriptive text in the
+<strong>Alt Tag</strong> field to ensure web accessibility and search
+engine readability.</li>
+<li><strong>Export HTML and Images:</strong> Go to <strong>File &gt;
+Export &gt; Save for Web (Legacy)</strong>. In the save dialog, change
+the <strong>Format</strong> dropdown from "Images Only" to <strong>HTML
+and Images</strong>, then click <strong>Save</strong>. Photoshop will
+generate both the image files and an HTML file containing the table
+structure and embedded hyperlinks.</li>
+</ol>
+<h3 id="method-2-assigning-urls-manually-using-html-and-css">Method 2:
+Assigning URLs Manually Using HTML and CSS</h3>
+<p>Modern web standards often favor exporting individual graphic slices
+without generated HTML, then assembling and linking them with custom
+code for better responsiveness.</p>
+<ol type="1">
+<li><strong>Export the Slices:</strong> Export your individual cut
+images from your software as standard web assets (PNG, JPEG, or
+WebP).</li>
+<li><strong>Wrap Slices in Anchor Tags:</strong> In your HTML file,
+place each sliced graphic inside a standard anchor
+(<code>&lt;a&gt;</code>) tag:</li>
+</ol>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;https://www.example.com/target-page&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">&quot;images/slice_01.png&quot;</span><span class="ot"> alt</span><span class="op">=</span><span class="st">&quot;Descriptive text for this section&quot;</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span></code></pre></div>
+<ol start="3" type="1">
+<li><strong>Assemble the Grid:</strong> Use CSS Flexbox or CSS Grid to
+align your sliced images so they appear seamless without unwanted
+gaps:</li>
+</ol>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.slice-container</span> {</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">display</span><span class="ch">:</span> <span class="dv">flex</span><span class="op">;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">flex-direction</span><span class="ch">:</span> <span class="dv">column</span><span class="op">;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">.slice-container</span> a img {</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">display</span><span class="ch">:</span> <span class="dv">block</span><span class="op">;</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">border</span><span class="ch">:</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<h3 id="method-3-using-html-image-maps">Method 3: Using HTML Image
+Maps</h3>
+<p>If you prefer not to physically cut the image into multiple files,
+you can export a single graphic and assign clickable URL areas using an
+HTML client-side image map:</p>
+<ol type="1">
+<li>Export the full image as a single file.</li>
+<li>Define coordinate-based links using the <code>&lt;map&gt;</code> and
+<code>&lt;area&gt;</code> tags:</li>
+</ol>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">&quot;full-graphic.png&quot;</span><span class="ot"> usemap</span><span class="op">=</span><span class="st">&quot;#graphic-map&quot;</span><span class="ot"> alt</span><span class="op">=</span><span class="st">&quot;Navigation Graphic&quot;</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">map</span><span class="ot"> name</span><span class="op">=</span><span class="st">&quot;graphic-map&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">area</span><span class="ot"> shape</span><span class="op">=</span><span class="st">&quot;rect&quot;</span><span class="ot"> coords</span><span class="op">=</span><span class="st">&quot;0,0,200,100&quot;</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;https://www.example.com/link1&quot;</span><span class="ot"> alt</span><span class="op">=</span><span class="st">&quot;Section 1&quot;</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">area</span><span class="ot"> shape</span><span class="op">=</span><span class="st">&quot;rect&quot;</span><span class="ot"> coords</span><span class="op">=</span><span class="st">&quot;201,0,400,100&quot;</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;https://www.example.com/link2&quot;</span><span class="ot"> alt</span><span class="op">=</span><span class="st">&quot;Section 2&quot;</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">map</span><span class="dt">&gt;</span></span></code></pre></div>
+<p>Using manual HTML/CSS wrappers remains the most reliable and
+mobile-responsive technique for modern web development, whereas
+software-generated exports work well for quick prototypes and HTML email
+templates.</p></article>
+        <div id='disqus_thread'></div>
+        <script>
+
+            var disqus_config = function () {
+                this.page.url =         'https://salivity.github.io/image-editing/article/how-to-assign-ur-ls-to-image-slices';  
+                //this.page.identifier =  PAGE_IDENTIFIER; 
+            };
+            
+            (function() {
+                var d = document, s = d.createElement('script');
+                s.src = 'https://salivity-github-io.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+    
+        </div>
+    </div>
+    
+    </main>
+    <footer>
+        <nav>
+            <ul class="social-links">
+            </ul>
+        </nav>
+        <nav>
+            <ul class="footer-links">
+                <li><a href="https://smvc.dev/contact">Contact</a></li>
+                <li><a href="/image-editing/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/image-editing/terms-and-conditions">Terms and Conditions</a></li>
+            </ul>
+        </nav>
+        <div class="copyright">
+            Copyright &copy; <span id="current-year"></span>
+        </div>
+    </footer>
+</body>
+</html>

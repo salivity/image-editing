@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Balance vs Curves in Image Editing - image-editing</title>
+    <meta name="description" content="While both Color Balance and Curves alter the color and mood of an image, they do so with vastly different levels of precision and operational scope. Color Balance is an intuitive, slider-based tool designed specifically to adjust hue across three broad t">
+    <link rel="canonical" href="https://salivity.github.io/image-editing/article/color-balance-vs-curves-in-image-editing">
+    <link rel="search" type="application/opensearchdescription+xml" title="image-editing" href="/image-editing/opensearch.xml">
+    <link rel="icon" href="/image-editing/favicon.ico">
+    <link rel="stylesheet" href="/image-editing/css/style.css">
+    <link media="print" rel="stylesheet" href="/image-editing/css/print.css">
+    <script src="/image-editing/js/fuse.min.js"></script>
+    <script src="/image-editing/js/script.js"></script>
+    <script id="MathJax-script" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/4.1.3/tex-chtml.min.js" defer></script>
+    <script src="/monetize/monetize.js"></script>
+    <script src="/social/social.js"></script>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Color Balance vs Curves in Image Editing - image-editing" />
+    <meta property="og:url" content="https://salivity.github.io/image-editing/article/color-balance-vs-curves-in-image-editing" />
+    <meta property="og:image" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:secure_url" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:width" content="1120" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:description" content="While both Color Balance and Curves alter the color and mood of an image, they do so with vastly different levels of precision and operational scope. Color Balance is an intuitive, slider-based tool designed specifically to adjust hue across three broad t" />
+    <link rel="manifest" href="/image-editing/pwa/manifest.json" />
+</head>
+<body>
+    <header>
+        <a href="/image-editing/" aria-label="Go To Home Page" title="Go To Home Page" id="logo">
+            <span>salivity.github.io/</span><span>image-editing</span>
+        </a>
+        <nav>
+            <ul class="header-links">
+                <li><a href="/image-editing/search" title="Search" aria-label="Go To Search Page"><svg class="svg-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"></path></svg></a></li>
+                <li><a id="theme-toggle" title="Theme" href="javascript:void(0);" aria-label="Toggle Website Theme"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+    <div class="article-layout">
+        <aside id="profile-sidebar" class="profile-column" aria-label="Author Profile"></aside>
+        <div class="article-main-column">
+            <article><h1 id="color-balance-vs-curves-in-image-editing">Color Balance vs
+Curves in Image Editing</h1>
+<p>While both Color Balance and Curves alter the color and mood of an
+image, they do so with vastly different levels of precision and
+operational scope. Color Balance is an intuitive, slider-based tool
+designed specifically to adjust hue across three broad tonal ranges,
+whereas Curves is an advanced, graph-based tool that controls both color
+and luminosity across any custom point on the tonal scale. This article
+outlines the fundamental differences between these two tools, how they
+manipulate pixel data, and when to use each in your editing
+workflow.</p>
+<h3 id="core-functionality-and-mechanics">Core Functionality and
+Mechanics</h3>
+<p>The Color Balance tool works by shifting colors between complementary
+color pairs: Cyan/Red, Magenta/Green, and Yellow/Blue. It segments the
+image into three fixed tonal ranges—Shadows, Midtones, and Highlights.
+Users adjust sliders to push color into these specific zones. Most
+software packages include a "Preserve Luminosity" option, ensuring that
+color adjustments do not unintentionally lighten or darken the
+image.</p>
+<p>The Curves tool manipulates the pixel values using an interactive
+coordinate graph representing the histogram. Curves can be used globally
+(via the combined RGB/composite channel) to adjust brightness and
+contrast, or per channel (Red, Green, Blue) to modify color. By placing
+control points anywhere along the diagonal line, you can target specific
+luminance levels with surgical precision, raising values to add
+color/brightness or lowering values to subtract color/darken.</p>
+<h3 id="precision-and-tonal-control">Precision and Tonal Control</h3>
+<p>The primary difference lies in the level of control each tool
+provides:</p>
+<ul>
+<li><strong>Tonal Targeting:</strong> Color Balance relies on fixed
+algorithms that predefine what constitutes shadows, midtones, and
+highlights. These ranges blend smoothly, but you cannot define where a
+shadow ends and a midtone begins. Curves allows you to place a control
+point on an exact brightness value, allowing you to alter a narrow slice
+of midtones without affecting neighboring values.</li>
+<li><strong>Simultaneous Contrast Control:</strong> Color Balance solely
+affects chromaticity and cannot adjust image contrast or tonal spread.
+Curves can simultaneously fix color casts, expand dynamic range, boost
+contrast, and create custom tonal responses (such as matte blacks or
+filmic rolls-off).</li>
+<li><strong>Multi-Point Adjustments:</strong> Color Balance is
+restricted to its preset sliders. Curves allows for complex S-curves,
+multi-point color splits, and localized color balancing that changes
+dynamically across subtle gradients.</li>
+</ul>
+<h3 id="when-to-use-color-balance">When to Use Color Balance</h3>
+<p>Color Balance is ideal for fast, global adjustments where
+fine-grained precision is unnecessary:</p>
+<ul>
+<li>Quickly neutralizing simple, uniform color casts (e.g., an overly
+blue or yellow photo).</li>
+<li>Applying quick creative split-toning, such as adding teal to shadows
+and warmth to highlights.</li>
+<li>Making adjustments when you want color shifts without inadvertently
+altering the exposure or contrast of the image.</li>
+</ul>
+<h3 id="when-to-use-curves">When to Use Curves</h3>
+<p>Curves is the tool of choice for advanced editing, technical
+corrections, and complex grading:</p>
+<ul>
+<li>Correcting specific color casts that only exist in narrow luminance
+bands (e.g., green-tinted quarter-tones).</li>
+<li>Balancing exposure and color simultaneously in a single adjustment
+layer.</li>
+<li>Performing precise color grading using targeted channel adjustments
+to emulate film stocks.</li>
+<li>Setting exact white, black, and gray neutral points using visual
+pickers.</li>
+</ul>
+<p>In summary, Color Balance offers an approachable, high-level method
+for color correction, while Curves provides complete non-linear control
+over both color channels and dynamic range.</p></article>
+        <div id='disqus_thread'></div>
+        <script>
+
+            var disqus_config = function () {
+                this.page.url =         'https://salivity.github.io/image-editing/article/color-balance-vs-curves-in-image-editing';  
+                //this.page.identifier =  PAGE_IDENTIFIER; 
+            };
+            
+            (function() {
+                var d = document, s = d.createElement('script');
+                s.src = 'https://salivity-github-io.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+    
+        </div>
+    </div>
+    
+    </main>
+    <footer>
+        <nav>
+            <ul class="social-links">
+            </ul>
+        </nav>
+        <nav>
+            <ul class="footer-links">
+                <li><a href="https://smvc.dev/contact">Contact</a></li>
+                <li><a href="/image-editing/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/image-editing/terms-and-conditions">Terms and Conditions</a></li>
+            </ul>
+        </nav>
+        <div class="copyright">
+            Copyright &copy; <span id="current-year"></span>
+        </div>
+    </footer>
+</body>
+</html>

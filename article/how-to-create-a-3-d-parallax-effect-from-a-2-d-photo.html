@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Create a 3D Parallax Effect from a 2D Photo - image-editing</title>
+    <meta name="description" content="The 3D parallax effect transforms a static two-dimensional image into an immersive, multi-layered visual experience by simulating depth and camera motion. The process involves dissecting a single photo into foreground, midground, and background elements,">
+    <link rel="canonical" href="https://salivity.github.io/image-editing/article/how-to-create-a-3-d-parallax-effect-from-a-2-d-photo">
+    <link rel="search" type="application/opensearchdescription+xml" title="image-editing" href="/image-editing/opensearch.xml">
+    <link rel="icon" href="/image-editing/favicon.ico">
+    <link rel="stylesheet" href="/image-editing/css/style.css">
+    <link media="print" rel="stylesheet" href="/image-editing/css/print.css">
+    <script src="/image-editing/js/fuse.min.js"></script>
+    <script src="/image-editing/js/script.js"></script>
+    <script id="MathJax-script" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/4.1.3/tex-chtml.min.js" defer></script>
+    <script src="/monetize/monetize.js"></script>
+    <script src="/social/social.js"></script>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="How to Create a 3D Parallax Effect from a 2D Photo - image-editing" />
+    <meta property="og:url" content="https://salivity.github.io/image-editing/article/how-to-create-a-3-d-parallax-effect-from-a-2-d-photo" />
+    <meta property="og:image" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:secure_url" content="https://salivity.github.io/image-editing/images/open-graph/default.webp" />
+    <meta property="og:image:width" content="1120" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:description" content="The 3D parallax effect transforms a static two-dimensional image into an immersive, multi-layered visual experience by simulating depth and camera motion. The process involves dissecting a single photo into foreground, midground, and background elements," />
+    <link rel="manifest" href="/image-editing/pwa/manifest.json" />
+</head>
+<body>
+    <header>
+        <a href="/image-editing/" aria-label="Go To Home Page" title="Go To Home Page" id="logo">
+            <span>salivity.github.io/</span><span>image-editing</span>
+        </a>
+        <nav>
+            <ul class="header-links">
+                <li><a href="/image-editing/search" title="Search" aria-label="Go To Search Page"><svg class="svg-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"></path></svg></a></li>
+                <li><a id="theme-toggle" title="Theme" href="javascript:void(0);" aria-label="Toggle Website Theme"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+    <div class="article-layout">
+        <aside id="profile-sidebar" class="profile-column" aria-label="Author Profile"></aside>
+        <div class="article-main-column">
+            <article><h1 id="how-to-create-a-3d-parallax-effect-from-a-2d-photo">How to
+Create a 3D Parallax Effect from a 2D Photo</h1>
+<p>The 3D parallax effect transforms a static two-dimensional image into
+an immersive, multi-layered visual experience by simulating depth and
+camera motion. The process involves dissecting a single photo into
+foreground, midground, and background elements, reconstructing the
+hidden parts of the background, arranging these layers in a 3D space,
+and animating a virtual camera to move across them. By moving elements
+closer to the camera faster than elements further away, viewers perceive
+natural spatial depth from an otherwise flat image.</p>
+<h3 id="step-1-select-the-right-image">Step 1: Select the Right
+Image</h3>
+<p>Not every photo translates well into a parallax animation. Choose an
+image that naturally features distinct depth planes:</p>
+<ul>
+<li>A distinct foreground subject (such as a person, vehicle, or
+statue).</li>
+<li>A clear midground (such as trees, buildings, or furniture).</li>
+<li>A distant background (such as the sky, mountains, or a
+horizon).</li>
+</ul>
+<p>High-resolution images are essential, as zooming or panning during
+the animation requires excess pixel data to prevent blurring.</p>
+<h3 id="step-2-cut-out-the-subject-layer-separation">Step 2: Cut Out the
+Subject (Layer Separation)</h3>
+<p>Import the image into an image editing program like Adobe Photoshop
+or GIMP.</p>
+<ol type="1">
+<li>Use selection tools (such as the Pen Tool, Object Selection, or
+Quick Selection) to trace precisely around the foreground subject.</li>
+<li>Refine the edges, paying close attention to hair, fur, or
+semi-transparent elements.</li>
+<li>Duplicate the selection onto a new layer.</li>
+<li>Repeat this process for any midground elements that should move
+independently of the background.</li>
+</ol>
+<h3 id="step-3-inpaint-and-clean-the-background">Step 3: Inpaint and
+Clean the Background</h3>
+<p>Once the subject is removed, it leaves an empty silhouette on the
+original background layer. If the camera moves, this hole becomes
+visible behind the cut-out subject.</p>
+<ol type="1">
+<li>Hide the foreground layers and select the base layer.</li>
+<li>Select the empty silhouette of the subject, expanding the selection
+slightly beyond the border.</li>
+<li>Use tools such as Content-Aware Fill, Generative Fill, or the Clone
+Stamp to seamlessly reconstruct the textures, patterns, and lighting of
+the background behind the subject.</li>
+<li>Save the foreground, midground, and reconstructed background as
+separate transparent PNG files or as a multi-layered PSD file.</li>
+</ol>
+<h3 id="step-4-import-into-a-compositing-environment">Step 4: Import
+into a Compositing Environment</h3>
+<p>Open a motion graphics or video editing application that supports 3D
+layers, such as Adobe After Effects, Blender, or DaVinci Resolve
+(Fusion).</p>
+<ol type="1">
+<li>Import the layered project or individual PNGs.</li>
+<li>Enable 3D layer switches for every element in the composition.</li>
+</ol>
+<h3 id="step-5-position-layers-along-the-z-axis">Step 5: Position Layers
+Along the Z-Axis</h3>
+<p>In 3D space, the X and Y axes represent horizontal and vertical
+positions, while the Z-axis represents depth.</p>
+<ol type="1">
+<li>Push the background layer deep into the Z-axis (further away from
+the view).</li>
+<li>Keep the midground at a moderate distance.</li>
+<li>Place the foreground element closest to the front of the
+Z-axis.</li>
+<li>Scale up the layers that were pushed backward so they align
+seamlessly with their original framing and proportions.</li>
+</ol>
+<h3 id="step-6-add-and-animate-a-virtual-camera">Step 6: Add and Animate
+a Virtual Camera</h3>
+<ol type="1">
+<li>Create a new virtual camera layer inside your composition (a 35mm or
+50mm lens preset generally yields natural results).</li>
+<li>Set a keyframe for the camera’s initial position.</li>
+<li>Move down the timeline (typically 3 to 6 seconds).</li>
+<li>Adjust the camera position by applying a subtle push-in (zoom), a
+horizontal pan (truck), or an orbital move around the subject.</li>
+<li>Apply ease-in and ease-out interpolation to the keyframes to ensure
+the movement begins and ends smoothly.</li>
+</ol>
+<h3 id="step-7-enhance-realism-with-finishing-touches">Step 7: Enhance
+Realism with Finishing Touches</h3>
+<p>To finalize the effect and hide the digital separation of the
+layers:</p>
+<ul>
+<li><strong>Depth of Field:</strong> Enable depth of field on the
+virtual camera. Set the focal distance directly to the foreground
+subject and increase the aperture to naturally blur the background.</li>
+<li><strong>Atmospheric Elements:</strong> Add floating dust particles,
+light rays, or fog between the layers to enhance the perception of
+physical space.</li>
+<li><strong>Puppet Warp:</strong> Apply minor mesh animations (like a
+breathing chest or blinking eyes) to organic subjects to prevent them
+from looking like stiff cardboard cutouts.</li>
+</ul></article>
+        <div id='disqus_thread'></div>
+        <script>
+
+            var disqus_config = function () {
+                this.page.url =         'https://salivity.github.io/image-editing/article/how-to-create-a-3-d-parallax-effect-from-a-2-d-photo';  
+                //this.page.identifier =  PAGE_IDENTIFIER; 
+            };
+            
+            (function() {
+                var d = document, s = d.createElement('script');
+                s.src = 'https://salivity-github-io.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+    
+        </div>
+    </div>
+    
+    </main>
+    <footer>
+        <nav>
+            <ul class="social-links">
+            </ul>
+        </nav>
+        <nav>
+            <ul class="footer-links">
+                <li><a href="https://smvc.dev/contact">Contact</a></li>
+                <li><a href="/image-editing/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/image-editing/terms-and-conditions">Terms and Conditions</a></li>
+            </ul>
+        </nav>
+        <div class="copyright">
+            Copyright &copy; <span id="current-year"></span>
+        </div>
+    </footer>
+</body>
+</html>
